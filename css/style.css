@@ -1,0 +1,102 @@
+body {
+  font-family: "Ubuntu", sans-serif;
+  font-size: 16px;
+  background: url(/images/100710_red_maple_leaf.svg) no-repeat fixed right
+    bottom;
+  background-size: 100px;
+}
+
+* {
+  box-sizing: border-box;
+}
+#button {
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+  background: rgb(88, 56, 56);
+}
+#button a {
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+  background: rgb(88, 56, 56);
+}
+
+#order {
+  /* background: rgb(88, 56, 56); */
+  padding: 0 2px;
+  margin: 0 2px;
+  color: rgb(255, 255, 255);
+  border: none;
+  background-color: rgb(88, 56, 56);
+  border-radius: 7px;
+}
+#order a {
+  color: #fff;
+}
+#hero {
+  background-color: whitesmoke;
+  padding: 2% 6%;
+}
+#service {
+  background: url(/images/note.svg), url(/images/pen.svg),
+    url(/images/writing.svg);
+  background-repeat: no-repeat;
+  background-position: left, right, bottom;
+  color: rgb(88, 56, 56);
+  padding: 2% 10%;
+  text-align: center;
+  background-color: rgb(226, 226, 226);
+  background-size: 338px, 320px, 100px;
+}
+
+footer {
+  padding: 4%;
+
+  background: rgb(226, 226, 226) url(/images/100710_red_maple_leaf.svg)
+    no-repeat fixed right bottom;
+  background-size: 100px;
+}
+
+#pricing {
+  padding: 10% 6%;
+}
+h2 {
+  text-shadow: 1px 2px 2px rgb(88, 56, 56);
+  font-size: 55px;
+}
+
+.hero-text-2 {
+  line-height: 1.7rem;
+}
+#hero-img {
+  width: 50%;
+  height: 100%;
+}
+
+#navbar {
+  font-size: 18px;
+  background-color: rgb(236, 236, 236);
+  padding: 0;
+}
+
+/* .navbar .navbar-nav .nav-link:active {
+    color: rgb(255, 255, 255);
+    font-size: 1.1em;
+} */
+
+.nav-link:hover {
+  color: #fff;
+  transition: all 0.5s ease-out;
+  border-bottom: 3px solid rgb(88, 56, 56);
+  padding: 0;
+  
+}
+
+.footer-text a {
+  text-decoration: none;
+  color: black;
+  text-align: center;
+  font-weight: 300;
+}
+h6 {
+  font-size: 21px;
+}

@@ -1,0 +1,32 @@
+* {
+    box-sizing: border-box;
+  }
+body{
+    font-family: "Ubuntu", sans-serif;
+  font-size: 14px;
+  background: url(/images/pexels-andrea-piacquadio-3769138.jpeg) no-repeat;
+  background-size: cover;
+
+}
+
+#navbar {
+    font-size: 18px;
+    background-color: rgb(236, 236, 236);
+    
+  }
+
+  .nav-link:hover {
+    color: #fff;
+    transition: all 0.5s ease-out;
+    border-bottom: 3px solid rgb(88, 56, 56);
+    padding: 0;
+    
+  }
+
+  #cont{
+      margin-top: 140px;
+      border-radius: 10px;
+      background-color: rgb(88, 56, 56);
+      color: white;
+      padding: 16% 9%;
+  }
