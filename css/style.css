@@ -100,3 +100,36 @@ h2 {
 h6 {
   font-size: 21px;
 }
+
+@media screen and (max-width:900px){
+  #hero-button{
+    text-align: center;
+    padding: 10px 4px;
+  }
+  #hero-text{
+    text-align: center;
+
+  }
+
+  #hero-img {
+    width: 79% ;
+    display: none;
+    
+  }
+  #title{
+    font-size: 35px;
+  }
+  #service {
+    background: url(/images/note.svg), url(/images/pen.svg),
+      url(/images/writing.svg);
+    background-repeat: no-repeat;
+    background-position: left, right, bottom;
+    color: rgb(88, 56, 56);
+    padding: 2% 10%;
+    text-align: center;
+    background-color: rgb(226, 226, 226);
+    background-size: 338px, 320px, 100px;
+    
+  }
+
+}
