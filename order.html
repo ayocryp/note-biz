@@ -15,6 +15,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/particlesjs/2.2.2/particles.min.js   ">
   c
   <script src="https://kit.fontawesome.com/0fed1877d2.js" crossorigin="anonymous"></script>
+  <script src="https://checkout.flutterwave.com/v3.js"></script>
 </head>
 
 <body>
@@ -51,7 +52,7 @@
         </p>
         
         <div class="contact-info">
-          <form method="POST" name="Order info"  data-netlify="true"  class="row">
+          <form method="POST" name="Order info"  data-netlify="true"  class="row" action="" >
             <h4 class="text-start lead mb-2 mobile-header"><i class="bi bi-person-fill"></i> PRIMARY APPLICANT</h4>
             <div class="row mt-3 justify-content-center align-items-center" id="mobile-input">
               <label for="First Name/Given Name" id="mobile-label"
@@ -194,7 +195,7 @@
               </label>
             </div>
             <div class="col-sm-12">
-              <button id="get-started" type="submit">Order</button>
+              <button id="get-started" class="order-payment" type="submit" onclick="makePayment()" >Order</button>
             </div>
           </form>
 
