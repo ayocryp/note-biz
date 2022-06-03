@@ -49,22 +49,23 @@
           Please provide the following information to process your request. Enter any other information in the
           Additional Notes section. After submitting this form you will be taken to complete the Payment.
         </p>
+        
         <div class="contact-info">
-          <div class="row">
+          <form action="#" netlify class="row">
             <h4 class="text-start lead mb-2 mobile-header"><i class="bi bi-person-fill"></i> PRIMARY APPLICANT</h4>
             <div class="row mt-3 justify-content-center align-items-center" id="mobile-input">
               <label for="First Name/Given Name" id="mobile-label"
                 class="col-sm-2 col-form-label  flex-column text-center  "><span class="label-star">*</span> FIRST NAME
               </label>
               <div class="col-sm-10 mt-1">
-                <input type="text" class="form-control" placeholder="Full name" required>
+                <input type="text" class="form-control" placeholder="Full name" name="PA first name" required>
               </div>
             </div>
             <div class="row mt-3 justify-content-center align-items-center" id="mobile-input">
               <label for="last name" id="mobile-label" class="col-sm-2 col-form-label flex-column text-center"><span class="label-star">*</span> LAST NAME
               </label>
               <div class="col-sm-10 mt-1">
-                <input type="text" class="form-control" placeholder="Last name" required>
+                <input type="text" class="form-control" placeholder="Last name" name="PA last name" required>
               </div>
             </div>
             <div class="row mt-2 justify-content-center align-items-center" id="mobile-input">
@@ -72,7 +73,7 @@
                 class="col-sm-2 col-form-label  flex-column text-center"><span class="label-star">*</span> EMAIL ADDRESS
               </label>
               <div class="col-sm-10 mt-1">
-                <input type="email" class="form-control" name="email" required>
+                <input type="email" class="form-control" name="PA email" required>
               </div>
             </div>
             <div class="row mt-2 justify-content-center align-items-center" id="mobile-input">
@@ -88,7 +89,7 @@
                 class="col-sm-2 col-form-label flex-column text-center"><span class="label-star">*</span> UCI or Client ID Number
               </label>
               <div class="col-sm-10 mt-1">
-                <input type="text" name="uci" class="form-control" placeholder="xx-xxx-xx or xx-xxx-xxx" required>
+                <input type="text" name="UCI" class="form-control" placeholder="xx-xxx-xx or xx-xxx-xxx" required>
               </div>
             </div>
 
@@ -99,14 +100,14 @@
                 class="col-sm-2 col-form-label flex-column text-center">FIRST NAME
               </label>
               <div class="col-sm-10 mt-1">
-                <input type="text" class="form-control" placeholder="Full name" required>
+                <input type="text" class="form-control" placeholder="Full name" name="Spouse first name" required>
               </div>
             </div>
             <div class="row mt-3 justify-content-center align-items-center" id="mobile-input">
               <label for="last name" id="mobile-label" class="col-sm-2 col-form-label flex-column text-center">LAST NAME
               </label>
               <div class="col-sm-10 mt-1">
-                <input type="text" class="form-control" placeholder="Last name" required>
+                <input type="text" class="form-control" placeholder="Last name" name="Spouse last name" required>
               </div>
             </div>
             <div class="row mt-2 justify-content-center align-items-center" id="mobile-input">
@@ -114,7 +115,7 @@
                 class="col-sm-2 col-form-label flex-column text-center">EMAIL ADDRESS
               </label>
               <div class="col-sm-10 mt-1">
-                <input type="email" class="form-control" required>
+                <input type="email" class="form-control" name="spouse email address" required>
               </div>
             </div>
             <div class="row mt-2 justify-content-center align-items-center" id="mobile-input">
@@ -122,9 +123,7 @@
                 class="col-sm-2 col-form-label flex-column text-center">SPOUSE DOB
               </label>
               <div class="col-sm-10 mt-1">
-                <input type="date" class="form-control" placeholder="YYYY-MM-DD" required>
-                
-
+                <input type="date" class="form-control" placeholder="YYYY-MM-DD" name="Spouse DOB" required>
               </div>
             </div>
             <div class="row mt-2 justify-content-center align-items-center" id="mobile-input">
@@ -132,7 +131,7 @@
                 class="col-sm-2 col-form-label flex-column text-center">UCI or Client ID Number
               </label>
               <div class="col-sm-10 mt-1">
-                <input type="text" class="form-control" placeholder="xx-xxx-xx or xx-xxx-xxx" required>
+                <input type="text" class="form-control" placeholder="xx-xxx-xx or xx-xxx-xxx" name="Spouse UCI" required>
               </div>
             </div>
 
@@ -145,7 +144,7 @@
               </label>
               <div class="col-sm-10 mt-1">
                 
-                <select name="visa type" id="" class="form-control" required>
+                <select name="visa type" name="visa type"  id="" class="form-control" required>
                   <option value="null" selected disabled>---</option>
                   <option value="study-permit">Study Permit</option>
                   <option value="temporary-visa">Temporary (Guest) Visa</option>
@@ -159,7 +158,7 @@
               <label for="application number" id="mobile-label" class="col-sm-2 col-form-label flex-column text-center ">APPLICATION NO
               </label>
               <div class="col-sm-10 mt-1">
-                <input type="text" class="form-control" placeholder="X-XXX-XXX or unknown" required>
+                <input type="text" class="form-control" name="Application no" placeholder="X-XXX-XXX or unknown" required>
               </div>
             </div>
             <div class="row mt-2 justify-content-center align-items-center" id="mobile-input">
@@ -167,7 +166,7 @@
                 class="col-sm-2 col-form-label flex-column text-center"><span class="label-star">*</span> PRIMARY EMAIL
               </label>
               <div class="col-sm-10 mt-1">
-                <input type="email" class="form-control" required>
+                <input type="email" class="form-control" name="Primary email" required>
               </div>
             </div>
             <div class="row mt-2 justify-content-center align-items-center" id="mobile-input">
@@ -175,29 +174,29 @@
                 class="col-sm-2 col-form-label flex-column text-center">ALTERNATE EMAIL
               </label>
               <div class="col-sm-10 mt-1">
-                <input type="email" class="form-control">
+                <input type="email" class="form-control" name="alternate email">
               </div>
             </div>
             <div class="row mt-2 justify-content-center align-items-center" id="mobile-input">
-              <label for="First Name/Given Name" id="mobile-label"
+              <label for="Additional note" id="mobile-label"
                 class="col-sm-2 col-form-label flex-column text-center">ADDITIONAL NOTES
               </label>
               <div class="col-sm-10 mt-1">
                 <!-- <input type="text" class="form-control" placeholder="xx-xxx-xx or xx-xxx-xxx" required> -->
-                <textarea name="" class="form-control" cols="30" rows="5"></textarea>
+                <textarea name="Additional note" class="form-control" cols="30" rows="5" placeholder="Provide any relavant information for your application"></textarea>
               </div>
               
             </div>
             <div class="form-check col-sm-12 mt-3">
-              <input class="form-check-inline" type="checkbox" value="" required>
+              <input class="form-check-inline" type="checkbox" required>
               <label class="form-check-label" for="checked">
                 I certify that the information provided is true and I agree to the terms
               </label>
             </div>
             <div class="col-sm-12">
-              <button id="get-started" type="submit">Submit form</button>
+              <button id="get-started" type="submit">Order</button>
             </div>
-          </div>
+          </form>
 
 
           <canvas class="background"></canvas>
