@@ -1,6 +1,6 @@
 
 
-// document.querySelector('.order-payment').addEventListener('click', makePayment())
+
 
 function makePayment() {
   FlutterwaveCheckout({
@@ -34,3 +34,27 @@ window.onload = function () {
       color: 'black'
   });
 };
+
+
+function PreventSubmission () {
+  'use strict'
+
+  // Fetch all the forms we want to apply custom Bootstrap validation styles to
+  const forms = document.querySelectorAll('.needs-validation')
+
+  // Loop over them and prevent submission
+  Array.from(forms).forEach(form => {
+    form.addEventListener('submit', event => {
+      if (!form.checkValidity()) {
+        event.preventDefault()
+        event.stopPropagation()
+        document.querySelector('.order-payment').addEventListener('click', makePayment)
+      }
+
+      form.classList.add('was-validated')
+    }, false)
+  })
+}
+
+PreventSubmission()
+
