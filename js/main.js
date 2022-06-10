@@ -1,7 +1,4 @@
-
-
-
-
+// Flutterwave API consumption
 function makePayment() {
   FlutterwaveCheckout({
     public_key: "FLWPUBK_TEST-SANDBOXDEMOKEY-X",
@@ -27,6 +24,8 @@ function makePayment() {
   });
 }
 
+
+// Background particles
 window.onload = function () {
   Particles.init({
       selector: ".background",
@@ -36,11 +35,15 @@ window.onload = function () {
 };
 
 
+
+// form validation
 function PreventSubmission () {
   'use strict'
 
   // Fetch all the forms we want to apply custom Bootstrap validation styles to
   const forms = document.querySelectorAll('.needs-validation')
+
+
 
   // Loop over them and prevent submission
   Array.from(forms).forEach(form => {
@@ -48,7 +51,14 @@ function PreventSubmission () {
       if (!form.checkValidity()) {
         event.preventDefault()
         event.stopPropagation()
-        document.querySelector('.order-payment').addEventListener('click', makePayment)
+
+        // Order button event trigger
+       
+      } else {
+        event.preventDefault()
+        event.stopPropagation()
+        makePayment()
+
       }
 
       form.classList.add('was-validated')
@@ -58,3 +68,8 @@ function PreventSubmission () {
 
 PreventSubmission()
 
+// const buttn = document.querySelector('.order-payment')
+
+// if (PreventSubmission !== true) {
+//   buttn
+// }
