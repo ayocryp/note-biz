@@ -6,6 +6,7 @@ body {
   background-size: 100px;
 }
 
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap');
 
 * {
   box-sizing: border-box;
@@ -33,10 +34,14 @@ body {
 #order a {
   color: #fff;
 }
+
+/* Hero section */
 #hero {
   background-color: whitesmoke;
   padding: 2% 6%;
 }
+
+/* Service section */
 #service {
   background: url(/images/note.svg), url(/images/pen.svg),
     url(/images/writing.svg);
@@ -48,6 +53,13 @@ body {
   background-color: rgb(226, 226, 226);
   background-size: 338px, 320px, 100px;
 }
+
+#service p{
+  font-size: 1.3rem;
+  text-align: center;
+}
+
+
 
 footer {
   padding: 4%;
@@ -101,6 +113,14 @@ h2 {
 h6 {
   font-size: 21px;
 }
+
+
+.answer{
+  /* overflow: hidden; */
+  height: 0;
+  transition: height 0.5s;
+}
+
 
 @media screen and (max-width:900px){
   #hero-button{

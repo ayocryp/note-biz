@@ -1,4 +1,4 @@
-* {
+ * {
   box-sizing: border-box;
 }
 
@@ -149,7 +149,7 @@ body {
 .get-started {
   text-decoration: none;
   border: 1px solid var(--brown);
-  padding: 10px 15px;
+  padding: 12px 18px;
   border-radius: 3px;
   background-color: var(--brown2);
   color: var(--white);
@@ -168,3 +168,11 @@ a:hover {
   right: 0;
   z-index: -1;
 } */
+
+@media screen and (max-width: 900px) {
+  .get-started{
+    font-size: 11px;
+    /* padding: 15px; */
+    margin: 4px;
+  }
+}
