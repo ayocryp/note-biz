@@ -1,5 +1,3 @@
-import React from "react";
-
 import Main from "../Main";
 import Service from "../Service";
 import FaqComponent from "../FAQ";

@@ -14,7 +14,7 @@ export const GetInTouchContainer = styled.div`
 export const GetInTouchWrapper = styled.div`
   padding: 8%;
   border-radius: 7px;
-  background: rgba(39, 15, 15, 0.9);
+  background: #0a0e27;
   max-width: 968px;
   width: 100%;
   box-sizing: border-box;
@@ -37,7 +37,7 @@ export const Desc = styled.div`
 `;
 
 export const TouchWrapper = styled.div`
-  color: rgba(39, 15, 15, 0.9);
+  color: #0a0e27;
   background: white;
   padding: 10%;
   display: flex;
@@ -80,6 +80,6 @@ export const DownloadBtn = styled.a`
 export const ContactIcon = styled.div`
   font-size: 25px;
   padding-right: 8px;
-  color: rgba(39, 15, 15, 0.9);
+  color: #0a0e27;
   margin-top: 50px;
 `;

@@ -60,7 +60,7 @@ export const MenuItem = styled.div`
   transition: all 0.3s ease-in-out;
 
   :hover {
-    border-bottom: 3px solid rgb(88, 56, 56);
+    border-bottom: 3px solid #0a0e27;
     padding-bottom: 12px;
   }
 
@@ -69,7 +69,7 @@ export const MenuItem = styled.div`
     width: 100%;
 
     :hover {
-      border-bottom: 3px solid rgb(88, 56, 56);
+      border-bottom: 3px solid #0a0e27;
       padding: 3px 0;
     }
   }
@@ -78,7 +78,7 @@ export const MenuItem = styled.div`
 export const OrderBtn = styled.div`
   color: rgb(255, 255, 255);
   width: fit-content;
-  background-color: rgb(88, 56, 56);
+  background-color: #0a0e27;
   cursor: pointer;
   padding: 10px 20px;
   font-size: 1.25rem;

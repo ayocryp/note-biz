@@ -16,7 +16,7 @@ export const FaqWrapper = styled.div`
 `;
 
 export const FaqTitle = styled.div`
-  color: rgb(88, 56, 56);
+  color: #0a0e27;
   font-size: 35px;
   text-align: center !important;
   font-weight: 500;
@@ -29,6 +29,11 @@ export const FaqButton = styled.div`
   letter-spacing: -0.03em;
   line-height: 4rem;
   margin-bottom: 1rem;
+
+  @media (max-width: 425px) {
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
 `;
 
 export const FaqText = styled.div`

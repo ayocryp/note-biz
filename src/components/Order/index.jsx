@@ -1,4 +1,4 @@
-import { useRef, useState } from "react";
+import { useRef } from "react";
 import {
   Desc,
   FileUpload,
@@ -16,7 +16,6 @@ import {
   Title,
   FormSelect,
 } from "./order.style";
-// import { Particles } from "../Particles/dist/particle.min";
 
 const LeafImage = ({ src }) => (
   <div>
@@ -55,15 +54,15 @@ const OrderComponent = () => {
               </FormItem>
               <FormItem>
                 <FormLabel>Last Name *</FormLabel>
-                <FormInput placeholder="First Name"></FormInput>
+                <FormInput placeholder="Last Name"></FormInput>
               </FormItem>
               <FormItem>
                 <FormLabel>Email Address *</FormLabel>
-                <FormInput placeholder="First Name"></FormInput>
+                <FormInput placeholder="Email Address" type="email"></FormInput>
               </FormItem>
               <FormItem>
                 <FormLabel>Date of Birth *</FormLabel>
-                <FormInput placeholder="First Name" type="date"></FormInput>
+                <FormInput placeholder="Date of Birth" type="date"></FormInput>
               </FormItem>
               <FormItem>
                 <FormLabel>UCI or Client ID Number *</FormLabel>

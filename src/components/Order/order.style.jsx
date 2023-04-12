@@ -65,7 +65,7 @@ export const OrderContainer = styled.div`
 export const OrderWrapper = styled.div`
   padding: 8%;
   border-radius: 7px;
-  background: rgba(39, 15, 15, 0.9);
+  background: #0a0e27;
   max-width: 80%;
   width: 100%;
   box-sizing: border-box;
@@ -88,7 +88,7 @@ export const Desc = styled.div`
 `;
 
 export const NoteWrapper = styled.div`
-  color: rgba(39, 15, 15, 0.9);
+  color: #0a0e27;
   background: white;
   padding: 10%;
   display: flex;
@@ -185,7 +185,7 @@ export const FileUpload = styled.div`
 `;
 
 export const OrderButton = styled.button`
-  background: rgba(39, 15, 15, 0.9);
+  background: #0a0e27;
   color: white;
   padding: 15px;
   border-radius: 15px;

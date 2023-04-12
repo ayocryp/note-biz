@@ -23,11 +23,11 @@ export const ArticleContainer = styled.div`
 
 export const ArticleTitle = styled.div`
   h2 {
-    color: #212529;
+    color: #fb9129;
     margin: 0;
     font-size: 55px;
     font-weight: 500;
-    text-shadow: 1px 2px 2px rgb(88, 56, 56);
+    text-shadow: 1px 2px 2px #0a0e27;
     @media (max-width: 900px) {
       font-size: 35px;
     }
@@ -65,7 +65,7 @@ export const ArticleImage = styled.img`
 export const OrderBtn = styled.div`
   color: rgb(255, 255, 255);
   width: fit-content;
-  background-color: rgb(88, 56, 56);
+  background-color: #0a0e27;
   cursor: pointer;
   padding: 12px 16px;
   font-size: 1.25rem;
