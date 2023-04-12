@@ -34,7 +34,14 @@ const GetInTouchComponent = () => {
             <IoIosMail />
           </ContactIcon>
           <IconDesc>Email: abcd@example.com</IconDesc>
-          <DownloadBtn>
+          <DownloadBtn
+            onClick={() =>
+              window.open(
+                `${process.env.PUBLIC_URL}` + "/assets/consent.pdf",
+                "_blank"
+              )
+            }
+          >
             DOWNLOAD CONSENT FORM
             <span>
               <BsArrowDownRight />

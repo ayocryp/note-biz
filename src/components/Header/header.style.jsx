@@ -56,7 +56,8 @@ export const OrderBtn = styled.div`
   padding: 8px;
   cursor: pointer;
   :hover {
-    padding: 0 8px;
+    padding: 5px 8px;
+    box-shadow: 0 5px 10px rgba(29, 29, 29, 0.5);
   }
   transition: all 0.3s ease-in-out;
   margin-right: 48px;

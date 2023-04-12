@@ -69,7 +69,10 @@ export const OrderBtn = styled.div`
   cursor: pointer;
   padding: 12px 16px;
   font-size: 1.25rem;
-  border-radius: 0.3rem;
+  border-radius: 10px;
+  :hover {
+    box-shadow: 0 5px 10px rgba(29, 29, 29, 0.5);
+  }
 `;
 export const MainWrapper = styled.div`
   max-width: 1320px;

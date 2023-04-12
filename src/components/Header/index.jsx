@@ -40,9 +40,6 @@ const HeaderComponent = () => {
           <a href="/#what">
             <MenuItem>What we do</MenuItem>
           </a>
-          <a href="/#pricing">
-            <MenuItem>Pricing</MenuItem>
-          </a>
           <Link to="/contact">
             <MenuItem>Contact us</MenuItem>
           </Link>
