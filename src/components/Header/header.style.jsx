@@ -10,6 +10,8 @@ export const HeaderContainer = styled.nav`
   position: fixed;
   z-index: 2;
   width: 100%;
+
+  box-sizing: border-box;
 `;
 
 export const HeaderLogo = styled.img`

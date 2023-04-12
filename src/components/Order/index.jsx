@@ -9,7 +9,7 @@ import {
   FormText,
   OrderButton,
   GroupWrapper,
-  GruopTitle,
+  GroupTitle,
   NoteWrapper,
   OrderContainer,
   OrderWrapper,
@@ -17,6 +17,21 @@ import {
   FormSelect,
 } from "./order.style";
 // import { Particles } from "../Particles/dist/particle.min";
+
+const LeafImage = ({ src }) => (
+  <div>
+    <img src={src} height="75px" width="75px" alt="Leaf" />
+  </div>
+);
+
+const leafImages = [
+  "http://www.pngmart.com/files/1/Fall-Autumn-Leaves-Transparent-PNG.png",
+  "http://www.pngmart.com/files/1/Autumn-Fall-Leaves-Pictures-Collage-PNG.png",
+  "http://www.pngmart.com/files/1/Autumn-Fall-Leaves-Clip-Art-PNG.png",
+  "http://www.pngmart.com/files/1/Green-Leaves-PNG-File.png",
+  "http://www.pngmart.com/files/1/Transparent-Autumn-Leaves-Falling-PNG.png",
+  "http://www.pngmart.com/files/1/Realistic-Autumn-Fall-Leaves-PNG.png",
+];
 
 const OrderComponent = () => {
   const [file, setFile] = useState(null);
@@ -33,7 +48,7 @@ const OrderComponent = () => {
         </Desc>
         <NoteWrapper>
           <GroupWrapper>
-            <GruopTitle>PRIMARY APPLICANT</GruopTitle>
+            <GroupTitle>PRIMARY APPLICANT</GroupTitle>
             <Form>
               <FormItem>
                 <FormLabel>First Name *</FormLabel>
@@ -58,7 +73,7 @@ const OrderComponent = () => {
             </Form>
           </GroupWrapper>
           <GroupWrapper>
-            <GruopTitle>SPOUSE or PARTNER</GruopTitle>
+            <GroupTitle>SPOUSE or PARTNER</GroupTitle>
             <Form>
               <FormItem>
                 <FormLabel>First Name *</FormLabel>
@@ -83,7 +98,7 @@ const OrderComponent = () => {
             </Form>
           </GroupWrapper>
           <GroupWrapper>
-            <GruopTitle>APPLICANT INFO</GruopTitle>
+            <GroupTitle>APPLICANT INFO</GroupTitle>
             <Form>
               <FormItem>
                 <FormLabel>Visa Type *</FormLabel>
@@ -120,7 +135,7 @@ const OrderComponent = () => {
             </Form>
           </GroupWrapper>
           <GroupWrapper>
-            <GruopTitle>* * *</GruopTitle>
+            <GroupTitle>* * *</GroupTitle>
             <Form>
               <FormItem>
                 <FormLabel>Transaction ID *</FormLabel>
@@ -142,6 +157,11 @@ const OrderComponent = () => {
           <OrderButton>Order Now</OrderButton>
         </NoteWrapper>
       </OrderWrapper>
+      <div className="leaf">
+        {leafImages.map((src) => (
+          <LeafImage key={src} src={src} />
+        ))}
+      </div>
     </OrderContainer>
   );
 };

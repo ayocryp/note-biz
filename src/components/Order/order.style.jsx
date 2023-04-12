@@ -1,16 +1,72 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
+
+const leafAnimation = (left, duration, delay) => css`
+  left: ${left};
+  animation: fall ${duration}s linear infinite;
+  animation-delay: ${delay}s;
+`;
 
 export const OrderContainer = styled.div`
-  padding-top: 150px;
+  padding: 150px 0;
   display: flex;
   justify-content: center;
+  background: radial-gradient(#6e6e6e, #000000);
+
+  .leaf div {
+    position: absolute;
+    display: block;
+  }
+
+  .leaf div:nth-child(1) {
+    ${leafAnimation("20%", 15, -2)}
+  }
+  .leaf div:nth-child(2) {
+    ${leafAnimation("70%", 15, -4)}
+  }
+  .leaf div:nth-child(3) {
+    ${leafAnimation("10%", 20, -7)}
+  }
+  .leaf div:nth-child(4) {
+    ${leafAnimation("50%", 18, -5)}
+  }
+  .leaf div:nth-child(5) {
+    ${leafAnimation("85%", 14, -5)}
+  }
+  .leaf div:nth-child(6) {
+    ${leafAnimation("15%", 16, -10)}
+  }
+
+  @keyframes fall {
+    0% {
+      opacity: 1;
+      top: -10%;
+      transform: translateX(20px) rotate(0deg);
+    }
+    20% {
+      opacity: 0.8;
+      transform: translateX(-20px) rotate(45deg);
+    }
+    40% {
+      transform: translateX(-20px) rotate(90deg);
+    }
+    60% {
+      transform: translateX(-20px) rotate(135deg);
+    }
+    80% {
+      transform: translateX(-20px) rotate(180deg);
+    }
+    100% {
+      top: 110%;
+      transform: translateX(-20px) rotate(225deg);
+    }
+  }
 `;
 
 export const OrderWrapper = styled.div`
   padding: 8%;
   border-radius: 7px;
   background: rgba(39, 15, 15, 0.9);
-  max-width: 968px;
+  max-width: 55%;
   width: 100%;
   box-sizing: border-box;
 `;
@@ -45,7 +101,7 @@ export const GroupWrapper = styled.div`
   width: 100%;
 `;
 
-export const GruopTitle = styled.div`
+export const GroupTitle = styled.div`
   font-size: 1.2rem;
   font-weight: 700;
   margin-bottom: 10px;
@@ -55,6 +111,10 @@ export const Form = styled.div`
   display: flex;
   flex-direction: column;
   gap: 10px;
+
+  @media screen and (max-width: 425px) {
+    gap: 20px;
+  }
 `;
 
 export const FormItem = styled.div`
@@ -63,11 +123,21 @@ export const FormItem = styled.div`
 
   justify-content: ${(props) =>
     props.id === "last" ? "center" : "flex-start"};
+
+  @media screen and (max-width: 425px) {
+    align-items: start;
+    gap: 10px;
+
+    flex-direction: ${(props) => (props.id === "last" ? "row" : "column")};
+  }
 `;
 
 export const FormLabel = styled.div`
   width: 60%;
   white-space: nowrap;
+  @media screen and (max-width: 425px) {
+    width: 100%;
+  }
 `;
 
 export const FormInput = styled.input`
@@ -77,6 +147,7 @@ export const FormInput = styled.input`
   border-radius: 5px;
   border: 1px solid gray;
   padding-left: 10px;
+  box-sizing: border-box;
 `;
 
 export const FormSelect = styled.select`
@@ -86,6 +157,7 @@ export const FormSelect = styled.select`
   border-radius: 5px;
   border: 1px solid gray;
   padding-left: 10px;
+  box-sizing: border-box;
 `;
 
 export const FormText = styled.textarea`
@@ -95,6 +167,7 @@ export const FormText = styled.textarea`
   border-radius: 5px;
   border: 1px solid gray;
   padding: 10px;
+  box-sizing: border-box;
 `;
 
 export const FileUpload = styled.div`
