@@ -107,7 +107,7 @@ export const GroupTitle = styled.div`
   margin-bottom: 10px;
 `;
 
-export const Form = styled.div`
+export const FormContent = styled.div`
   display: flex;
   flex-direction: column;
   gap: 10px;
@@ -145,7 +145,7 @@ export const FormInput = styled.input`
   height: 30px;
   font-size: 16px;
   border-radius: 5px;
-  border: 1px solid gray;
+  border: ${(props) => (props.isError ? "1px solid red" : "1px solid gray")};
   padding-left: 10px;
   box-sizing: border-box;
 `;
@@ -155,7 +155,7 @@ export const FormSelect = styled.select`
   height: 30px;
   font-size: 16px;
   border-radius: 5px;
-  border: 1px solid gray;
+  border: ${(props) => (props.isError ? "1px solid red" : "1px solid gray")};
   padding-left: 10px;
   box-sizing: border-box;
 `;
@@ -165,13 +165,13 @@ export const FormText = styled.textarea`
   font-size: 16px;
   height: 100px;
   border-radius: 5px;
-  border: 1px solid gray;
+  border: ${(props) => (props.isError ? "1px solid red" : "1px solid gray")};
   padding: 10px;
   box-sizing: border-box;
 `;
 
 export const FileUpload = styled.div`
-  border: 1px dotted gray;
+  border: ${(props) => (props.isError ? "1px dotted red" : "1px dotted gray")};
   padding: 50px;
   border-radius: 5px;
   display: flex;

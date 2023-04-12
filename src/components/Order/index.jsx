@@ -1,8 +1,10 @@
 import { useRef } from "react";
+import { Form, Field } from "react-final-form";
+import * as Yup from "yup";
 import {
   Desc,
   FileUpload,
-  Form,
+  FormContent,
   FormInput,
   FormItem,
   FormLabel,
@@ -17,6 +19,35 @@ import {
   FormSelect,
 } from "./order.style";
 
+const validationSchema = Yup.object().shape({
+  firstName: Yup.string().required("First Name is required"),
+  lastName: Yup.string().required("Last Name is required"),
+  email: Yup.string().email("Invalid email").required("Email is required"),
+  dob: Yup.date().required("Date of Birth is required"),
+  uciOrClientId: Yup.string().required("UCI or Client ID Number is required"),
+  s_firstName: Yup.string().required("First Name is required"),
+  s_lastName: Yup.string().required("Last Name is required"),
+  s_email: Yup.string().email("Invalid email").required("Email is required"),
+  s_uciOrClientId: Yup.string().required("UCI or Client ID Number is required"),
+  app_email: Yup.string()
+    .email("Invalid email")
+    .required("Primary Email is required"),
+  app_visatype: Yup.string().required("Please choose an option"),
+  transactionId: Yup.string().required("Transaction ID is required"),
+  file: Yup.mixed().required("A file is required"),
+});
+
+const validate = async (values) => {
+  try {
+    await validationSchema.validate(values, { abortEarly: false });
+  } catch (errors) {
+    return errors.inner.reduce((acc, error) => {
+      acc[error.path] = error.message;
+      return acc;
+    }, {});
+  }
+};
+
 const LeafImage = ({ src }) => (
   <div>
     <img src={src} height="75px" width="75px" alt="Leaf" />
@@ -24,19 +55,37 @@ const LeafImage = ({ src }) => (
 );
 
 const leafImages = [
-  "http://www.pngmart.com/files/1/Fall-Autumn-Leaves-Transparent-PNG.png",
-  "http://www.pngmart.com/files/1/Autumn-Fall-Leaves-Pictures-Collage-PNG.png",
-  "http://www.pngmart.com/files/1/Autumn-Fall-Leaves-Clip-Art-PNG.png",
-  "http://www.pngmart.com/files/1/Green-Leaves-PNG-File.png",
-  "http://www.pngmart.com/files/1/Transparent-Autumn-Leaves-Falling-PNG.png",
-  "http://www.pngmart.com/files/1/Realistic-Autumn-Fall-Leaves-PNG.png",
+  "https://www.pngmart.com/files/1/Fall-Autumn-Leaves-Transparent-PNG.png",
+  "https://www.pngmart.com/files/1/Autumn-Fall-Leaves-Pictures-Collage-PNG.png",
+  "https://www.pngmart.com/files/1/Autumn-Fall-Leaves-Clip-Art-PNG.png",
+  "https://www.pngmart.com/files/1/Green-Leaves-PNG-File.png",
+  "https://www.pngmart.com/files/1/Transparent-Autumn-Leaves-Falling-PNG.png",
+  "https://www.pngmart.com/files/1/Realistic-Autumn-Fall-Leaves-PNG.png",
 ];
 
 const OrderComponent = () => {
   const fileRef = useRef(null);
+
+  const onSubmit = (values) => {
+    console.log("Form data:", values);
+  };
+
+  const renderField = (name, placeholder, type = "text") => (
+    <Field name={name}>
+      {({ input, meta }) => (
+        <FormInput
+          {...input}
+          type={type}
+          placeholder={placeholder}
+          onBlur={() => input.onBlur(input.value.trim())}
+          isError={meta.touched && meta.error}
+        />
+      )}
+    </Field>
+  );
+
   return (
     <OrderContainer>
-      {/* <Particles /> */}
       <OrderWrapper>
         <Title>Get your notes</Title>
         <Desc>
@@ -44,116 +93,157 @@ const OrderComponent = () => {
           Enter any other information in the Additional Notes section. After
           submitting this form you will be taken to complete the Payment.
         </Desc>
-        <NoteWrapper>
-          <GroupWrapper>
-            <GroupTitle>PRIMARY APPLICANT</GroupTitle>
-            <Form>
-              <FormItem>
-                <FormLabel>First Name *</FormLabel>
-                <FormInput placeholder="First Name"></FormInput>
-              </FormItem>
-              <FormItem>
-                <FormLabel>Last Name *</FormLabel>
-                <FormInput placeholder="Last Name"></FormInput>
-              </FormItem>
-              <FormItem>
-                <FormLabel>Email Address *</FormLabel>
-                <FormInput placeholder="Email Address" type="email"></FormInput>
-              </FormItem>
-              <FormItem>
-                <FormLabel>Date of Birth *</FormLabel>
-                <FormInput placeholder="Date of Birth" type="date"></FormInput>
-              </FormItem>
-              <FormItem>
-                <FormLabel>UCI or Client ID Number *</FormLabel>
-                <FormInput placeholder="xx-xxx-xx or xx-xxx-xxx"></FormInput>
-              </FormItem>
-            </Form>
-          </GroupWrapper>
-          <GroupWrapper>
-            <GroupTitle>SPOUSE or PARTNER</GroupTitle>
-            <Form>
-              <FormItem>
-                <FormLabel>First Name *</FormLabel>
-                <FormInput placeholder="First Name"></FormInput>
-              </FormItem>
-              <FormItem>
-                <FormLabel>Last Name *</FormLabel>
-                <FormInput placeholder="First Name"></FormInput>
-              </FormItem>
-              <FormItem>
-                <FormLabel>Email Address *</FormLabel>
-                <FormInput placeholder="First Name" type="email"></FormInput>
-              </FormItem>
-              <FormItem>
-                <FormLabel>Spouse DOB</FormLabel>
-                <FormInput placeholder="First Name" type="date"></FormInput>
-              </FormItem>
-              <FormItem>
-                <FormLabel>UCI or Client ID Number *</FormLabel>
-                <FormInput placeholder="xx-xxx-xx or xx-xxx-xxx"></FormInput>
-              </FormItem>
-            </Form>
-          </GroupWrapper>
-          <GroupWrapper>
-            <GroupTitle>APPLICANT INFO</GroupTitle>
-            <Form>
-              <FormItem>
-                <FormLabel>Visa Type *</FormLabel>
-                <FormSelect>
-                  <option value="">--Please choose an option--</option>
-                  <option value="study_work">Study Permit</option>
-                  <option value="temporary_visa">Temporary(Guest) Visa</option>
-                  <option value="work_permit">Work Permit</option>
-                  <option value="permanent_residence">
-                    Permanent Residence
-                  </option>
-                  <option value="other">Other</option>
-                </FormSelect>
-              </FormItem>
-              <FormItem>
-                <FormLabel>Application NO</FormLabel>
-                <FormInput placeholder="X-XXX-XXX or unknow"></FormInput>
-              </FormItem>
-              <FormItem>
-                <FormLabel>Primary Email *</FormLabel>
-                <FormInput placeholder="Primary Email" type="email"></FormInput>
-              </FormItem>
-              <FormItem>
-                <FormLabel>Alternate Email</FormLabel>
-                <FormInput
-                  placeholder="Alternate Email"
-                  type="email"
-                ></FormInput>
-              </FormItem>
-              <FormItem>
-                <FormLabel>Additional Notes</FormLabel>
-                <FormText placeholder="Provide any relavant information for your application"></FormText>
-              </FormItem>
-            </Form>
-          </GroupWrapper>
-          <GroupWrapper>
-            <GroupTitle>* * *</GroupTitle>
-            <Form>
-              <FormItem>
-                <FormLabel>Transaction ID *</FormLabel>
-                <FormInput placeholder="xxxxxxxxxx"></FormInput>
-              </FormItem>
-              <FileUpload>
-                <span onClick={() => fileRef.current.click()}>Upload File</span>
-                <FormInput type="file" ref={fileRef} hidden />
-              </FileUpload>
-              <FormItem id="last">
-                <input type="checkbox" />
-                <span style={{ marginLeft: 10 }}>
-                  I certify that the information provided is true and I agree to
-                  the terms
-                </span>
-              </FormItem>
-            </Form>
-          </GroupWrapper>
-          <OrderButton>Order Now</OrderButton>
-        </NoteWrapper>
+        <Form
+          onSubmit={onSubmit}
+          validate={validate}
+          render={({ handleSubmit, submitting }) => (
+            <form onSubmit={handleSubmit}>
+              <NoteWrapper>
+                <GroupWrapper>
+                  <GroupTitle>PRIMARY APPLICANT</GroupTitle>
+                  <FormContent>
+                    <FormItem>
+                      <FormLabel>First Name *</FormLabel>
+                      {renderField("firstName", "First Name")}
+                    </FormItem>
+                    <FormItem>
+                      <FormLabel>Last Name *</FormLabel>
+                      {renderField("lastName", "Last Name")}
+                    </FormItem>
+                    <FormItem>
+                      <FormLabel>Email Address *</FormLabel>
+                      {renderField("email", "Email Address")}
+                    </FormItem>
+                    <FormItem>
+                      <FormLabel>Date of Birth *</FormLabel>
+                      {renderField("dob", "Date of Birth", "date")}
+                    </FormItem>
+                    <FormItem>
+                      <FormLabel>UCI or Client ID Number *</FormLabel>
+                      {renderField("uciOrClientId", "xx-xxx-xx or xx-xxx-xxx")}
+                    </FormItem>
+                  </FormContent>
+                </GroupWrapper>
+                <GroupWrapper>
+                  <GroupTitle>SPOUSE or PARTNER</GroupTitle>
+                  <FormContent>
+                    <FormItem>
+                      <FormLabel>First Name *</FormLabel>
+                      {renderField("s_firstName", "First Name")}
+                    </FormItem>
+                    <FormItem>
+                      <FormLabel>Last Name *</FormLabel>
+                      {renderField("s_lastName", "Last Name")}
+                    </FormItem>
+                    <FormItem>
+                      <FormLabel>Email Address *</FormLabel>
+                      {renderField("s_email", "Email Address")}
+                    </FormItem>
+                    <FormItem>
+                      <FormLabel>Spouse DOB</FormLabel>
+                      {renderField("s_dob", "Date of Birth", "date")}
+                    </FormItem>
+                    <FormItem>
+                      <FormLabel>UCI or Client ID Number *</FormLabel>
+                      {renderField(
+                        "s_uciOrClientId",
+                        "xx-xxx-xx or xx-xxx-xxx"
+                      )}
+                    </FormItem>
+                  </FormContent>
+                </GroupWrapper>
+                <GroupWrapper>
+                  <GroupTitle>APPLICANT INFO</GroupTitle>
+                  <FormContent>
+                    <FormItem>
+                      <FormLabel>Visa Type *</FormLabel>
+
+                      <Field name="app_visatype">
+                        {({ input, meta }) => (
+                          <FormSelect
+                            {...input}
+                            onBlur={() => input.onBlur(input.value.trim())}
+                            isError={meta.touched && meta.error}
+                          >
+                            <option value="">
+                              --Please choose an option--
+                            </option>
+                            <option value="study_work">Study Permit</option>
+                            <option value="temporary_visa">
+                              Temporary(Guest) Visa
+                            </option>
+                            <option value="work_permit">Work Permit</option>
+                            <option value="permanent_residence">
+                              Permanent Residence
+                            </option>
+                            <option value="other">Other</option>
+                          </FormSelect>
+                        )}
+                      </Field>
+                    </FormItem>
+                    <FormItem>
+                      <FormLabel>Application No</FormLabel>
+                      {renderField("app_no", "X-XXX-XXX or unknow")}
+                    </FormItem>
+                    <FormItem>
+                      <FormLabel>Primary Email *</FormLabel>
+                      {renderField("app_email", "Primary Email")}
+                    </FormItem>
+                    <FormItem>
+                      <FormLabel>Alternate Email</FormLabel>
+                      {renderField("app_alter_email", "Alternate Email")}
+                    </FormItem>
+                    <FormItem>
+                      <FormLabel>Additional Notes</FormLabel>
+                      <Field name="app_notes">
+                        {({ input, meta }) => (
+                          <FormText
+                            {...input}
+                            placeholder="Provide any relevant information for your application"
+                            onBlur={() => input.onBlur(input.value.trim())}
+                            isError={meta.touched && meta.error}
+                          />
+                        )}
+                      </Field>
+                    </FormItem>
+                  </FormContent>
+                </GroupWrapper>
+                <GroupWrapper>
+                  <GroupTitle>* * *</GroupTitle>
+                  <FormContent>
+                    <FormItem>
+                      <FormLabel>Transaction ID *</FormLabel>
+                      {renderField("transactionId", "xxxxxxxxxx")}
+                    </FormItem>
+
+                    <Field name="file">
+                      {({ input, meta }) => (
+                        <FileUpload isError={meta.touched && meta.error}>
+                          <span onClick={() => fileRef.current.click()}>
+                            {!meta.error ? "Loaded File" : "Upload File"}
+                          </span>
+                          <FormInput
+                            type="file"
+                            ref={fileRef}
+                            hidden
+                            onChange={(event) => {
+                              event.preventDefault();
+                              input.onChange(event.target.files[0]);
+                            }}
+                            isError={meta.touched && meta.error}
+                          />
+                        </FileUpload>
+                      )}
+                    </Field>
+                  </FormContent>
+                </GroupWrapper>
+                <OrderButton type="submit" disabled={submitting}>
+                  Order Now
+                </OrderButton>
+              </NoteWrapper>
+            </form>
+          )}
+        />
       </OrderWrapper>
       <div className="leaf">
         {leafImages.map((src) => (

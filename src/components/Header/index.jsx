@@ -30,11 +30,29 @@ const HeaderComponent = () => {
       setIsMobile(window.innerWidth <= 768);
     };
     window.addEventListener("resize", handleResize);
-    // Clean up the event listener on component unmount
     return () => {
       window.removeEventListener("resize", handleResize);
     };
   }, []);
+
+  const renderMenuItem = (item, index) => {
+    const content = <MenuItem>{item.text}</MenuItem>;
+    return item.href ? (
+      <a key={index} href={item.href}>
+        {content}
+      </a>
+    ) : (
+      <Link key={index} to={item.to}>
+        {content}
+      </Link>
+    );
+  };
+
+  const renderOrderButton = () => (
+    <OrderBtn onClick={handleOrderClick}>
+      <span>Order</span>
+    </OrderBtn>
+  );
 
   return (
     <HeaderContainer>
@@ -47,22 +65,8 @@ const HeaderComponent = () => {
             />
           </Link>
           <MenuWrapper showMenu={showMenu}>
-            {menuItems.map((item, index) =>
-              item.href ? (
-                <a key={index} href={item.href}>
-                  <MenuItem>{item.text}</MenuItem>
-                </a>
-              ) : (
-                <Link key={index} to={item.to}>
-                  <MenuItem>{item.text}</MenuItem>
-                </Link>
-              )
-            )}
-            {isMobile && (
-              <OrderBtn onClick={handleOrderClick}>
-                <span>Order</span>
-              </OrderBtn>
-            )}
+            {menuItems.map(renderMenuItem)}
+            {isMobile && renderOrderButton()}
           </MenuWrapper>
         </div>
         {isMobile ? (
@@ -70,9 +74,7 @@ const HeaderComponent = () => {
             <FaBars size={30} onClick={() => setShowMenu(!showMenu)} />
           </div>
         ) : (
-          <OrderBtn onClick={handleOrderClick}>
-            <span>Order</span>
-          </OrderBtn>
+          renderOrderButton()
         )}
       </HeaderMenus>
     </HeaderContainer>

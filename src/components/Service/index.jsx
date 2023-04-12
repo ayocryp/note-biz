@@ -14,10 +14,17 @@ import {
 } from "./service.style";
 
 const ServiceComponent = () => {
+  const servicesList = [
+    "Lets you know if your representative is doing his/her job",
+    "Helps your prepare for interview and gather documents",
+    "Lets you know the status of your visa application",
+    "Understand visa refusal reasons",
+  ];
+
   return (
     <ServiceContainer id="what">
       <LeftImage>
-        <NoteImage src="/assets/image/service/note.svg" alt="" />
+        <NoteImage src="/assets/image/service/note.svg" alt="Note" />
       </LeftImage>
       <MainSection>
         <SectionWrapper>
@@ -32,10 +39,11 @@ const ServiceComponent = () => {
               lean on.
             </p>
             <p>GCMS Notes are helpful with the following;</p>
-            <li>Lets you know if your representative is doing his/her job</li>
-            <li>Helps your prepare for interview and gather documents</li>
-            <li>Lets you know the status of your visa application</li>
-            <li>Understand visa refusal reasons</li>
+            <ul>
+              {servicesList.map((service, index) => (
+                <li key={index}>{service}</li>
+              ))}
+            </ul>
             <p>
               We submit your request to the government agency once we receive
               the application details, payment, and consent form. After
@@ -65,12 +73,15 @@ const ServiceComponent = () => {
             </p>
           </SectionContent>
           <SectionImage>
-            <WritingImage src="/assets/Image/Service/writing.svg" alt="" />
+            <WritingImage
+              src="/assets/Image/Service/writing.svg"
+              alt="Writing"
+            />
           </SectionImage>
         </SectionWrapper>
       </MainSection>
       <RightImage>
-        <PenImage src="/assets/Image/Service/pen.svg" alt="" />
+        <PenImage src="/assets/Image/Service/pen.svg" alt="Pen" />
       </RightImage>
     </ServiceContainer>
   );
