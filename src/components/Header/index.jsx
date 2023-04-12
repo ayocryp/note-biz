@@ -1,6 +1,4 @@
-import React, { useState, useEffect } from "react";
-import { Link, useLocation, useNavigate } from "react-router-dom";
-
+import { Link, useNavigate } from "react-router-dom";
 import {
   HeaderContainer,
   HeaderLogo,
@@ -8,57 +6,75 @@ import {
   MenuItem,
   OrderBtn,
   MenuWrapper,
-  SubOrder,
 } from "./header.style";
-
-// react icons
+import { useEffect, useState } from "react";
 import { FaBars } from "react-icons/fa";
 
+const menuItems = [
+  { to: "/", text: "Home" },
+  { href: "/#what", text: "What we do" },
+  { to: "/contact", text: "Contact us" },
+];
+
 const HeaderComponent = () => {
-  const [menuState, setMenuState] = useState(false);
-  const [flag, setFlag] = useState(false);
-  const location = useLocation();
   const navigate = useNavigate();
+  const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
+  const [showMenu, setShowMenu] = useState(false);
+
+  const handleOrderClick = () => {
+    navigate("/order");
+  };
 
   useEffect(() => {
-    setFlag(location.pathname === "/contact" || location.pathname === "/order");
-  }, [location]);
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 768);
+    };
+    window.addEventListener("resize", handleResize);
+    // Clean up the event listener on component unmount
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
 
   return (
     <HeaderContainer>
       <HeaderMenus>
-        <Link to="/">
-          <HeaderLogo
-            src="/assets/image/Header/100710_red_maple_leaf.svg"
-            alt=""
-          />
-        </Link>
-        <MenuWrapper state={menuState}>
+        <div>
           <Link to="/">
-            <MenuItem>Home</MenuItem>
+            <HeaderLogo
+              src="/assets/image/Header/100710_red_maple_leaf.svg"
+              alt=""
+            />
           </Link>
-          <a href="/#what">
-            <MenuItem>What we do</MenuItem>
-          </a>
-          <Link to="/contact">
-            <MenuItem>Contact us</MenuItem>
-          </Link>
-          <SubOrder>Order</SubOrder>
-        </MenuWrapper>
-      </HeaderMenus>
-      {!flag && (
-        <OrderBtn
-          onClick={() => {
-            setMenuState(!menuState);
-            navigate("/order");
-          }}
-        >
-          <span>Order</span>
+          <MenuWrapper showMenu={showMenu}>
+            {menuItems.map((item, index) =>
+              item.href ? (
+                <a key={index} href={item.href}>
+                  <MenuItem>{item.text}</MenuItem>
+                </a>
+              ) : (
+                <Link key={index} to={item.to}>
+                  <MenuItem>{item.text}</MenuItem>
+                </Link>
+              )
+            )}
+            {isMobile && (
+              <OrderBtn onClick={handleOrderClick}>
+                <span>Order</span>
+              </OrderBtn>
+            )}
+          </MenuWrapper>
+        </div>
+        {isMobile ? (
           <div>
-            <FaBars />
+            <FaBars size={30} onClick={() => setShowMenu(!showMenu)} />
           </div>
-        </OrderBtn>
-      )}
+        ) : (
+          <OrderBtn onClick={handleOrderClick}>
+            <span>Order</span>
+          </OrderBtn>
+        )}
+      </HeaderMenus>
     </HeaderContainer>
   );
 };

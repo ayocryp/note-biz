@@ -66,7 +66,7 @@ export const OrderWrapper = styled.div`
   padding: 8%;
   border-radius: 7px;
   background: rgba(39, 15, 15, 0.9);
-  max-width: 55%;
+  max-width: 80%;
   width: 100%;
   box-sizing: border-box;
 `;
@@ -112,7 +112,7 @@ export const Form = styled.div`
   flex-direction: column;
   gap: 10px;
 
-  @media screen and (max-width: 425px) {
+  @media screen and (max-width: 768px) {
     gap: 20px;
   }
 `;
@@ -124,7 +124,7 @@ export const FormItem = styled.div`
   justify-content: ${(props) =>
     props.id === "last" ? "center" : "flex-start"};
 
-  @media screen and (max-width: 425px) {
+  @media screen and (max-width: 768px) {
     align-items: start;
     gap: 10px;
 
@@ -135,7 +135,7 @@ export const FormItem = styled.div`
 export const FormLabel = styled.div`
   width: 60%;
   white-space: nowrap;
-  @media screen and (max-width: 425px) {
+  @media screen and (max-width: 768px) {
     width: 100%;
   }
 `;

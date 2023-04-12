@@ -34,7 +34,6 @@ const leafImages = [
 ];
 
 const OrderComponent = () => {
-  const [file, setFile] = useState(null);
   const fileRef = useRef(null);
   return (
     <OrderContainer>
