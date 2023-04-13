@@ -55,7 +55,8 @@ export const MenuItem = styled.div`
   color: #262c55;
   cursor: pointer;
   display: block;
-  font-size: 15px;
+  font-size: 1rem;
+  font-family: "Moderat", sans-serif !important;
   font-weight: 500;
   justify-content: flex-start;
   line-height: 1.8rem;
@@ -67,11 +68,15 @@ export const OrderBtn = styled.div`
   width: fit-content;
   background-color: #0a0e27;
   cursor: pointer;
-  padding: 10px 20px;
-  font-size: 1.25rem;
-  border-radius: 10px;
+  padding: 11px 20px;
+  font-size: 1rem;
+  font-family: "Moderat", sans-serif !important;
+  font-weight: 100;
+  border-radius: 10px 10px;
 
   :hover {
-    box-shadow: 0 5px 10px rgba(29, 29, 29, 0.5);
-  }
+    // box-shadow: 0 5px 10px rgba(29, 29, 29, 0.5);
+    background: #fff;
+    color: #0a0e27;
+    transition: all ease 0.9s;
 `;
