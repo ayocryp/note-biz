@@ -34,7 +34,6 @@ export const MenuWrapper = styled.div`
   display: flex;
   align-items: center;
   transition: all 0.3s ease-in-out;
-
   a {
     text-decoration: none;
   }
@@ -44,11 +43,11 @@ export const MenuWrapper = styled.div`
     flex-direction: column;
     align-items: flex-start;
     position: absolute;
-    top: 70px;
+    top: 80px;
     gap: 10px;
     background-color: rgb(236, 236, 236);
     overflow: hidden;
-    height: ${(props) => (props.showMenu ? "205px" : "0px")};
+    height: ${(props) => (props.showMenu ? "280px" : "0px")};
   }
 `;
 
@@ -56,7 +55,7 @@ export const MenuItem = styled.div`
   color: #262c55;
   cursor: pointer;
   display: block;
-  font-size: 1.5rem;
+  font-size: 15px;
   font-weight: 500;
   justify-content: flex-start;
   line-height: 1.8rem;
