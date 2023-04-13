@@ -64,11 +64,11 @@ const HeaderComponent = () => {
               alt=""
             />
           </Link>
-          <MenuWrapper showMenu={showMenu}>
-            {menuItems.map(renderMenuItem)}
-            {isMobile && renderOrderButton()}
-          </MenuWrapper>
         </div>
+        <MenuWrapper showMenu={showMenu}>
+          {menuItems.map(renderMenuItem)}
+          {isMobile && renderOrderButton()}
+        </MenuWrapper>
         {isMobile ? (
           <div>
             <FaBars size={30} onClick={() => setShowMenu(!showMenu)} />
