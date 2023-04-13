@@ -14,7 +14,7 @@ export const GetInTouchContainer = styled.div`
 export const GetInTouchWrapper = styled.div`
   padding: 8%;
   border-radius: 7px;
-  background: rgba(39, 15, 15, 0.9);
+  background: #0a0e27;
   max-width: 968px;
   width: 100%;
   box-sizing: border-box;
@@ -37,7 +37,7 @@ export const Desc = styled.div`
 `;
 
 export const TouchWrapper = styled.div`
-  color: rgba(39, 15, 15, 0.9);
+  color: #0a0e27;
   background: white;
   padding: 10%;
   display: flex;
@@ -50,12 +50,12 @@ export const IconDesc = styled.div`
 `;
 
 export const DownloadBtn = styled.a`
+  cursor: pointer;
   display: flex;
   align-items: center;
   text-decoration: none;
-  border: 1px solid rgb(39, 15, 15, 0.9);
   padding: 12px 18px;
-  border-radius: 3px;
+  border-radius: 10px;
   background-color: rgb(39, 15, 15);
   color: white;
   margin-top: 50px;
@@ -71,11 +71,15 @@ export const DownloadBtn = styled.a`
     color: black;
     justify-content: center;
   }
+
+  :hover {
+    box-shadow: 0 5px 10px rgba(29, 29, 29, 0.5);
+  }
 `;
 
 export const ContactIcon = styled.div`
   font-size: 25px;
   padding-right: 8px;
-  color: rgba(39, 15, 15, 0.9);
+  color: #0a0e27;
   margin-top: 50px;
 `;

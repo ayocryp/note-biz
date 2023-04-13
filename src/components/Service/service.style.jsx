@@ -31,7 +31,7 @@ export const SectionTitle = styled.div`
   font-size: 1.75rem;
   font-weight: 500;
   line-height: 1.2;
-  color: rgb(88, 56, 56);
+  color: #0a0e27;
   text-align: center;
   margin: 56px 0;
 `;
@@ -40,7 +40,7 @@ export const SectionContent = styled.div`
   background-color: #f8f9fa;
   padding: 24px 48px 48px;
   line-height: 1.5;
-  color: rgb(88, 56, 56);
+  color: #0a0e27;
   text-align: center;
   p {
     font-size: 1.3rem;

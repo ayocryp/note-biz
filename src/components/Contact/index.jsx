@@ -1,4 +1,3 @@
-import React from "react";
 import {
   ContactContainer,
   ContactWrapper,
@@ -11,37 +10,41 @@ import {
 import { AiOutlineInstagram, AiOutlineTwitter } from "react-icons/ai";
 import { FaTelegram } from "react-icons/fa";
 
+const ContactList = ({ title, children }) => (
+  <ContactListWrapper>
+    <ChannelTitle>{title}</ChannelTitle>
+    {children}
+  </ContactListWrapper>
+);
+
+const IconChannelItem = ({ icon: Icon, label }) => (
+  <ChannelItem>
+    <Icon />
+    {label}
+  </ChannelItem>
+);
+
 const ContactComponent = () => {
   return (
     <ContactContainer>
       <ContactWrapper>
-        <ContactListWrapper>
-          <ChannelTitle>Contact us</ChannelTitle>
-          <ChannelItem>
-            <AiOutlineTwitter />
-            Twitter
-          </ChannelItem>
-          <ChannelItem>
-            <FaTelegram />
-            Telegram
-          </ChannelItem>
-          <ChannelItem>
-            <AiOutlineInstagram />
-            Instagram
-          </ChannelItem>
-        </ContactListWrapper>
-        <ContactListWrapper>
-          <ChannelTitle>Updates</ChannelTitle>
-          <ChannelItem>CIBC news</ChannelItem>
-          <ChannelItem>Study Visa</ChannelItem>
-          <ChannelItem>Permanent Residence</ChannelItem>
-        </ContactListWrapper>
-        <ContactListWrapper>
-          <ChannelTitle>Order your notes</ChannelTitle>
-          <ChannelItem>CIBC news</ChannelItem>
-          <ChannelItem>Study Visa</ChannelItem>
-          <ChannelItem>Permanent Residence</ChannelItem>
-        </ContactListWrapper>
+        <div>
+          <ContactList title="Contact us">
+            <IconChannelItem icon={AiOutlineTwitter} label="Twitter" />
+            <IconChannelItem icon={FaTelegram} label="Telegram" />
+            <IconChannelItem icon={AiOutlineInstagram} label="Instagram" />
+          </ContactList>
+          <ContactList title="Updates">
+            <ChannelItem>CIBC news</ChannelItem>
+            <ChannelItem>Study Visa</ChannelItem>
+            <ChannelItem>Permanent Residence</ChannelItem>
+          </ContactList>
+          <ContactList title="Order your notes">
+            <ChannelItem>CIBC news</ChannelItem>
+            <ChannelItem>Study Visa</ChannelItem>
+            <ChannelItem>Permanent Residence</ChannelItem>
+          </ContactList>
+        </div>
       </ContactWrapper>
       <FooterImg src="/assets/image/Header/100710_red_maple_leaf.svg" alt="" />
     </ContactContainer>

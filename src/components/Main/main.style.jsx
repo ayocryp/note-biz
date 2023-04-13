@@ -22,15 +22,19 @@ export const ArticleContainer = styled.div`
 `;
 
 export const ArticleTitle = styled.div`
-  h2 {
-    color: #212529;
-    margin: 0;
-    font-size: 55px;
-    font-weight: 500;
-    text-shadow: 1px 2px 2px rgb(88, 56, 56);
-    @media (max-width: 900px) {
-      font-size: 35px;
-    }
+  color: #fb9129;
+  font-family: "Millik", sans-serif !important;
+  margin: 0;
+  font-size: 70px;
+  font-weight: 500;
+  @media (max-width: 900px) {
+    font-size: 35px;
+  }
+
+  span {
+    color: black;
+    font-size: 50px;
+    font-family: "Millik", sans-serif !important;
   }
 `;
 
@@ -65,16 +69,20 @@ export const ArticleImage = styled.img`
 export const OrderBtn = styled.div`
   color: rgb(255, 255, 255);
   width: fit-content;
-  background-color: rgb(88, 56, 56);
+  background-color: #0a0e27;
   cursor: pointer;
   padding: 12px 16px;
   font-size: 1.25rem;
-  border-radius: 0.3rem;
+  border-radius: 10px;
+  :hover {
+    box-shadow: 0 5px 10px rgba(29, 29, 29, 0.5);
+  }
 `;
 export const MainWrapper = styled.div`
   max-width: 1320px;
   display: flex;
   align-items: flex-end;
+  padding: 100px 0;
   @media (max-width: 990px) {
     flex-direction: column;
   }
