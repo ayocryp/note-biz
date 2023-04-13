@@ -29,7 +29,7 @@ export const FaqButton = styled.div`
   letter-spacing: -0.03em;
   line-height: 4rem;
   margin-bottom: 1rem;
-
+  font-family: "Millik", sans-serif !important;
   @media (max-width: 425px) {
     font-size: 1.5rem;
     line-height: 2rem;
@@ -47,5 +47,8 @@ export const FaqContent = styled.div`
   color: #fff;
   margin: 0 auto;
   max-width: 109.2rem;
-  padding: 3rem;
+  padding: 100px;
+  @media (max-width: 425px) {
+    padding: 3rem;
+  }
 `;

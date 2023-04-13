@@ -28,21 +28,23 @@ const ContactComponent = () => {
   return (
     <ContactContainer>
       <ContactWrapper>
-        <ContactList title="Contact us">
-          <IconChannelItem icon={AiOutlineTwitter} label="Twitter" />
-          <IconChannelItem icon={FaTelegram} label="Telegram" />
-          <IconChannelItem icon={AiOutlineInstagram} label="Instagram" />
-        </ContactList>
-        <ContactList title="Updates">
-          <ChannelItem>CIBC news</ChannelItem>
-          <ChannelItem>Study Visa</ChannelItem>
-          <ChannelItem>Permanent Residence</ChannelItem>
-        </ContactList>
-        <ContactList title="Order your notes">
-          <ChannelItem>CIBC news</ChannelItem>
-          <ChannelItem>Study Visa</ChannelItem>
-          <ChannelItem>Permanent Residence</ChannelItem>
-        </ContactList>
+        <div>
+          <ContactList title="Contact us">
+            <IconChannelItem icon={AiOutlineTwitter} label="Twitter" />
+            <IconChannelItem icon={FaTelegram} label="Telegram" />
+            <IconChannelItem icon={AiOutlineInstagram} label="Instagram" />
+          </ContactList>
+          <ContactList title="Updates">
+            <ChannelItem>CIBC news</ChannelItem>
+            <ChannelItem>Study Visa</ChannelItem>
+            <ChannelItem>Permanent Residence</ChannelItem>
+          </ContactList>
+          <ContactList title="Order your notes">
+            <ChannelItem>CIBC news</ChannelItem>
+            <ChannelItem>Study Visa</ChannelItem>
+            <ChannelItem>Permanent Residence</ChannelItem>
+          </ContactList>
+        </div>
       </ContactWrapper>
       <FooterImg src="/assets/image/Header/100710_red_maple_leaf.svg" alt="" />
     </ContactContainer>

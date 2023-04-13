@@ -3,15 +3,19 @@ import styled from "styled-components";
 export const ContactContainer = styled.div`
   position: relative;
   background-color: #e2e2e2;
-  padding: 48px;
+  padding: 48px 0;
 `;
 
 export const ContactWrapper = styled.div`
-  max-width: 1320px;
-  width: 90%;
-  margin: auto;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  display: flex;
+  justify-content: center;
+
+  & > div {
+    width: 60%;
+    display: grid;
+    align-items: start;
+    grid-template-columns: repeat(3, 1fr);
+  }
 `;
 
 export const ContactListWrapper = styled.div`
@@ -19,6 +23,7 @@ export const ContactListWrapper = styled.div`
   padding: 0 12px;
   display: flex;
   flex-direction: column;
+  gap: 20px;
 `;
 
 export const ChannelTitle = styled.div`
@@ -26,6 +31,7 @@ export const ChannelTitle = styled.div`
   margin-bottom: 0.5rem;
   font-weight: 500;
   line-height: 1.2;
+  color: #1d1d1d;
 `;
 
 export const ChannelItem = styled.a`
@@ -40,6 +46,8 @@ export const ChannelItem = styled.a`
   width: fit-content;
   text-align: center;
   font-weight: 300;
+  color: #1d1d1d;
+  font-size: 16px;
 `;
 export const FooterImg = styled.img`
   position: fixed;

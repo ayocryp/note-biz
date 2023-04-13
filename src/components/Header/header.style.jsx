@@ -53,26 +53,14 @@ export const MenuWrapper = styled.div`
 `;
 
 export const MenuItem = styled.div`
-  color: rgba(0, 0, 0, 0.55);
+  color: #262c55;
   cursor: pointer;
-  padding-right: 0.5rem;
-  padding-left: 0.5rem;
-  transition: all 0.3s ease-in-out;
-
-  :hover {
-    border-bottom: 3px solid #0a0e27;
-    padding-bottom: 12px;
-  }
-
-  @media (max-width: 768px) {
-    padding: 10px 0;
-    width: 100%;
-
-    :hover {
-      border-bottom: 3px solid #0a0e27;
-      padding: 3px 0;
-    }
-  }
+  display: block;
+  font-size: 1.5rem;
+  font-weight: 500;
+  justify-content: flex-start;
+  line-height: 1.8rem;
+  padding: 1rem 1.2rem;
 `;
 
 export const OrderBtn = styled.div`

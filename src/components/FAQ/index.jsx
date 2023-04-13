@@ -1,7 +1,6 @@
 import {
   FaqContainer,
   FaqWrapper,
-  FaqTitle,
   FaqButton,
   FaqText,
   FaqContent,
@@ -18,7 +17,6 @@ const FAQ_DATA = [
 const FaqComponent = () => (
   <FaqContainer id="faq">
     <FaqWrapper>
-      <FaqTitle>FREQUENTLY ASKED QUESTIONS</FaqTitle>
       {FAQ_DATA.map(({ question, answer }) => (
         <FaqContent key={question}>
           <FaqButton>{question}</FaqButton>
