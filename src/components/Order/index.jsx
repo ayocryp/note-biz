@@ -1,6 +1,7 @@
 import { useRef } from "react";
 import { Form, Field } from "react-final-form";
 import * as Yup from "yup";
+import axios from "axios";
 import {
   Desc,
   FileUpload,
@@ -63,11 +64,24 @@ const leafImages = [
   "https://www.pngmart.com/files/1/Realistic-Autumn-Fall-Leaves-PNG.png",
 ];
 
+const sendData = async (data) => {
+  try {
+    const response = await axios.post(
+      "https://localhost:3000/api/sender",
+      data
+    );
+    console.log("Response from backend:", response.data);
+  } catch (error) {
+    console.error("Error sending data to backend:", error);
+  }
+};
+
 const OrderComponent = () => {
   const fileRef = useRef(null);
 
   const onSubmit = (values) => {
     console.log("Form data:", values);
+    sendData(values);
   };
 
   const renderField = (name, placeholder, type = "text") => (
