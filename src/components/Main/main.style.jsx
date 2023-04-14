@@ -25,16 +25,15 @@ export const ArticleTitle = styled.div`
   color: #fb9129;
   font-family: "Millik", sans-serif !important;
   margin: 0;
-  font-size: 90px;
-  font-weight: 600;
+  font-size: 70px;
+  font-weight: 500;
   @media (max-width: 900px) {
     font-size: 35px;
   }
 
   span {
     color: black;
-    font-size: 54px;
-    font-weight: 400;
+    font-size: 50px;
     font-family: "Millik", sans-serif !important;
   }
 `;
@@ -44,9 +43,7 @@ export const ArticleText = styled.div`
   p {
     margin: 0;
     color: #212529;
-    line-height: 1.9rem;
-    font-family: "Moderat", sans-serif !important;
-    font-weight: 100;
+    line-height: 1.7rem;
   }
 `;
 
@@ -74,14 +71,11 @@ export const OrderBtn = styled.div`
   width: fit-content;
   background-color: #0a0e27;
   cursor: pointer;
-  padding: 15px 16px;
-  font-size: 1rem;
-  font-family: "Moderat", sans-serif !important;
-  font-weight: 100;
-  border-radius: 10px 10px;
+  padding: 12px 16px;
+  font-size: 1.25rem;
+  border-radius: 10px;
   :hover {
-    // box-shadow: 0 5px 10px rgba(29, 29, 29, 0.5);
-    // background: #fb9129;
+    box-shadow: 0 5px 10px rgba(29, 29, 29, 0.5);
   }
 `;
 export const MainWrapper = styled.div`
