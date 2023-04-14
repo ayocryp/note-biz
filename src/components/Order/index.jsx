@@ -2,6 +2,7 @@ import { useRef } from "react";
 import { Form, Field } from "react-final-form";
 import * as Yup from "yup";
 import axios from "axios";
+
 import {
   Desc,
   FileUpload,
@@ -64,24 +65,47 @@ const leafImages = [
   "https://www.pngmart.com/files/1/Realistic-Autumn-Fall-Leaves-PNG.png",
 ];
 
+const fileToBase64 = (file) => {
+  return new Promise((resolve, reject) => {
+    const reader = new FileReader();
+    reader.readAsDataURL(file);
+    reader.onload = () => resolve(reader.result);
+    reader.onerror = (error) => reject(error);
+  });
+};
+
 const sendData = async (data) => {
   try {
     const response = await axios.post(
-      "https://localhost:3000/api/sender",
-      data
+      "http://localhost:5000/api/sender",
+      data,
+      {
+        headers: {
+          "Content-Type": "application/json",
+        },
+      }
     );
+
     console.log("Response from backend:", response.data);
+    return response;
   } catch (error) {
     console.error("Error sending data to backend:", error);
+    return error;
   }
 };
 
 const OrderComponent = () => {
   const fileRef = useRef(null);
 
-  const onSubmit = (values) => {
-    console.log("Form data:", values);
-    sendData(values);
+  const onSubmit = async (values) => {
+    const base64File = await fileToBase64(values.file);
+    let formData = {
+      file: base64File,
+      values,
+    };
+
+    await sendData(formData);
+    // Handle the response or error here
   };
 
   const renderField = (name, placeholder, type = "text") => (
@@ -238,6 +262,7 @@ const OrderComponent = () => {
                           </span>
                           <FormInput
                             type="file"
+                            accept=".pdf"
                             ref={fileRef}
                             hidden
                             onChange={(event) => {
