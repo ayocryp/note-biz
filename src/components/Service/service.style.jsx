@@ -28,7 +28,7 @@ export const SectionWrapper = styled.div`
 `;
 
 export const SectionTitle = styled.div`
-  font-size: 50px;
+  font-size: 2.75rem;
   font-weight: 500;
   line-height: 1.2;
   color: #0a0e27;
@@ -44,7 +44,8 @@ export const SectionContent = styled.div`
   color: #0a0e27;
   text-align: center;
   p {
-    font-size: 1.3rem;
+    font-size: 1.2rem;
+    font-family: "Millik", sans-serif !important;
   }
 `;
 

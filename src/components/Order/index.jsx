@@ -136,18 +136,18 @@ const OrderComponent = () => {
           Enter any other information in the Additional Notes section. After
           submitting this form you will be taken to complete the Payment.
         </Desc>
-        <DownloadBtn onClick={handleDownloadClick}>
-          DOWNLOAD CONSENT FORM
-          <span>
-            <BsArrowDownRight />
-          </span>
-        </DownloadBtn>
         <Form
           onSubmit={onSubmit}
           validate={validate}
           render={({ handleSubmit, submitting }) => (
             <form onSubmit={handleSubmit}>
               <NoteWrapper>
+                <DownloadBtn onClick={handleDownloadClick}>
+                  DOWNLOAD CONSENT FORM
+                  <span>
+                    <BsArrowDownRight />
+                  </span>
+                </DownloadBtn>
                 <GroupWrapper>
                   <GroupTitle>PRIMARY APPLICANT</GroupTitle>
                   <FormContent>
