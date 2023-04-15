@@ -34,18 +34,26 @@ const ContactComponent = () => {
             <IconChannelItem icon={FaTelegram} label="Telegram" />
             <IconChannelItem icon={AiOutlineInstagram} label="Instagram" />
           </ContactList>
-          <ContactList title="Updates">
-            <ChannelItem>CIBC news</ChannelItem>
+          <ContactList title="Other services">
+            <ChannelItem>Admissions</ChannelItem>
             <ChannelItem>Study Visa</ChannelItem>
             <ChannelItem>Permanent Residence</ChannelItem>
           </ContactList>
-          <ContactList title="Order your notes">
+          <ContactList title="News">
             <ChannelItem>CIBC news</ChannelItem>
             <ChannelItem>Study Visa</ChannelItem>
             <ChannelItem>Permanent Residence</ChannelItem>
+            <ChannelItem>Work visa</ChannelItem>
+            <ChannelItem>Travel news</ChannelItem>
+          </ContactList>
+          <ContactList title="Payment">
+            <ChannelItem>Terms</ChannelItem>
+            <ChannelItem>Privacy</ChannelItem>
+            <ChannelItem>IRCC</ChannelItem>
           </ContactList>
         </div>
       </ContactWrapper>
+      <p>All right reserved &copy; 2023</p>
       <FooterImg src="/assets/image/Header/100710_red_maple_leaf.svg" alt="" />
     </ContactContainer>
   );
