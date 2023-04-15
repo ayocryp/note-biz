@@ -2,6 +2,7 @@ import { useRef } from "react";
 import { Form, Field } from "react-final-form";
 import * as Yup from "yup";
 import axios from "axios";
+import {  toast } from 'react-toastify';
 
 import {
   Desc,
@@ -78,8 +79,8 @@ const fileToBase64 = (file) => {
 
 const sendData = async (data) => {
   try {
-    const response = await axios.post(
-      "https://mummyserena-note-server.netlify.app/api/sender",
+    await axios.post(
+      `${process.env.NEXT_SERVER}/api/sender`,
       data,
       {
         headers: {
@@ -88,10 +89,31 @@ const sendData = async (data) => {
       }
     );
 
-    console.log("Response from backend:", response.data);
-    return response;
+
+    toast.success('successful', {
+      position: "top-right",
+      autoClose: 5000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: "light",
+      });
+
+    return true;
   } catch (error) {
-    console.error("Error sending data to backend:", error);
+    toast.success('Error Happened', {
+      position: "top-right",
+      autoClose: 5000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: "light",
+      });
+
     return error;
   }
 };
