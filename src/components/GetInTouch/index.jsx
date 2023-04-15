@@ -2,7 +2,6 @@ import React from "react";
 import {
   ContactIcon,
   Desc,
-  DownloadBtn,
   GetInTouchContainer,
   GetInTouchWrapper,
   IconDesc,
@@ -10,7 +9,7 @@ import {
   TouchWrapper,
 } from "./touch.style";
 
-import { BsArrowDownRight, BsFillHouseFill } from "react-icons/bs";
+import { BsFillHouseFill } from "react-icons/bs";
 import { FaPhoneAlt } from "react-icons/fa";
 import { IoIosMail } from "react-icons/io";
 
@@ -29,10 +28,6 @@ const contactInfo = [
   },
 ];
 
-const handleDownloadClick = () => {
-  window.open(`${process.env.PUBLIC_URL}/assets/consent.pdf`, "_blank");
-};
-
 const GetInTouchComponent = () => (
   <GetInTouchContainer>
     <GetInTouchWrapper>
@@ -45,12 +40,6 @@ const GetInTouchComponent = () => (
             <IconDesc>{text}</IconDesc>
           </>
         ))}
-        <DownloadBtn onClick={handleDownloadClick}>
-          DOWNLOAD CONSENT FORM
-          <span>
-            <BsArrowDownRight />
-          </span>
-        </DownloadBtn>
       </TouchWrapper>
     </GetInTouchWrapper>
   </GetInTouchContainer>
