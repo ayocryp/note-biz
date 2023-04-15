@@ -136,18 +136,35 @@ const OrderComponent = () => {
           Enter any other information in the Additional Notes section. After
           submitting this form you will be taken to complete the Payment.
         </Desc>
+
         <Form
           onSubmit={onSubmit}
           validate={validate}
           render={({ handleSubmit, submitting }) => (
             <form onSubmit={handleSubmit}>
               <NoteWrapper>
-                <DownloadBtn onClick={handleDownloadClick}>
-                  DOWNLOAD CONSENT FORM
-                  <span>
-                    <BsArrowDownRight />
-                  </span>
-                </DownloadBtn>
+                <div>
+                  <p>
+                    <GroupTitle>Why is a consent form required?</GroupTitle>
+                    <br />A consent form is required pursuant to the Canadian
+                    Privacy Act, which states that personal information shall
+                    not, without the consent of the individual to whom it
+                    relates, be disclosed.
+                    <br />
+                    <br /> A properly filled in consent form will ensure timely
+                    processing of your order! Print and hand sign directly on
+                    the printed form. Each individual 16 years of age or older
+                    must sign on their own and the signature must be consistent
+                    with the official signature on the passport. Please review
+                    the instructions
+                  </p>
+                  <DownloadBtn onClick={handleDownloadClick}>
+                    DOWNLOAD CONSENT FORM
+                    <span>
+                      <BsArrowDownRight />
+                    </span>
+                  </DownloadBtn>
+                </div>
                 <GroupWrapper>
                   <GroupTitle>PRIMARY APPLICANT</GroupTitle>
                   <FormContent>
