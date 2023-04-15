@@ -4,6 +4,9 @@ export const FaqContainer = styled.div`
   display: flex;
   justify-content: center;
   padding: 90px;
+  @media (max-width: 425px) {
+    padding: 30px;
+  }
 `;
 
 export const FaqWrapper = styled.div`

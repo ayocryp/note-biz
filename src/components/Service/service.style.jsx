@@ -28,12 +28,13 @@ export const SectionWrapper = styled.div`
 `;
 
 export const SectionTitle = styled.div`
-  font-size: 1.75rem;
+  font-size: 50px;
   font-weight: 500;
   line-height: 1.2;
   color: #0a0e27;
   text-align: center;
   margin: 56px 0;
+  font-family: "Millik", sans-serif !important;
 `;
 
 export const SectionContent = styled.div`
@@ -62,9 +63,13 @@ export const RightImage = styled.div`
   }
 `;
 
-export const NoteImage = styled.img``;
+export const NoteImage = styled.img`
+  width: 100%;
+`;
 
-export const PenImage = styled.img``;
+export const PenImage = styled.img`
+  width: 100%;
+`;
 
 export const WritingImage = styled.img`
   width: 100px;
