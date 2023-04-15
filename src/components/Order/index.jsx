@@ -2,7 +2,7 @@ import { useRef } from "react";
 import { Form, Field } from "react-final-form";
 import * as Yup from "yup";
 import axios from "axios";
-import {  toast } from 'react-toastify';
+import { toast } from "react-toastify";
 
 import {
   Desc,
@@ -79,18 +79,13 @@ const fileToBase64 = (file) => {
 
 const sendData = async (data) => {
   try {
-    await axios.post(
-      `${process.env.NEXT_SERVER}/api/sender`,
-      data,
-      {
-        headers: {
-          "Content-Type": "application/json",
-        },
-      }
-    );
+    await axios.post(`${process.env.NEXT_PUBLIC_ENDPOINT}/api/sender`, data, {
+      headers: {
+        "Content-Type": "application/json",
+      },
+    });
 
-
-    toast.success('successful', {
+    toast.success("successful", {
       position: "top-right",
       autoClose: 5000,
       hideProgressBar: false,
@@ -99,11 +94,11 @@ const sendData = async (data) => {
       draggable: true,
       progress: undefined,
       theme: "light",
-      });
+    });
 
     return true;
   } catch (error) {
-    toast.success('Error Happened', {
+    toast.success("Error Happened", {
       position: "top-right",
       autoClose: 5000,
       hideProgressBar: false,
@@ -112,7 +107,7 @@ const sendData = async (data) => {
       draggable: true,
       progress: undefined,
       theme: "light",
-      });
+    });
 
     return error;
   }
