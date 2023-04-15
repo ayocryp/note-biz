@@ -140,8 +140,17 @@ const OrderComponent = () => {
         <Form
           onSubmit={onSubmit}
           validate={validate}
-          render={({ handleSubmit, submitting }) => (
-            <form onSubmit={handleSubmit}>
+          render={({ handleSubmit, submitting, form }) => (
+            <form
+              onSubmit={(event) => {
+                event.preventDefault();
+                handleSubmit().then(() => {
+                  if (!submitting) {
+                    form.reset();
+                  }
+                });
+              }}
+            >
               <NoteWrapper>
                 <div>
                   <p>
