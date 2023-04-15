@@ -79,7 +79,7 @@ const fileToBase64 = (file) => {
 const sendData = async (data) => {
   try {
     const response = await axios.post(
-      "http://localhost:5000/api/sender",
+      "https://mummyserena-note-server.netlify.app/api/sender",
       data,
       {
         headers: {
