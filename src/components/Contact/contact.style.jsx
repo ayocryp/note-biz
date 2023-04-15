@@ -15,6 +15,17 @@ export const ContactWrapper = styled.div`
     display: grid;
     align-items: start;
     grid-template-columns: repeat(3, 1fr);
+    @media (max-width: 768px) {
+      width: 80%;
+    }
+
+    @media (max-width: 425px) {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      padding-left: 35%;
+      gap: 50px;
+    }
   }
 `;
 

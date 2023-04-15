@@ -19,7 +19,9 @@ import {
   OrderWrapper,
   Title,
   FormSelect,
+  DownloadBtn,
 } from "./order.style";
+import { BsArrowDownRight } from "react-icons/bs";
 
 const validationSchema = Yup.object().shape({
   firstName: Yup.string().required("First Name is required"),
@@ -121,6 +123,9 @@ const OrderComponent = () => {
       )}
     </Field>
   );
+  const handleDownloadClick = () => {
+    window.open(`${process.env.PUBLIC_URL}/assets/consent.pdf`, "_blank");
+  };
 
   return (
     <OrderContainer>
@@ -131,6 +136,12 @@ const OrderComponent = () => {
           Enter any other information in the Additional Notes section. After
           submitting this form you will be taken to complete the Payment.
         </Desc>
+        <DownloadBtn onClick={handleDownloadClick}>
+          DOWNLOAD CONSENT FORM
+          <span>
+            <BsArrowDownRight />
+          </span>
+        </DownloadBtn>
         <Form
           onSubmit={onSubmit}
           validate={validate}

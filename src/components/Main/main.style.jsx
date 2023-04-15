@@ -27,9 +27,6 @@ export const ArticleTitle = styled.div`
   margin: 0;
   font-size: 70px;
   font-weight: 500;
-  @media (max-width: 900px) {
-    font-size: 35px;
-  }
 
   span {
     color: black;
