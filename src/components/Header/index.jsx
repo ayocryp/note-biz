@@ -15,7 +15,7 @@ const menuItems = [
   { href: "/#what", text: "What we do" },
   { to: "/contact", text: "Contact us" },
   { to: "/#", text: "Privacy" },
-  { to: "/#", text: "FAQ" },
+  { href: "/#faq", text: "FAQ" },
   { to: "/#", text: "Terms" },
 ];
 
