@@ -1,9 +1,8 @@
 import {
   ServiceContainer,
   SectionTitle,
-  SectionImage,
   SectionWrapper,
-  WritingImage,
+  SectionContent,
 } from "./service.style";
 
 const ServiceComponent = () => {
@@ -14,10 +13,18 @@ const ServiceComponent = () => {
           Build a successful online business with our{" "}
           <span>Commerce tools</span>
         </SectionTitle>
-
-        <SectionImage>
-          <WritingImage src="/assets/Image/Service/writing.svg" alt="Writing" />
-        </SectionImage>
+        <SectionContent>
+          <div>
+            <p>Store</p>
+            <p>
+              Create a free ecommerce website and start selling worldwide with
+              just a few clicks.
+            </p>
+          </div>
+          <div>
+            <img src="/assets/Image/Service/service.jpg" alt="service" />
+          </div>
+        </SectionContent>
       </SectionWrapper>
     </ServiceContainer>
   );

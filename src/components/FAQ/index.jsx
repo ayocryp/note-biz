@@ -1,10 +1,5 @@
-import {
-  FaqContainer,
-  FaqWrapper,
-  FaqButton,
-  FaqText,
-  FaqContent,
-} from "./faq.style";
+import { FaqContainer, FaqWrapper, SectionTitle } from "./faq.style";
+import Accordion from "react-bootstrap/Accordion";
 
 const FAQ_DATA = [
   {
@@ -17,12 +12,15 @@ const FAQ_DATA = [
 const FaqComponent = () => (
   <FaqContainer id="faq">
     <FaqWrapper>
-      {FAQ_DATA.map(({ question, answer }) => (
-        <FaqContent key={question}>
-          <FaqButton>{question}</FaqButton>
-          <FaqText>{answer}</FaqText>
-        </FaqContent>
-      ))}
+      <SectionTitle>Frequently Asked Questions</SectionTitle>
+      <Accordion flush data-aos="fade-up">
+        {FAQ_DATA.map(({ question, answer, index }) => (
+          <Accordion.Item eventKey={index} key={question}>
+            <Accordion.Header>{question}</Accordion.Header>
+            <Accordion.Body>{answer}</Accordion.Body>
+          </Accordion.Item>
+        ))}
+      </Accordion>
     </FaqWrapper>
   </FaqContainer>
 );

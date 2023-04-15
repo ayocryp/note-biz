@@ -1,23 +1,51 @@
 import styled from "styled-components";
 
 export const ServiceContainer = styled.div`
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #e2e2e2;
-  position: relative;
-  z-index: 1;
-  padding: 100px 0;
-`;
-
-export const LeftImage = styled.div`
-  z-index: 0;
-  position: absolute;
-  left: 0;
 `;
 
 export const SectionWrapper = styled.div`
-  width: 90%;
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+`;
+
+export const SectionContent = styled.div`
+  display: flex;
+  align-items: center;
+  width: 70%;
+  gap: 20px;
+
+  @media screen and (max-width: 1024px) {
+    width: 100%;
+  }
+
+  @media screen and (max-width: 768px) {
+    flex-direction: column;
+  }
+
+  div {
+    img {
+      width: 517px;
+      height: 648px;
+      object-fit: cover;
+      @media screen and (max-width: 768px) {
+        width: 100%;
+      }
+    }
+    p {
+      font-size: 20px;
+      :first-child {
+        font-size: 30px;
+        font-weight: 700;
+      }
+    }
+  }
 `;
 
 export const SectionTitle = styled.div`
@@ -37,15 +65,4 @@ export const SectionTitle = styled.div`
     margin: 56px 0;
     font-family: "Millik", sans-serif !important;
   }
-`;
-
-export const SectionImage = styled.div`
-  display: flex;
-  justify-content: center;
-  margin-top: 30px;
-`;
-
-export const WritingImage = styled.img`
-  width: 100px;
-  height: auto;
 `;
