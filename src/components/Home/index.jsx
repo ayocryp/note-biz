@@ -11,7 +11,7 @@ const HomeComponent = () => {
       <Main />
       <Service />
       <FaqComponent />
-      <ContactComponent />
+      <ContactCo mponent />
     </HomeContainer>
   );
 };

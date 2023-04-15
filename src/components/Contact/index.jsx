@@ -40,7 +40,7 @@ const ContactComponent = () => {
             <ChannelItem>Permanent Residence</ChannelItem>
           </ContactList>
           <ContactList title="Order your notes">
-            <ChannelItem>CIBC news</ChannelItem>
+            <ChannelItem>CIBC news</ChannelItem>/
             <ChannelItem>Study Visa</ChannelItem>
             <ChannelItem>Permanent Residence</ChannelItem>
           </ContactList>
