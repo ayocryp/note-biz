@@ -6,6 +6,34 @@ const leafAnimation = (left, duration, delay) => css`
   animation-delay: ${delay}s;
 `;
 
+export const DownloadBtn = styled.a`
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  padding: 12px 18px;
+  border-radius: 10px;
+  background-color: rgb(39, 15, 15);
+  color: white;
+  margin-top: 50px;
+  span {
+    margin-left: 3px;
+    display: flex;
+    width: 14px;
+    height: 14px;
+    align-items: center;
+    background-color: white;
+    border-radius: 2px;
+    font-size: 8px;
+    color: black;
+    justify-content: center;
+  }
+
+  :hover {
+    box-shadow: 0 5px 10px rgba(29, 29, 29, 0.5);
+  }
+`;
+
 export const OrderContainer = styled.div`
   padding: 150px 0;
   display: flex;
