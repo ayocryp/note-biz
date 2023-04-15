@@ -10,12 +10,13 @@ export const DownloadBtn = styled.a`
   cursor: pointer;
   display: flex;
   align-items: center;
+  justify-content: center;
   text-decoration: none;
   padding: 12px 18px;
   border-radius: 10px;
-  background-color: rgb(39, 15, 15);
+  background-color: #fb9129;
+  margin-bottom: 50px;
   color: white;
-  margin-top: 50px;
   span {
     margin-left: 3px;
     display: flex;
