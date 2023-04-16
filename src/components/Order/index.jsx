@@ -79,7 +79,7 @@ const fileToBase64 = (file) => {
 
 const sendData = async (data) => {
   try {
-    await axios.post(`${process.env.NEXT_PUBLIC_ENDPOINT}/api/sender`, data, {
+    await axios.post(`${process.env.REACT_APP_ENDPOINT}/api/sender`, data, {
       headers: {
         "Content-Type": "application/json",
       },
@@ -109,21 +109,27 @@ const sendData = async (data) => {
       theme: "light",
     });
 
-    return error;
+    return false;
   }
 };
 
 const OrderComponent = () => {
   const fileRef = useRef(null);
 
-  const onSubmit = async (values) => {
+  const onSubmit = async (values, form) => {
     const base64File = await fileToBase64(values.file);
     let formData = {
       file: base64File,
       values,
     };
 
-    await sendData(formData);
+    const success = await sendData(formData);
+
+    if (success) {
+      setTimeout(() => {
+        form.reset(); // Reset the form after successful submission
+      }, 0);
+    }
     // Handle the response or error here
   };
 
@@ -157,17 +163,8 @@ const OrderComponent = () => {
         <Form
           onSubmit={onSubmit}
           validate={validate}
-          render={({ handleSubmit, submitting, form }) => (
-            <form
-              onSubmit={(event) => {
-                event.preventDefault();
-                handleSubmit().then(() => {
-                  if (!submitting) {
-                    form.reset();
-                  }
-                });
-              }}
-            >
+          render={({ handleSubmit, submitting }) => (
+            <form onSubmit={handleSubmit}>
               <NoteWrapper>
                 <div>
                   <p>
