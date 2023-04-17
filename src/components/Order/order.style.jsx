@@ -222,4 +222,9 @@ export const OrderButton = styled.button`
   :hover {
     box-shadow: 0 5px 10px rgba(29, 29, 29, 0.5);
   }
+
+  :disabled {
+    background: #808080;
+    cursor: not-allowed;
+  }
 `;
