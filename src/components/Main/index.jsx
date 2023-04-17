@@ -24,7 +24,7 @@ const MainComponent = () => {
       <MainWrapper>
         <ArticleContainer>
           <ArticleTitle>
-            Limitless <span>Immigration</span>
+            Limitless<span>Immigration</span>
           </ArticleTitle>
           <ArticleText>
             <p>{articleText}</p>

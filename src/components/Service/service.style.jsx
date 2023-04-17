@@ -16,10 +16,11 @@ export const SectionWrapper = styled.div`
 `;
 
 export const SectionContent = styled.div`
-  display: flex;
+  text-align: center;
   align-items: center;
-  width: 70%;
-  gap: 20px;
+  width: 80%;
+  gap: 30px;
+  font-family: "Millik", sans-serif !important;
 
   @media screen and (max-width: 1024px) {
     width: 100%;
@@ -38,10 +39,19 @@ export const SectionContent = styled.div`
         width: 100%;
       }
     }
+    
+    margin-top: 6.5rem;
     p {
+      text-align: justify;
+      text-justify: inter-word;
       font-size: 20px;
+      font-family: "Moderat", sans-serif !important;
+      letter-spacing: 2px;
+    
+      font-weight: 100;
       :first-child {
-        font-size: 30px;
+        text-align: center;
+        font-size: 40px;
         font-weight: 700;
       }
     }

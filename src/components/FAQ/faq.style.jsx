@@ -4,6 +4,7 @@ export const FaqContainer = styled.div`
   display: flex;
   justify-content: center;
   padding: 90px;
+  color: black;
   @media (max-width: 425px) {
     padding: 30px;
   }
@@ -14,7 +15,6 @@ export const FaqWrapper = styled.div`
   width: 100%;
   display: flex;
   flex-direction: column;
-
   gap: 30px;
 
   .accordion-button {
@@ -23,8 +23,8 @@ export const FaqWrapper = styled.div`
     border: none;
   }
   .accordion-body {
-    background: #030d12;
-    color: white;
+    background: #fff;
+    color: black;
   }
 `;
 
@@ -38,6 +38,6 @@ export const SectionTitle = styled.div`
   line-height: 1.2;
   color: #0a0e27;
   text-align: center;
-  margin: 56px 0;
+  margin: 54px 0;
   font-family: "Millik", sans-serif !important;
 `;

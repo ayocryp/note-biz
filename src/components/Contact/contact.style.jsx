@@ -47,7 +47,7 @@ export const ChannelTitle = styled.div`
   color: #1d1d1d;
 
   font-family: "Moderat", sans-serif !important;
-  font-weight: 100;
+  font-weight: 300;
 `;
 
 export const ChannelItem = styled.a`
@@ -63,7 +63,7 @@ export const ChannelItem = styled.a`
   text-align: center;
   color: #1d1d1d;
 
-  font-size: 15px;
+  font-size: 14px;
   font-family: "Moderat", sans-serif !important;
   font-weight: 100;
 `;

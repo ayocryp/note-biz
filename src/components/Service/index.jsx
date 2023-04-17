@@ -14,16 +14,17 @@ const ServiceComponent = () => {
           <span>Commerce tools</span>
         </SectionTitle>
         <SectionContent>
-          <div>
-            <p>Store</p>
-            <p>
-              Create a free ecommerce website and start selling worldwide with
-              just a few clicks.
-            </p>
-          </div>
-          <div>
+        <div>
             <img src="/assets/Image/Service/service.jpg" alt="service" />
           </div>
+          <div className="Commit">
+            <p>Our Commitment</p>
+            <p>
+              Limitless Immigration is a professional and independent organization that offers GCMS notes service to individuals who have applied for a Canadian visa. We pride ourselves on providing an unbiased, transparent, and trustworthy service to our clients. As an independently owned and operated business, we are committed to providing high-quality services to ensure our clients receive accurate and reliable information about their visa application.
+            </p>
+          </div>
+          
+          
         </SectionContent>
       </SectionWrapper>
     </ServiceContainer>

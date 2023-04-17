@@ -7,6 +7,11 @@ const FAQ_DATA = [
     answer:
       "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Temporibus, magnam.",
   },
+  {
+    question: "Why GCMS?",
+    answer:
+      "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Temporibus, magnam.",
+  },
 ];
 
 const FaqComponent = () => (
@@ -16,6 +21,14 @@ const FaqComponent = () => (
       <Accordion flush data-aos="fade-up">
         {FAQ_DATA.map(({ question, answer, index }) => (
           <Accordion.Item eventKey={index} key={question}>
+            <Accordion.Header>{question}</Accordion.Header>
+            <Accordion.Body>{answer}</Accordion.Body>
+            <Accordion.Header>{question}</Accordion.Header>
+            <Accordion.Body>{answer}</Accordion.Body>
+            <Accordion.Header>{question}</Accordion.Header>
+            <Accordion.Body>{answer}</Accordion.Body>
+            <Accordion.Header>{question}</Accordion.Header>
+            <Accordion.Body>{answer}</Accordion.Body>
             <Accordion.Header>{question}</Accordion.Header>
             <Accordion.Body>{answer}</Accordion.Body>
           </Accordion.Item>

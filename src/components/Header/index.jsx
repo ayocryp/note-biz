@@ -12,7 +12,7 @@ import { FaBars } from "react-icons/fa";
 
 const menuItems = [
   { to: "/", text: "Home" },
-  { href: "/#what", text: "What we do" },
+  { href: "/#what", text: "Services" },
   { to: "/contact", text: "Contact us" },
   { to: "/#", text: "Privacy" },
   { href: "/#faq", text: "FAQ" },

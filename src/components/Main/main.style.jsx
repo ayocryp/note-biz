@@ -30,8 +30,8 @@ export const ArticleTitle = styled.div`
 
   span {
     color: black;
-    font-size: 54px;
-    font-weight: 400;
+    font-size: 104px;
+    font-weight: 300;
     font-family: "Millik", sans-serif !important;
   }
 `;
@@ -44,6 +44,7 @@ export const ArticleText = styled.div`
     line-height: 1.9rem;
     font-family: "Moderat", sans-serif !important;
     font-weight: 100;
+    letter-spacing: 0.8px;
   }
 `;
 

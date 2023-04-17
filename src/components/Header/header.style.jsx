@@ -26,7 +26,7 @@ export const HeaderMenus = styled.div`
 export const HeaderLogo = styled.img`
   width: 50px;
   height: auto;
-  margin-left: 48px;
+  margin-left: 60px;
   margin-right: 30px;
 `;
 
@@ -55,7 +55,7 @@ export const MenuItem = styled.div`
   color: #262c55;
   cursor: pointer;
   display: block;
-  font-size: 1rem;
+  font-size: 1.15rem;
   font-family: "Moderat", sans-serif !important;
   font-weight: 500;
   justify-content: flex-start;
@@ -77,8 +77,8 @@ export const OrderBtn = styled.div`
 
   :hover {
     /* box-shadow: 0 5px 10px rgba(29, 29, 29, 0.5); */
-    background: #fff;
+    background: #FC9029;
     color: #0a0e27;
-    transition: all ease 0.9s;
+    transition: all linear 0.9s;
   }
 `;
