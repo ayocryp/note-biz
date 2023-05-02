@@ -10,9 +10,11 @@ export const DownloadBtn = styled.a`
   cursor: pointer;
   display: flex;
   align-items: center;
+  text-align: center;
   justify-content: center;
   text-decoration: none;
-  padding: 12px 18px;
+  padding: 12px 15px;
+  width: 20rem;
   border-radius: 10px;
   background-color: #fb9129;
   margin-bottom: 50px;
@@ -23,16 +25,14 @@ export const DownloadBtn = styled.a`
     width: 14px;
     height: 14px;
     align-items: center;
-    background-color: white;
+    background-color: #0a0e27;
     border-radius: 2px;
     font-size: 8px;
-    color: black;
+    color: white;
     justify-content: center;
   }
 
-  :hover {
-    box-shadow: 0 5px 10px rgba(29, 29, 29, 0.5);
-  }
+
 `;
 
 export const OrderContainer = styled.div`
@@ -134,6 +134,7 @@ export const GroupTitle = styled.div`
   font-size: 1.2rem;
   font-weight: 700;
   margin-bottom: 10px;
+  color: #F39129;
 `;
 
 export const FormContent = styled.div`

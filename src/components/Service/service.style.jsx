@@ -47,12 +47,15 @@ export const SectionContent = styled.div`
       font-size: 20px;
       font-family: "Moderat", sans-serif !important;
       letter-spacing: 2px;
-    
       font-weight: 100;
       :first-child {
         text-align: center;
         font-size: 40px;
         font-weight: 700;
+      }
+      li{
+        padding: 0.8rem;
+        
       }
     }
   }

@@ -168,7 +168,7 @@ const OrderComponent = () => {
               <NoteWrapper>
                 <div>
                   <p>
-                    <GroupTitle>Why is a consent form required?</GroupTitle>
+                    <GroupTitle>WHY IS A CONSENT FORM REQUIRED?</GroupTitle>
                     <br />A consent form is required pursuant to the Canadian
                     Privacy Act, which states that personal information shall
                     not, without the consent of the individual to whom it

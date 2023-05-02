@@ -77,10 +77,6 @@ export const OrderBtn = styled.div`
   font-family: "Moderat", sans-serif !important;
   font-weight: 100;
   border-radius: 10px 10px;
-  :hover {
-    // box-shadow: 0 5px 10px rgba(29, 29, 29, 0.5);
-    // background: #fb9129;
-  }
 `;
 export const MainWrapper = styled.div`
   max-width: 1320px;
