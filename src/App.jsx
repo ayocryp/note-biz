@@ -6,7 +6,7 @@ import Header from "./components/Header";
 import Home from "./components/Home";
 import GetInTouch from "./components/GetInTouch";
 import Order from "./components/Order";
-import ContactComponent from "./components/Contact";
+import ContactComponent from "./components/Contact/index.jsx";
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import "./App.css";
