@@ -12,8 +12,7 @@ export const Layout = styled.div`
 export const Container = styled.div`
   display: flex;
   width: 60%;
-
-  gap: 100px;
+  gap:100px;
 `;
 export const TextContainer = styled.div`
   flex: 1;
@@ -30,14 +29,14 @@ export const Title = styled.div`
   margin-bottom: 20px;
 `;
 export const Detail = styled.div`
-  font-size: 1rem;
-  font-family: Poppins, sans-serif;
-
+line-height: 1.9rem;
+font-family: "Moderat", sans-serif !important;
+font-weight: 300;
+letter-spacing: 0.1px;
   margin-bottom: 20px;
 `;
 export const ImageContainer = styled.div`
   flex: 1;
-
   display: flex;
   align-items: center;
   justify-content: center;

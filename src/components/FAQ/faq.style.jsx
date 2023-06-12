@@ -16,42 +16,47 @@ export const FaqWrapper = styled.div`
   display: flex;
   flex-direction: column;
   gap: 30px;
-  background: green;
-  color: white;
+  background: #090E27;
+  color: #B6F5E8;
   
+  margin-bottom: 150px;
 
   .accordion-button {
     background: white;
-    color: black;
-    border: 5px solid #62A449;
+    color: #090E27;
+    border: 3px solid black;
     text-align: center;
-    font-family: "Millik", sans-serif !important;
-    border-radius: 10px;
-    font-size: 20px;
+    line-height: 1.9rem;
+    font-family: "Moderat", sans-serif !important;
+    font-weight: 300;
+    letter-spacing: 0.8px;
+    border-radius: 1px;
+    font-size: 18px;
   }
   .accordion-body {
     text-align: center;
-    color: black;
-    font-family: "Millik", sans-serif !important; 
-    border: none;
-    font-size: 14px;
-    font-style: normal;
-    font-weight: 100;
+    line-height: 1.9rem;
+    font-family: "Moderat", sans-serif !important;
+    font-weight: 300;
+    letter-spacing: 0.1px;
   }
   
 `;
 
 export const FaqText = styled.div`
   margin: 0;
-  font-family: "Millik", sans-serif !important;
+  line-height: 1.9rem;
+    font-family: "Moderat", sans-serif !important;
+    font-weight: 300;
+    letter-spacing: 0.1px;
 
 `;
 
 export const SectionTitle = styled.div`
-  font-size: 4rem;
+  font-size: 44px;
   font-weight: 500;
   line-height: 1.2;
-  color: #fff;
+  color: white;
   text-align: center;
   margin: 54px 0;
   font-family: "Millik", sans-serif !important;

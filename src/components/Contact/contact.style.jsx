@@ -2,10 +2,12 @@ import styled from "styled-components";
 
 export const ContactContainer = styled.div`
   p {
-    margin-top: 70px;
+    margin-top: 90px;
     text-align: center;
     font-family: "Moderat", sans-serif !important;
-    font-weight: 200;
+    font-weight: 300;
+    letter-spacing: 0.1px
+    font-size: 15px
   }
 `;
 
@@ -13,6 +15,7 @@ export const ContactWrapper = styled.div`
   display: flex;
   justify-content: center;
 
+  
   & > div {
     width: 60%;
     display: grid;
@@ -43,11 +46,9 @@ export const ContactListWrapper = styled.div`
 export const ChannelTitle = styled.div`
   font-size: 21px;
   margin-bottom: 0.5rem;
-  line-height: 1.2;
+  line-height: 1.1;
   color: #1d1d1d;
-
   font-family: "Moderat", sans-serif !important;
-  font-weight: 300;
 `;
 
 export const ChannelItem = styled.a`
@@ -67,6 +68,9 @@ export const ChannelItem = styled.a`
   font-family: "Moderat", sans-serif !important;
   font-weight: 100;
 `;
+
+
+
 export const FooterImg = styled.img`
   position: fixed;
   bottom: 0;

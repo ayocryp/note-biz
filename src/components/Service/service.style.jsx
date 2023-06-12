@@ -32,9 +32,9 @@ export const SectionContent = styled.div`
 
   div {
     img {
-      width: 517px;
+      width: 1000px;
       height: 648px;
-      object-fit: cover;
+      cursor: pointer;
       @media screen and (max-width: 768px) {
         width: 100%;
       }
@@ -62,13 +62,14 @@ export const SectionContent = styled.div`
 `;
 
 export const SectionTitle = styled.div`
-  font-size: 4rem;
+  font-size: 3.5rem;
   font-weight: 500;
-  line-height: 1.2;
+  line-height: 1.8;
   color: #0a0e27;
   text-align: center;
   margin: 56px 0;
   font-family: "Millik", sans-serif !important;
+  margin-top: 80px;
   span {
     color: green;
     font-size: 4rem;

@@ -72,11 +72,11 @@ export const OrderBtn = styled.div`
   width: fit-content;
   background-color: #0a0e27;
   cursor: pointer;
-  padding: 15px 16px;
+  padding: 15px 17px;
   font-size: 1rem;
   font-family: "Moderat", sans-serif !important;
   font-weight: 100;
-  border-radius: 10px 10px;
+  border-radius: 3px;
 `;
 export const MainWrapper = styled.div`
   max-width: 1320px;

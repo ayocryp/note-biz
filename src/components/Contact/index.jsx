@@ -58,7 +58,7 @@ const ContactComponent = () => {
           </ContactList>
         </div>
       </ContactWrapper>
-      <p>All right reserved &copy; 2023</p>
+      <p>All right reserved &copy; 2023 Limitless </p>
       <FooterImg src="/assets/image/Header/100710_red_maple_leaf.svg" alt="" />
     </ContactContainer>
   );
