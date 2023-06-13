@@ -24,6 +24,7 @@
     font-size: 17px;
     font-weight: 300;
     letter-spacing: 0.1px;
+    word-break: break-all;
 }
 
 .commitment_li_main_wrap{

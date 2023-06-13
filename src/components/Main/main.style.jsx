@@ -45,6 +45,7 @@ export const ArticleText = styled.div`
     font-family: "Moderat", sans-serif !important;
     font-weight: 100;
     letter-spacing: 0.8px;
+    word-break: break-all;
   }
 `;
 

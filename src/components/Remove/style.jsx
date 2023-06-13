@@ -34,6 +34,7 @@ font-family: "Moderat", sans-serif !important;
 font-weight: 300;
 letter-spacing: 0.1px;
   margin-bottom: 20px;
+  word-break: break-all;
 `;
 export const ImageContainer = styled.div`
   flex: 1;

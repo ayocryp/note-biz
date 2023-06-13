@@ -55,7 +55,7 @@ const validate = async (values) => {
 
 const LeafImage = ({ src }) => (
   <div>
-    <img src={src} height="75px" width="75px" alt="Leaf" />
+    <img src={src} height="25px" width="25px" alt="Leaf" />
   </div>
 );
 
@@ -158,6 +158,7 @@ const OrderComponent = () => {
           Please provide the following information to process your request.
           Enter any other information in the Additional Notes section. After
           submitting this form you will be taken to complete the Payment.
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique excepturi rerum omnis numquam autem at. Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis velit sunt vero accusantium. Lorem ipsum dolor sit. adipisicing elit. Similique excepturi rerum omnis numquam autem at. Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis velit sunt vero accusantium
         </Desc>
 
         <Form
@@ -192,23 +193,23 @@ const OrderComponent = () => {
                   <GroupTitle>PRIMARY APPLICANT</GroupTitle>
                   <FormContent>
                     <FormItem>
-                      <FormLabel>First Name *</FormLabel>
+                      <FormLabel>First Name <span>*</span></FormLabel>
                       {renderField("firstName", "First Name")}
                     </FormItem>
                     <FormItem>
-                      <FormLabel>Last Name *</FormLabel>
+                      <FormLabel>Last Name <span>*</span></FormLabel>
                       {renderField("lastName", "Last Name")}
                     </FormItem>
                     <FormItem>
-                      <FormLabel>Email Address *</FormLabel>
+                      <FormLabel>Email Address <span>*</span></FormLabel>
                       {renderField("email", "Email Address")}
                     </FormItem>
                     <FormItem>
-                      <FormLabel>Date of Birth *</FormLabel>
+                      <FormLabel>Date of Birth <span>*</span></FormLabel>
                       {renderField("dob", "Date of Birth", "date")}
                     </FormItem>
                     <FormItem>
-                      <FormLabel>UCI or Client ID Number *</FormLabel>
+                      <FormLabel>UCI or Client ID Number <span>*</span></FormLabel>
                       {renderField("uciOrClientId", "xx-xxx-xx or xx-xxx-xxx")}
                     </FormItem>
                   </FormContent>
@@ -217,15 +218,15 @@ const OrderComponent = () => {
                   <GroupTitle>SPOUSE or PARTNER</GroupTitle>
                   <FormContent>
                     <FormItem>
-                      <FormLabel>First Name *</FormLabel>
+                      <FormLabel>First Name </FormLabel>
                       {renderField("s_firstName", "First Name")}
                     </FormItem>
                     <FormItem>
-                      <FormLabel>Last Name *</FormLabel>
+                      <FormLabel>Last Name </FormLabel>
                       {renderField("s_lastName", "Last Name")}
                     </FormItem>
                     <FormItem>
-                      <FormLabel>Email Address *</FormLabel>
+                      <FormLabel>Email Address</FormLabel>
                       {renderField("s_email", "Email Address")}
                     </FormItem>
                     <FormItem>
@@ -233,7 +234,7 @@ const OrderComponent = () => {
                       {renderField("s_dob", "Date of Birth", "date")}
                     </FormItem>
                     <FormItem>
-                      <FormLabel>UCI or Client ID Number *</FormLabel>
+                      <FormLabel>UCI or Client ID Number</FormLabel>
                       {renderField(
                         "s_uciOrClientId",
                         "xx-xxx-xx or xx-xxx-xxx"
@@ -272,7 +273,7 @@ const OrderComponent = () => {
                     </FormItem>
                     <FormItem>
                       <FormLabel>Application No</FormLabel>
-                      {renderField("app_no", "X-XXX-XXX or unknow")}
+                      {renderField("app_no", "X-XXX-XXX or unknown")}
                     </FormItem>
                     <FormItem>
                       <FormLabel>Primary Email *</FormLabel>
@@ -289,6 +290,7 @@ const OrderComponent = () => {
                           <FormText
                             {...input}
                             placeholder="Provide any relevant information for your application"
+                      
                             onBlur={() => input.onBlur(input.value.trim())}
                             isError={meta.touched && meta.error}
                           />
@@ -304,12 +306,13 @@ const OrderComponent = () => {
                       <FormLabel>Transaction ID *</FormLabel>
                       {renderField("transactionId", "xxxxxxxxxx")}
                     </FormItem>
-
+                          
                     <Field name="file">
                       {({ input, meta }) => (
+                        
                         <FileUpload isError={meta.touched && meta.error}>
                           <span onClick={() => fileRef.current.click()}>
-                            {!meta.error ? "Loaded File" : "Upload File"}
+                            {!meta.error ? "Loaded File" : "Upload Consent Form"}
                           </span>
                           <FormInput
                             type="file"
