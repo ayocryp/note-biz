@@ -42,12 +42,12 @@ export const Desc = styled.div`
 
 export const TouchWrapper = styled.div`
   color: black;
-  // background: #CAEFFF;
-  padding: 10px;
+  background: #CAEFFF;
+  padding: 30px 0 70px;
   display: flex;
   align-items: center;
   flex-direction: column;
-
+  margin-top: 65px;
 `;
 
 export const IconDesc = styled.div`
