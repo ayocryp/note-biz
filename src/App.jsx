@@ -10,7 +10,8 @@ import ContactComponent from "./components/Contact/index.jsx";
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import "./App.css";
-
+import Policy from "./components/Policy";
+import Terms from "./components/Terms/";
 function App() {
   return (
     <div>
@@ -22,6 +23,8 @@ function App() {
             <Route path="/contact" element={<GetInTouch />}></Route>
             <Route path="/order" element={<Order />}></Route>
             <Route path="*" element={<Link to="/" />}></Route>
+            <Route path="/policy" element={<Policy />} />
+            <Route path="/terms" element={<Terms/>} />
           </Routes>
           <ContactComponent />
           <ToastContainer />

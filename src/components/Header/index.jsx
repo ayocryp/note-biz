@@ -14,9 +14,9 @@ const menuItems = [
   { to: "/", text: "Home" },
   { href: "/#what", text: "Services" },
   { to: "/contact", text: "Contact us" },
-  { to: "/#", text: "Privacy" },
+  { to: "/policy", text: "Privacy" },
   { href: "/#faq", text: "FAQ" },
-  { to: "/#", text: "Terms" },
+  { to: "/terms", text: "Terms" },
 ];
 
 const HeaderComponent = () => {

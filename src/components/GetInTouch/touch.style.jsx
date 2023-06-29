@@ -61,6 +61,7 @@ export const IconDesc = styled.div`
 
 export const ContactIcon = styled.div`
   font-size: 40px;
-  color: #F6CA59;
+  // color: #F6CA59;
+  color: #242F4F;
   margin-top: 50px;
 `;
