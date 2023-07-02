@@ -79,11 +79,6 @@ export const ImageSection = styled.div`
 export const ArticleImage = styled.img`
   width: 400px;
 
-  // @media (max-width: 900px){
-  //   width: 100px;
-   
-  // }
-
 `;
 
 export const OrderBtn = styled.div`

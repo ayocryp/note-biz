@@ -32,6 +32,12 @@ export const HeaderLogo = styled.img`
   height: auto;
   margin-left: 60px;
   margin-right: 30px;
+
+  @media (max-width: 900px){
+  width: 50px;
+  height: auto;
+  margin: 5px 0px 5px 5px;
+  }
 `
 
 export const MenuWrapper = styled.div`

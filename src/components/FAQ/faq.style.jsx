@@ -61,5 +61,10 @@ export const SectionTitle = styled.div`
   margin: 54px 0;
   font-family: "Millik", sans-serif !important;
   border: none;
+
+  @media (max-width: 900px){
+    font-size: 30px;
+    font-weight: 500;
+  }
 `;
 

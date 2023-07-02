@@ -22,12 +22,15 @@ export const SectionContent = styled.div`
   gap: 30px;
   font-family: "Millik", sans-serif !important;
 
+  margin-top: 4rem;
+
   @media screen and (max-width: 1024px) {
     width: 100%;
   }
 
   @media screen and (max-width: 768px) {
     flex-direction: column;
+    margin-top: 2.5rem;
   }
 
   div {
@@ -38,10 +41,10 @@ export const SectionContent = styled.div`
       @media screen and (max-width: 900px) {
         width: 100%;
         height: 100%;
+        margin-top: 0;
       }
     }
     
-    margin-top: 6.5rem;
     p {
       text-align: justify;
       text-justify: inter-word;
@@ -63,7 +66,7 @@ export const SectionContent = styled.div`
 `;
 
 export const SectionTitle = styled.div`
-  font-size: 3.5rem;
+  font-size: 4rem;
   font-weight: 500;
   line-height: 1.8;
   color: #0a0e27;
@@ -82,7 +85,12 @@ export const SectionTitle = styled.div`
   }
 
   @media (max-width: 900px){
-    font-size: 50px;
+    font-size: 40px;
+    padding: 0;
     margin: 25px 0px;
+    line-height: 1.4;
+    span{
+      font-size: 35px;
+    }
   }
 `;
