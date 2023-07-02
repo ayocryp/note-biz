@@ -8,6 +8,10 @@ export const HeaderContainer = styled.div`
   font-size: 18px;
   box-sizing: border-box;
   background-color: rgb(236, 236, 236);
+
+  @media (max-width: 900px){
+    width: 100%;
+  }
 `
 
 export const HeaderMenus = styled.div`

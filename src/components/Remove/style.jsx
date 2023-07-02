@@ -7,12 +7,19 @@ export const Layout = styled.div`
   justify-content: center;
 
   padding: 150px 0px;
+
+
 `;
 
 export const Container = styled.div`
   display: flex;
   width: 60%;
   gap:100px;
+
+  @media (max-width:900px){
+    width: 90%;
+    flex-direction: column;
+  }
 `;
 export const TextContainer = styled.div`
   flex: 1;

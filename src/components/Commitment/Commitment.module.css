@@ -56,11 +56,36 @@
 }
 
 
-@media screen and(max-width:900px) {
+@media screen and (max-width:900px) {
+
+    .commitment_main_wrap{
+        padding: 5% 5%;
+    }
+
+    .commitment_heading{
+        font-size: 35px;
+        margin-bottom: 20px;
+    }
 
     
     .commitment_li_main_wrap{
         flex-direction: column;
+        
+        
+  
+    }
+
+/* 
+    .commitment_li{
+        text-align: left;
+    } */
+    .commitment_text{
+        padding: 0px 5px;;
+    }
+
+
+    .commitment_img{
+        width: 300px;
     }
     
 }

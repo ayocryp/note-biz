@@ -35,8 +35,9 @@ export const SectionContent = styled.div`
       width: 1000px;
       height: 648px;
       cursor: pointer;
-      @media screen and (max-width: 768px) {
+      @media screen and (max-width: 900px) {
         width: 100%;
+        height: 100%;
       }
     }
     
@@ -78,5 +79,10 @@ export const SectionTitle = styled.div`
     text-align: center;
     margin: 56px 0;
     font-family: "Millik", sans-serif !important;
+  }
+
+  @media (max-width: 900px){
+    font-size: 50px;
+    margin: 25px 0px;
   }
 `;

@@ -5,6 +5,10 @@ export const MainContainer = styled.div`
   justify-content: center;
   background-color: whitesmoke;
   padding: 155px 6% 86px;
+
+  @media (max-width:900px){
+    padding: 10px;
+  }
 `;
 
 export const ArticleContainer = styled.div`
@@ -12,6 +16,7 @@ export const ArticleContainer = styled.div`
   @media (max-width: 990px) {
     width: 100%;
     max-width: 100%;
+    padding: 5%;
   }
   @media (max-width: 900px) {
     display: flex;
@@ -33,11 +38,18 @@ export const ArticleTitle = styled.div`
     font-size: 104px;
     font-weight: 300;
     font-family: "Millik", sans-serif !important;
+    @media (max-width: 900px) {
+      font-size: 32px;
+    }
+  }
+
+  @media (max-width: 900px) {
+    font-size: 32px;
   }
 `;
 
 export const ArticleText = styled.div`
-  margin: 20px 0;
+  margin: 30px 0;
   p {
     margin: 0;
     color: #212529;
@@ -66,6 +78,12 @@ export const ImageSection = styled.div`
 
 export const ArticleImage = styled.img`
   width: 400px;
+
+  // @media (max-width: 900px){
+  //   width: 100px;
+   
+  // }
+
 `;
 
 export const OrderBtn = styled.div`
