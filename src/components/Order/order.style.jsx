@@ -49,6 +49,11 @@ export const OrderContainer = styled.div`
   background-position:  bottom center;
   background-repeat: no-repeat;
   background-size: 350px;
+  @media (max-width: 900px){
+    background-size: 150px;
+  }
+
+  
   .leaf div {
     position: absolute;
     display: block;
@@ -106,6 +111,9 @@ export const OrderWrapper = styled.div`
   width: 100%;
   box-sizing: border-box;
   
+  @media (max-width: 900px){
+    padding: 70px 10px;
+    }
 `;
 
 export const Title = styled.div`
@@ -115,7 +123,9 @@ export const Title = styled.div`
   margin: 0px 0px 50px 0;
   padding:  0px 0px 10px;
   font-family: "Millik", sans-serif !important;
+  
 `;
+
 
 export const Desc = styled.div`
   color: black;
@@ -127,6 +137,11 @@ export const Desc = styled.div`
     font-size: 17px;
     font-weight: 300;
     letter-spacing: 0.1px;
+
+
+    @media (max-width: 900px){
+      font-size: 13px;
+    }
 `;
 
 export const NoteWrapper = styled.div`
@@ -142,6 +157,15 @@ export const NoteWrapper = styled.div`
     font-size: 17px;
     font-weight: 300;
     letter-spacing: 0.1px;
+    
+    p{
+      
+      @media (max-width: 900px){
+        font-size: 13px;
+      }
+    }
+
+   
     
 `;
 
@@ -163,6 +187,12 @@ export const GroupTitle = styled.div`
     font-size: 18px;
     font-weight: 600;
     letter-spacing: 0.8px;
+
+    
+    @media screen and (max-width: 768px) {
+      font-size: 15px;
+    }
+    
 `;
 
 export const FormContent = styled.div`
@@ -197,7 +227,7 @@ export const FormLabel = styled.div`
     color: red;
   }
   @media screen and (max-width: 768px) {
-    width: 100%;
+    font-size: 12px;
   }
 `;
 
@@ -214,6 +244,16 @@ export const FormInput = styled.input`
   line-height: 1.9rem;
     font-weight: 300;
     letter-spacing: 0.1px;
+
+    ::placeholder{
+      @media screen and (max-width: 768px) {
+        font-size: 10px;
+      }
+    }
+
+    @media screen and (max-width: 768px) {
+      height: 35px;
+    }
 `;
 
 export const FormSelect = styled.select`   
@@ -247,6 +287,9 @@ export const FormText = styled.textarea`
   line-height: 1.9rem;
     font-weight: 300;
     letter-spacing: 0.1px;
+    @media screen and (max-width: 768px) {
+      font-size: 10px;
+    }
   }
 `;
 
@@ -266,10 +309,14 @@ export const FileUpload = styled.div`
     color: white;
     border: none;
     font-family: "Moderat", sans-serif !important;
-  line-height: 1.9rem;
+    line-height: 1.9rem;
     font-size: 14px;
     font-weight: 300;
     letter-spacing: 0.1px;
+
+    @media screen and (max-width: 768px) {
+      padding: 1px 8px;
+    }
   }
 `;
 
