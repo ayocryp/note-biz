@@ -33,6 +33,8 @@ export const ContactWrapper = styled.div`
       // width: 100%;
       // padding-left: 35%;
       gap: 40px;
+      text-align: left;
+
     }
   }
 `;
@@ -75,6 +77,10 @@ svg {
   font-size: 14px;
   font-family: "Moderat", sans-serif !important;
   font-weight: 100;
+
+  @media ( max-width:900px){
+    width:fit-content;
+  }
 `;
 
 
