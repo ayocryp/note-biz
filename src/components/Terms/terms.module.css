@@ -7,6 +7,12 @@
     letter-spacing: 0.8px;
    
 }
+@media (max-width: 900px){
+    
+    .policy_main_wrap{
+        padding: 35% 10%;
+    }
+}
 
 h2{
     font-family: "Moderat", sans-serif !important;

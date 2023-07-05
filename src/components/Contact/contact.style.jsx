@@ -15,14 +15,13 @@ margin-top: 10px;
 export const ContactWrapper = styled.div`
   display: flex;
   justify-content: center;
-
+  text-align: center;
   
   & > div {
     width: 90%;
     display: grid;
     // align-items: start;
     grid-template-columns: repeat(4, 1fr);
-
     @media (max-width: 768px) {
       width: 80%;
     }
@@ -44,7 +43,6 @@ export const ContactListWrapper = styled.div`
   display: flex;
   flex-direction: column;
   gap: 20px;
-  // text-align: center;
   @media (max-width: 900px) {
     gap: 17px;
   }
@@ -67,10 +65,11 @@ svg {
   height: 35px;
   display: inline-flex;
   align-items: center;
+  justify-content: center;
   text-decoration: none;
   color: black;
-  width: fit-content;
-  text-align: center;
+  // width: fit-content;
+  text-align: right;
   color: #1d1d1d;
 
   font-size: 14px;

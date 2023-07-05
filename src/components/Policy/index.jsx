@@ -5,7 +5,7 @@ import styles from "./policy.module.css"
 const Policy = () => {
     return (
         <div className={styles.policy_main_wrap}>
-            <h2 className={`${styles['h2']} mb-14 text-6xl`}>Policy privacy</h2>
+            <h2 className={`${styles['h2']} mb-14  lg:text-6xl md:text-4xl sm:text-3xl text-4xl`}>Policy privacy</h2>
             <h2 className={` ${styles['h2']}`}>Privacy and Information Security Policy
             </h2>
             <p>When you use our services, you’re trusting us with your information. We understand this is a big responsibility and work hard to protect your information. No personal information is shared or sold to any third party.

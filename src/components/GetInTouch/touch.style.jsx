@@ -10,7 +10,8 @@ export const GetInTouchContainer = styled.div`
   background-size: 450px;
 
   @media (max-width: 900px) {
-    padding:  20% 10%;
+    padding:  35% 5%;
+    
     font-size: 14px;
     background-size: 145px;
   }

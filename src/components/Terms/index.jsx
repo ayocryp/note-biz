@@ -3,7 +3,7 @@ import styles from './terms.module.css'
 const Terms = () => {
     return (
         <div className={styles.policy_main_wrap}>
-            <h2 className={`${styles['h2']} mb-14 text-6xl`}>Terms of Service</h2>
+            <h2 className={`${styles['h2']} mb-14 lg:text-6xl md:text-4xl sm:text-3xl text-4xl`}>Terms of Service</h2>
             <h2 className={` ${styles['h2']}`}>Privacy and Information Security
 
             </h2>
