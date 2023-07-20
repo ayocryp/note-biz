@@ -17,12 +17,12 @@ export const DownloadBtn = styled.a`
   width: 20rem;
   font-family: "Moderat", sans-serif !important;
     font-size: 17px;
-    font-weight: 300;
+    font-weight: 500;
     letter-spacing: 0.1px;
   border: none;
   background-color: #F6CA59;
   margin-bottom: 50px;
-  color: white;
+  color: black;
 
 
   span {
@@ -42,7 +42,7 @@ export const DownloadBtn = styled.a`
 `;
 
 export const OrderContainer = styled.div`
-  padding: 150px 0;
+  padding: 80px 0;
   display: flex;
   justify-content: center;
   background: url(./assets/Image/Order/check.gif);
@@ -105,14 +105,15 @@ export const OrderContainer = styled.div`
 `;
 
 export const OrderWrapper = styled.div`
-  padding: 8%;
+  padding: 3%;
   border-radius: 1px;
   max-width: 80%;
   width: 100%;
   box-sizing: border-box;
+  word-break:break-all;
   
   @media (max-width: 900px){
-    padding: 70px 10px;
+    padding: 70px 5px;
     }
 `;
 
@@ -120,10 +121,14 @@ export const Title = styled.div`
   font-size: 55px;
   color: black;
   text-align: center;
-  margin: 0px 0px 50px 0;
-  padding:  0px 0px 10px;
+  margin: 0px 0px 20px 0;
+  padding: 0px 0px 10px;
   font-family: "Millik", sans-serif !important;
-  
+
+  @media (max-width: 900px) {
+    font-size: 30px;
+    margin: 5px 0px;
+  }
 `;
 
 
@@ -180,19 +185,17 @@ export const GroupWrapper = styled.div`
 
 export const GroupTitle = styled.div`
   margin-bottom: 10px;
-  color: #F6CA59;
+  color: #008001;
   word-break: break-all;
   font-family: "Moderat", sans-serif !important;
   line-height: 1.5rem;
-    font-size: 18px;
-    font-weight: 600;
-    letter-spacing: 0.8px;
+  font-size: 20px;
+  font-weight: 800;
+  letter-spacing: 0.8px;
 
-    
-    @media screen and (max-width: 768px) {
-      font-size: 15px;
-    }
-    
+  @media screen and (max-width: 768px) {
+    font-size: 17px;
+  }
 `;
 
 export const FormContent = styled.div`

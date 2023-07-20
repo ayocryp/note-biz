@@ -1,5 +1,6 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 import {
   MainContainer,
@@ -29,9 +30,11 @@ const MainComponent = () => {
           <ArticleText>
             <p>{articleText}</p>
           </ArticleText>
-          <OrderBtn onClick={() => navigate("/order")}>
+          {/* <OrderBtn onClick={() => navigate("/get_your_note")}>
             Order your notes now
-          </OrderBtn>
+          </OrderBtn> */}
+          <Link to="/get-your-note">
+          <button className="border-0 px-12 py-2 text-lg bg-black rounded-sm text-white ">Order your note </button></Link>
         </ArticleContainer>
         <ImageSection>
           <ArticleImage src={imageSrc} alt="Immigration" />

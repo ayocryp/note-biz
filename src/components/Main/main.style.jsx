@@ -4,7 +4,7 @@ export const MainContainer = styled.div`
   display: flex;
   justify-content: center;
   background-color: whitesmoke;
-  padding: 155px 6% 86px;
+  padding: 50px 6% 86px;
 
   @media (max-width:900px){
     padding: 10px;

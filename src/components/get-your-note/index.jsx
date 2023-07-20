@@ -33,7 +33,7 @@ const GetYourNotes = () => {
 
         <div>
           <p>
-            <GroupTitle>WHY IS A CONSENT FORM REQUIRED?</GroupTitle>
+            <GroupTitle>How to?</GroupTitle>
             <br />A consent form is required pursuant to the Canadian Privacy
             Act, which states that personal information shall not, without the
             consent of the individual to whom it relates, be disclosed.
@@ -53,7 +53,7 @@ const GetYourNotes = () => {
         </div>
 
         <div>
-          <a href="https://paystack.com/pay/limiltess">
+          <a href="https://paystack.com/pay/limiltess" target="_blank">
             <button className="bg-[#008001]  text-slate-50 w-[320px] py-2 font-semibold rounded-sm text-xl border-0 ">
               Proceed
             </button>
