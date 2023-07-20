@@ -12,6 +12,7 @@ import 'react-toastify/dist/ReactToastify.css';
 import "./App.css";
 import Policy from "./components/Policy";
 import Terms from "./components/Terms/";
+import GetYourNotes from "./components/get-your-note/index.jsx";
 function App() {
   return (
     <div>
@@ -24,7 +25,8 @@ function App() {
             <Route path="/order" element={<Order />}></Route>
             <Route path="*" element={<Link to="/" />}></Route>
             <Route path="/policy" element={<Policy />} />
-            <Route path="/terms" element={<Terms/>} />
+            <Route path="/terms" element={<Terms />} />
+            <Route path="/get-your-note" element={<GetYourNotes />} />
           </Routes>
           <ContactComponent />
           <ToastContainer />

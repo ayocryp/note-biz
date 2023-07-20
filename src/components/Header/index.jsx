@@ -25,7 +25,7 @@ const HeaderComponent = () => {
   const [showMenu, setShowMenu] = useState(false);
 
   const handleOrderClick = () => {
-    navigate("/order");
+    navigate("/get-your-note");
   };
 
   useEffect(() => {
