@@ -169,7 +169,7 @@ export const GroupTitle = styled.div`
   word-break: break-all;
   font-family: "Moderat", sans-serif !important;
   line-height: 1.5rem;
-  font-size: 19px;
+  font-size: 20px;
   font-weight: 600;
   letter-spacing: 0.8px;
 `;

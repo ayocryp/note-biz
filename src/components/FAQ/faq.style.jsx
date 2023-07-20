@@ -31,7 +31,7 @@ export const FaqWrapper = styled.div`
     font-weight: 300;
     letter-spacing: 0.8px;
     border-radius: 1px;
-    font-size: 18px;
+    font-size: 17px;
   }
   .accordion-body {
     text-align: center;
@@ -61,5 +61,10 @@ export const SectionTitle = styled.div`
   margin: 54px 0;
   font-family: "Millik", sans-serif !important;
   border: none;
+
+  @media (max-width: 900px){
+    font-size: 25px;
+    font-weight: 500;
+  }
 `;
 

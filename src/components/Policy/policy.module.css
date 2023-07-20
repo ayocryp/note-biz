@@ -8,6 +8,12 @@
    
 }
 
+@media (max-width: 900px){
+    .policy_main_wrap{
+        padding: 40% 10%;
+    }
+}
+
 h2{
     font-family: "Moderat", sans-serif !important;
     font-weight: 500;

@@ -7,7 +7,9 @@ export const Layout = styled.div`
   justify-content: center;
 
   padding: 150px 0px;
-
+@media (max-width: 900px){
+  padding: 70px 0px;
+}
 
 `;
 
@@ -32,7 +34,6 @@ export const Title = styled.div`
   font-size: 2rem;
   font-weight: 800;
   font-family: Poppins, sans-serif;
-
   margin-bottom: 20px;
 `;
 export const Detail = styled.div`

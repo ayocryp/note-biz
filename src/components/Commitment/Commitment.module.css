@@ -13,7 +13,6 @@
 }
 
 .commitment_text{
-    /* width: 1000px; */
     padding: 0 70px;
     text-align: left;
     margin: auto;
@@ -51,6 +50,7 @@
     font-weight: 300;
     letter-spacing: 0.1px;
 }
+
 .commitment_img{
     width: 500px;
 }
@@ -63,24 +63,27 @@
     }
 
     .commitment_heading{
-        font-size: 35px;
+        font-size: 37px;
         margin-bottom: 20px;
     }
 
     
     .commitment_li_main_wrap{
         flex-direction: column;
-        
-        
   
     }
 
-/* 
     .commitment_li{
         text-align: left;
-    } */
+        list-style-type: square;
+        font-weight: 300;
+        font-size: 20px;
+        padding: 9% 0;
+      }
+
     .commitment_text{
-        padding: 0px 5px;;
+        padding: 0px 5px;
+        font-size: 15px;
     }
 
 

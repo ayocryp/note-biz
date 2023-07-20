@@ -8,16 +8,25 @@ export const GetInTouchContainer = styled.div`
   background-position:  bottom;
   background-repeat: no-repeat;
   background-size: 450px;
+
+  @media (max-width: 900px) {
+    padding:  35% 5%;
+    
+    font-size: 14px;
+    background-size: 145px;
+  }
 `;
 
 export const GetInTouchWrapper = styled.div`
   padding: 4%;
   border-radius: 2px;
   border: none;
-  // background: #CAEFFF;
+  // background: black;
   max-width: 968px;
   width: 100%;
   box-sizing: border-box;
+
+  
 `;
 
 export const Title = styled.div`
@@ -27,6 +36,10 @@ export const Title = styled.div`
   margin: 0px 0px 15px;
   padding: 0px 0px 10px;
   font-family: "Millik", sans-serif !important;
+
+  @media (max-width: 900x){
+    font-size: 10px;
+  }
 `;
 
 export const Desc = styled.div`
@@ -38,6 +51,7 @@ export const Desc = styled.div`
   font-weight: 300;
   letter-spacing: 0.1px;
   word-break: break-all;
+  
 `;
 
 export const TouchWrapper = styled.div`
@@ -48,6 +62,10 @@ export const TouchWrapper = styled.div`
   align-items: center;
   flex-direction: column;
   margin-top: 65px;
+
+  @media(max-width: 900px){
+    padding: 30px 5px;
+  }
 `;
 
 export const IconDesc = styled.div`

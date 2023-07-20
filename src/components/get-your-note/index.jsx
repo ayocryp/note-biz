@@ -7,6 +7,7 @@ import {
   Title,
 } from "./get_your_note.style";
 
+
 import { BsArrowDownRight } from "react-icons/bs";
 
 const GetYourNotes = () => {
@@ -51,12 +52,12 @@ const GetYourNotes = () => {
           </DownloadBtn>
         </div>
 
-        
-
         <div>
-          <button className="bg-[#008001]  text-slate-50 w-[320px] py-2 text-xl border-0 ">
-            Proceed
-          </button>
+          <a href="https://paystack.com/pay/limiltess">
+            <button className="bg-[#008001]  text-slate-50 w-[320px] py-2 font-semibold rounded-sm text-xl border-0 ">
+              Proceed
+            </button>
+          </a>
         </div>
       </OrderWrapper>
     </OrderContainer>

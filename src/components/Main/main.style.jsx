@@ -39,12 +39,14 @@ export const ArticleTitle = styled.div`
     font-weight: 300;
     font-family: "Millik", sans-serif !important;
     @media (max-width: 900px) {
-      font-size: 32px;
+      font-size: 45px;
     }
   }
 
   @media (max-width: 900px) {
-    font-size: 32px;
+    font-size: 40px;
+    display: flex;
+    flex-direction: column;
   }
 `;
 
@@ -78,11 +80,6 @@ export const ImageSection = styled.div`
 
 export const ArticleImage = styled.img`
   width: 400px;
-
-  // @media (max-width: 900px){
-  //   width: 100px;
-   
-  // }
 
 `;
 
