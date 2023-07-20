@@ -146,7 +146,7 @@ export const Desc = styled.div`
 
 export const NoteWrapper = styled.div`
   color: #0a0e27;
-  // background: white;
+  
   padding: 10%;
   display: flex;
   align-items: center;
