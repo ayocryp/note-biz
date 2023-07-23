@@ -1,6 +1,7 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
+// import {motion} from 'framer-motion'
 
 import {
   MainContainer,
@@ -12,6 +13,23 @@ import {
   OrderBtn,
   MainWrapper,
 } from "./main.style";
+
+// Animatiom
+
+// const variant1 = {
+//   hidden:{
+//     opacity:0.1,
+
+//   },
+
+//   visible:{
+//     opacity:2,
+//     transition:{
+//       delay: 0.1,
+//       duration: 0.1
+//     }
+//   }
+// }
 
 const MainComponent = () => {
   const navigate = useNavigate();
