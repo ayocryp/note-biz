@@ -1,6 +1,5 @@
 import React from 'react'
 import styles from "./policy.module.css"
-// import img from "./assets/Image/Policy/cloudflare.png"
 
 const Policy = () => {
     return (
@@ -49,7 +48,7 @@ We offer you peace of mind when you use our services because we will NEVER sell 
                 <p>
 In any organization, failure to protect personal information can increase the risk of a privacy breach. These privacy breaches can lead to things such as reputational harm, fraud or identity theft.
 
-We use exceptionally strong safeguards to protect the privacy of all our records, including your personal information. These strong safeguards are designed to prevent unauthorized access, disclosure, loss, theft, copying, use or modification to your personal information. Technical measures include passwords, audit trails, SSL encryption, firewalls and other technical security safeguards. Furthermore, we conduct periodic audits to ensure security of all the services.</p>
+We use exceptionally strong safeguards to protect the privacy of all our records, including your personal information. These strong safeguards designed to prevent unauthorized access, disclosure, loss, theft, copying, use or modification to your personal information. Technical measures include passwords, audit trails, SSL encryption, firewalls and other technical security safeguards. Furthermore, we conduct periodic audits to ensure security of all the services.</p>
             </div>
 
             <div className="mt-12 flex  py-5 px-3 justify-center  bg-slate-100 rounded-sm">
