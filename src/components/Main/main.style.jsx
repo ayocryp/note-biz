@@ -83,7 +83,7 @@ export const ArticleImage = styled.img`
 
 `;
 
-export const OrderBtn = styled.div`
+export const OrderBtn = styled.button`
   color: rgb(255, 255, 255);
   width: fit-content;
   background-color: #0a0e27;
@@ -93,6 +93,7 @@ export const OrderBtn = styled.div`
   font-family: "Moderat", sans-serif !important;
   font-weight: 100;
   border-radius: 3px;
+  list-style: none;
 `;
 export const MainWrapper = styled.div`
   max-width: 1320px;

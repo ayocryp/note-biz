@@ -1,7 +1,8 @@
 import React from "react";
 
 import { Link } from "react-router-dom";
-// import {motion} from 'framer-motion'
+import { motion } from "framer-motion";
+
 
 import {
   MainContainer,
@@ -11,24 +12,27 @@ import {
   ArticleTitle,
   ArticleText,
   MainWrapper,
+  OrderBtn,
 } from "./main.style";
 
 // Animatiom
 
-// const variant1 = {
-//   hidden:{
-//     opacity:0.1,
+const variant1 = {
+  hidden: {
+    y: '-80vh' ,
+    opacity:0.1,
 
-//   },
+  },
 
-//   visible:{
-//     opacity:2,
-//     transition:{
-//       delay: 0.1,
-//       duration: 0.1
-//     }
-//   }
-// }
+  visible: {
+    y: 0,
+    opacity:1,
+    transition:{
+      delay: 0.3,
+      duration: 1
+    }
+  }
+}
 
 const MainComponent = () => {
  
@@ -38,6 +42,9 @@ const MainComponent = () => {
     "/assets/image/Main/vincent-van-zalinge-5vCvYLEJRzg-unsplash-removebg-preview.png";
 
   return (
+  <motion.div variants={variant1} initial="hidden" animate="visible">
+      
+  
     <MainContainer id="home">
       <MainWrapper>
         <ArticleContainer>
@@ -51,13 +58,15 @@ const MainComponent = () => {
             Order your notes now
           </OrderBtn> */}
           <Link to="/get-your-note">
-          <button className="border-0 px-12 py-2 text-lg bg-black rounded-sm text-white ">Order your note </button></Link>
+              <OrderBtn >Order your note </OrderBtn>
+            </Link>
         </ArticleContainer>
         <ImageSection>
           <ArticleImage src={imageSrc} alt="Immigration" />
         </ImageSection>
       </MainWrapper>
-    </MainContainer>
+      </MainContainer>
+      </motion.div>
   );
 };
 

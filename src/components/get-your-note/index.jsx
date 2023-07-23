@@ -1,19 +1,17 @@
 import {
   GroupTitle,
-  DownloadBtn,
   Desc,
   OrderContainer,
   OrderWrapper,
   Title,
+  HowTo,
 } from "./get_your_note.style";
 
 
-import { BsArrowDownRight } from "react-icons/bs";
+// import { BsArrowDownRight } from "react-icons/bs";
 
 const GetYourNotes = () => {
-  const handleDownloadClick = () => {
-    window.open(`${process.env.PUBLIC_URL}/assets/consent.pdf`, "_blank")
-  };
+  
 
   return (
     <OrderContainer>
@@ -32,8 +30,10 @@ const GetYourNotes = () => {
         </Desc>
 
         <div>
-          <p>
-            <GroupTitle>How to?</GroupTitle>
+        <GroupTitle>How to order a note on Limitless</GroupTitle>
+          <div >
+          <HowTo>
+            
             <br />A consent form is required pursuant to the Canadian Privacy
             Act, which states that personal information shall not, without the
             consent of the individual to whom it relates, be disclosed.
@@ -43,13 +43,9 @@ const GetYourNotes = () => {
             printed form. Each individual 16 years of age or older must sign on
             their own and the signature must be consistent with the official
             signature on the passport. Please review the instructions
-          </p>
-          <DownloadBtn onClick={handleDownloadClick}>
-            DOWNLOAD CONSENT FORM
-            <span>
-              <BsArrowDownRight />
-            </span>
-          </DownloadBtn>
+          </HowTo>
+          </div>
+          
         </div>
 
         <div>

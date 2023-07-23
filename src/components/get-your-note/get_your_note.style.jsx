@@ -128,25 +128,17 @@ export const Title = styled.div`
 `;
 
 export const Desc = styled.div`
-  color: black;
-  text-align: center;
-  margin: 0px 0px 18px;
-  padding: 0px 0px 30px;
-  font-family: "Moderat", sans-serif !important;
-  line-height: 1.9rem;
-  font-size: 17px;
-  font-weight: 300;
-  letter-spacing: 0.1px;
+font-family: "Moderat", sans-serif !important;
+line-height: 1.9rem;
+font-size: 17px;
+font-weight: 300;
+letter-spacing: 0.1px;
+  
 `;
 
 export const NoteWrapper = styled.div`
   color: #0a0e27;
-  // background: white;
   padding: 10%;
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  gap: 30px;
   font-family: "Moderat", sans-serif !important;
   line-height: 1.9rem;
   font-size: 17px;
@@ -164,18 +156,26 @@ export const GroupWrapper = styled.div`
 `;
 
 export const GroupTitle = styled.div`
-  margin-bottom: 10px;
+  margin-top: 100px;
   color: green;
   word-break: break-all;
-  font-family: "Moderat", sans-serif !important;
+  font-family: "Milik", sans-serif !important;
   line-height: 1.5rem;
-  font-size: 20px;
+  font-size: 45px;
   font-weight: 600;
   letter-spacing: 0.8px;
 `;
 
 
+export const HowTo = styled.div`
+font-family: "Moderat", sans-serif !important;
+  line-height: 1.9rem;
+  font-size: 17px;
+  font-weight: 300;
+  letter-spacing: 0.1px;
+  margin-bottom: 40px;
 
+`
 
 
 
