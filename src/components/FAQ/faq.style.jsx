@@ -4,6 +4,7 @@ export const FaqContainer = styled.div`
   display: flex;
   justify-content: center;
   padding: 90px;
+  color: black;
   @media (max-width: 425px) {
     padding: 30px;
   }
@@ -14,44 +15,56 @@ export const FaqWrapper = styled.div`
   width: 100%;
   display: flex;
   flex-direction: column;
-
   gap: 30px;
-`;
+  background: #090E27;
+  color: #B6F5E8;
+  
+  margin-bottom: 150px;
 
-export const FaqTitle = styled.div`
-  color: #0a0e27;
-  font-size: 35px;
-  text-align: center !important;
-  font-weight: 500;
-  line-height: 1.2;
-`;
-
-export const FaqButton = styled.div`
-  font-size: 2rem;
-  font-weight: 500;
-  letter-spacing: -0.03em;
-  line-height: 4rem;
-  margin-bottom: 1rem;
-  font-family: "Millik", sans-serif !important;
-  @media (max-width: 425px) {
-    font-size: 1.5rem;
-    line-height: 2rem;
+  .accordion-button {
+    background: white;
+    color: #090E27;
+    border: 3px solid black;
+    text-align: center;
+    line-height: 1.9rem;
+    font-family: "Moderat", sans-serif !important;
+    font-weight: 300;
+    letter-spacing: 0.8px;
+    border-radius: 1px;
+    font-size: 17px;
   }
+  .accordion-body {
+    text-align: center;
+    line-height: 1.9rem;
+    font-family: "Moderat", sans-serif !important;
+    font-weight: 300;
+    letter-spacing: 0.1px;
+  }
+  
 `;
 
 export const FaqText = styled.div`
   margin: 0;
+  line-height: 1.9rem;
+    font-family: "Moderat", sans-serif !important;
+    font-weight: 300;
+    letter-spacing: 0.1px;
+
 `;
 
-export const FaqContent = styled.div`
-  background-color: #1d1d1d;
-  border-radius: 2rem;
-  box-shadow: 0 25px 50px rgba(29, 29, 29, 0.5);
-  color: #fff;
-  margin: 0 auto;
-  max-width: 109.2rem;
-  padding: 100px;
-  @media (max-width: 425px) {
-    padding: 3rem;
+export const SectionTitle = styled.div`
+  font-size: 44px;
+  font-weight: 500;
+  line-height: 1.2;
+  color: white;
+  text-align: center;
+  margin: 54px 0;
+  font-family: "Millik", sans-serif !important;
+  border: none;
+
+  @media (max-width: 900px){
+    font-size: 25px;
+    font-weight: 500;
   }
 `;
+

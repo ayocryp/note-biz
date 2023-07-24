@@ -10,37 +10,50 @@ export const DownloadBtn = styled.a`
   cursor: pointer;
   display: flex;
   align-items: center;
+  text-align: center;
   justify-content: center;
   text-decoration: none;
-  padding: 12px 18px;
-  border-radius: 10px;
-  background-color: #fb9129;
+  padding: 12px 0;
+  width: 20rem;
+  font-family: "Moderat", sans-serif !important;
+    font-size: 17px;
+    font-weight: 500;
+    letter-spacing: 0.1px;
+  border: none;
+  background-color: #F6CA59;
   margin-bottom: 50px;
-  color: white;
+  color: black;
+
+
   span {
     margin-left: 3px;
     display: flex;
     width: 14px;
     height: 14px;
     align-items: center;
-    background-color: white;
+    background-color: black;
     border-radius: 2px;
     font-size: 8px;
-    color: black;
+    color: white;
     justify-content: center;
   }
 
-  :hover {
-    box-shadow: 0 5px 10px rgba(29, 29, 29, 0.5);
-  }
+
 `;
 
 export const OrderContainer = styled.div`
-  padding: 150px 0;
+  padding: 80px 0;
   display: flex;
   justify-content: center;
-  background: radial-gradient(#6e6e6e, #000000);
+  background: url(./assets/Image/Order/check.gif);
+  background-position:  bottom center;
+  background-repeat: no-repeat;
+  background-size: 350px;
+  @media (max-width: 900px){
+    background-size: 150px;
+  }
 
+  
   .leaf div {
     position: absolute;
     display: block;
@@ -92,55 +105,104 @@ export const OrderContainer = styled.div`
 `;
 
 export const OrderWrapper = styled.div`
-  padding: 8%;
-  border-radius: 7px;
-  background: #0a0e27;
+  padding: 3%;
+  border-radius: 1px;
   max-width: 80%;
   width: 100%;
   box-sizing: border-box;
+  word-break:break-all;
+  
+  @media (max-width: 900px){
+    padding: 70px 5px;
+    }
 `;
 
 export const Title = styled.div`
-  font-size: 40px;
-  color: white;
+  font-size: 55px;
+  color: black;
   text-align: center;
-  margin: 0px 0px 15px;
+  margin: 0px 0px 20px 0;
   padding: 0px 0px 10px;
+  font-family: "Millik", sans-serif !important;
+
+  @media (max-width: 900px) {
+    font-size: 30px;
+    margin: 5px 0px;
+  }
 `;
 
+
 export const Desc = styled.div`
-  font-size: 18px;
-  color: white;
+  color: black;
   text-align: center;
   margin: 0px 0px 18px;
   padding: 0px 0px 30px;
+  font-family: "Moderat", sans-serif !important;
+  line-height: 1.5rem;
+    font-size: 17px;
+    font-weight: 300;
+    letter-spacing: 0.1px;
+
+
+    @media (max-width: 900px){
+      font-size: 13px;
+    }
 `;
 
 export const NoteWrapper = styled.div`
   color: #0a0e27;
-  background: white;
+  
   padding: 10%;
   display: flex;
   align-items: center;
   flex-direction: column;
   gap: 30px;
+  font-family: "Moderat", sans-serif !important;
+  line-height: 1.5rem;
+    font-size: 17px;
+    font-weight: 300;
+    letter-spacing: 0.1px;
+    
+    p{
+      
+      @media (max-width: 900px){
+        font-size: 13px;
+      }
+    }
+
+   
+    
 `;
 
 export const GroupWrapper = styled.div`
   width: 100%;
+  font-family: "Moderat", sans-serif !important;
+  line-height: 1.5rem;
+    font-size: 17px;
+    font-weight: 300;
+    letter-spacing: 0.1px;
 `;
 
 export const GroupTitle = styled.div`
-  font-size: 1.2rem;
-  font-weight: 700;
   margin-bottom: 10px;
+  color: #008001;
+  word-break: break-all;
+  font-family: "Moderat", sans-serif !important;
+  line-height: 1.5rem;
+  font-size: 20px;
+  font-weight: 800;
+  letter-spacing: 0.8px;
+
+  @media screen and (max-width: 768px) {
+    font-size: 17px;
+  }
 `;
 
 export const FormContent = styled.div`
   display: flex;
   flex-direction: column;
   gap: 10px;
-
+  
   @media screen and (max-width: 768px) {
     gap: 20px;
   }
@@ -149,7 +211,6 @@ export const FormContent = styled.div`
 export const FormItem = styled.div`
   display: flex;
   align-items: center;
-
   justify-content: ${(props) =>
     props.id === "last" ? "center" : "flex-start"};
 
@@ -164,62 +225,124 @@ export const FormItem = styled.div`
 export const FormLabel = styled.div`
   width: 60%;
   white-space: nowrap;
+  
+  span{
+    color: red;
+  }
   @media screen and (max-width: 768px) {
-    width: 100%;
+    font-size: 12px;
   }
 `;
 
 export const FormInput = styled.input`
   width: 100%;
-  height: 30px;
-  font-size: 16px;
-  border-radius: 5px;
+  height: 70px;
+  font-size: 14px;
+  text-align center;
+  border: none;
   border: ${(props) => (props.isError ? "1px solid red" : "1px solid gray")};
   padding-left: 10px;
   box-sizing: border-box;
+  font-family: "Moderat", sans-serif !important;
+  line-height: 1.9rem;
+    font-weight: 300;
+    letter-spacing: 0.1px;
+
+    ::placeholder{
+      @media screen and (max-width: 768px) {
+        font-size: 10px;
+      }
+    }
+
+    @media screen and (max-width: 768px) {
+      height: 35px;
+    }
 `;
 
-export const FormSelect = styled.select`
+export const FormSelect = styled.select`   
   width: 100%;
-  height: 30px;
+  height: 50px;
   font-size: 16px;
-  border-radius: 5px;
+  text-align: center;
+  border-radius: 0;
   border: ${(props) => (props.isError ? "1px solid red" : "1px solid gray")};
   padding-left: 10px;
   box-sizing: border-box;
+  font-family: "Moderat", sans-serif !important;
+  line-height: 1.9rem;
+    font-weight: 300;
+    letter-spacing: 0.1px;
 `;
 
 export const FormText = styled.textarea`
   width: 100%;
-  font-size: 16px;
-  height: 100px;
-  border-radius: 5px;
+  border-radius: 0;
   border: ${(props) => (props.isError ? "1px solid red" : "1px solid gray")};
   padding: 10px;
   box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  ::placeholder{
+    text-align: center;
+    font-size: 13px;
+    font-family: "Moderat", sans-serif !important;
+  line-height: 1.9rem;
+    font-weight: 300;
+    letter-spacing: 0.1px;
+    @media screen and (max-width: 768px) {
+      font-size: 10px;
+    }
+  }
 `;
 
 export const FileUpload = styled.div`
   border: ${(props) => (props.isError ? "1px dotted red" : "1px dotted gray")};
   padding: 50px;
-  border-radius: 5px;
+  border-radius: 0;
   display: flex;
   justify-content: center;
   align-items: center;
-
+  margin-top: 55px;
+  
   span {
-    padding: 15px;
+    padding: 7px 12px;
     cursor: pointer;
+    background: #0a0e27;
+    color: white;
+    border: none;
+    font-family: "Moderat", sans-serif !important;
+    line-height: 1.9rem;
+    font-size: 14px;
+    font-weight: 300;
+    letter-spacing: 0.1px;
+
+    @media screen and (max-width: 768px) {
+      padding: 1px 8px;
+    }
   }
 `;
 
 export const OrderButton = styled.button`
-  background: #0a0e27;
+  background: green;
   color: white;
-  padding: 15px;
-  border-radius: 15px;
+  padding: 15px 55px;
+  border-radius: 0;
+  border: none;
   cursor: pointer;
+  margin-top: 40px;
+  font-family: "Moderat", sans-serif !important;
+  line-height: 1.9rem;
+    font-size: 17px;
+    font-weight: 300;
+    letter-spacing: 0.1px;
   :hover {
-    box-shadow: 0 5px 10px rgba(29, 29, 29, 0.5);
+    background: #0a0e27;
+    transition: all linear 0.3s;
+  }
+
+  :disabled {
+    background: #808080;
+    cursor: not-allowed;
   }
 `;

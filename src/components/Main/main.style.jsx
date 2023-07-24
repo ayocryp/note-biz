@@ -4,7 +4,11 @@ export const MainContainer = styled.div`
   display: flex;
   justify-content: center;
   background-color: whitesmoke;
-  padding: 155px 6% 86px;
+  padding: 50px 6% 86px;
+
+  @media (max-width:900px){
+    padding: 10px;
+  }
 `;
 
 export const ArticleContainer = styled.div`
@@ -12,6 +16,7 @@ export const ArticleContainer = styled.div`
   @media (max-width: 990px) {
     width: 100%;
     max-width: 100%;
+    padding: 5%;
   }
   @media (max-width: 900px) {
     display: flex;
@@ -30,20 +35,31 @@ export const ArticleTitle = styled.div`
 
   span {
     color: black;
-    font-size: 54px;
-    font-weight: 400;
+    font-size: 104px;
+    font-weight: 300;
     font-family: "Millik", sans-serif !important;
+    @media (max-width: 900px) {
+      font-size: 45px;
+    }
+  }
+
+  @media (max-width: 900px) {
+    font-size: 40px;
+    display: flex;
+    flex-direction: column;
   }
 `;
 
 export const ArticleText = styled.div`
-  margin: 20px 0;
+  margin: 30px 0;
   p {
     margin: 0;
     color: #212529;
     line-height: 1.9rem;
     font-family: "Moderat", sans-serif !important;
     font-weight: 100;
+    letter-spacing: 0.8px;
+    word-break: break-all;
   }
 `;
 
@@ -64,22 +80,20 @@ export const ImageSection = styled.div`
 
 export const ArticleImage = styled.img`
   width: 400px;
+
 `;
 
-export const OrderBtn = styled.div`
+export const OrderBtn = styled.button`
   color: rgb(255, 255, 255);
   width: fit-content;
   background-color: #0a0e27;
   cursor: pointer;
-  padding: 15px 16px;
+  padding: 15px 17px;
   font-size: 1rem;
   font-family: "Moderat", sans-serif !important;
   font-weight: 100;
-  border-radius: 10px 10px;
-  :hover {
-    // box-shadow: 0 5px 10px rgba(29, 29, 29, 0.5);
-    // background: #fb9129;
-  }
+  border-radius: 3px;
+  list-style: none;
 `;
 export const MainWrapper = styled.div`
   max-width: 1320px;

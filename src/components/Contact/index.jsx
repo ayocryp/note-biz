@@ -33,11 +33,15 @@ const ContactComponent = () => {
             <IconChannelItem icon={AiOutlineTwitter} label="Twitter" />
             <IconChannelItem icon={FaTelegram} label="Telegram" />
             <IconChannelItem icon={AiOutlineInstagram} label="Instagram" />
+            <IconChannelItem icon={AiOutlineInstagram} label="TikTok" />
+            <IconChannelItem icon={AiOutlineInstagram} label="Linkedln" />
           </ContactList>
           <ContactList title="Other services">
             <ChannelItem>Admissions</ChannelItem>
             <ChannelItem>Study Visa</ChannelItem>
             <ChannelItem>Permanent Residence</ChannelItem>
+            <ChannelItem>Privacy</ChannelItem>
+            
           </ContactList>
           <ContactList title="News">
             <ChannelItem>CIBC news</ChannelItem>
@@ -48,12 +52,13 @@ const ContactComponent = () => {
           </ContactList>
           <ContactList title="Payment">
             <ChannelItem>Terms</ChannelItem>
+            <ChannelItem>FAQ</ChannelItem>
             <ChannelItem>Privacy</ChannelItem>
             <ChannelItem>IRCC</ChannelItem>
           </ContactList>
         </div>
       </ContactWrapper>
-      <p>All right reserved &copy; 2023</p>
+      <p className=" lg:text-lg md:text-4xl sm:text-lg text-sm">All right reserved &copy; 2023 Limitless </p>
       <FooterImg src="/assets/image/Header/100710_red_maple_leaf.svg" alt="" />
     </ContactContainer>
   );

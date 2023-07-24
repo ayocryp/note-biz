@@ -10,13 +10,14 @@ import {
 import { useEffect, useState } from "react";
 import { FaBars } from "react-icons/fa";
 
+
 const menuItems = [
   { to: "/", text: "Home" },
-  { href: "/#what", text: "What we do" },
+  { href: "/#what", text: "Services" },
   { to: "/contact", text: "Contact us" },
-  { to: "/#", text: "Privacy" },
-  { to: "/#", text: "FAQ" },
-  { to: "/#", text: "Terms" },
+  { to: "/policy", text: "Privacy" },
+  { href: "/#faq", text: "FAQ" },
+  { to: "/terms", text: "Terms" },
 ];
 
 const HeaderComponent = () => {
@@ -25,7 +26,7 @@ const HeaderComponent = () => {
   const [showMenu, setShowMenu] = useState(false);
 
   const handleOrderClick = () => {
-    navigate("/order");
+    navigate("/get-your-note");
   };
 
   useEffect(() => {
@@ -75,6 +76,8 @@ const HeaderComponent = () => {
         {isMobile ? (
           <div>
             <FaBars size={30} onClick={() => setShowMenu(!showMenu)} />
+    
+
           </div>
         ) : (
           renderOrderButton()

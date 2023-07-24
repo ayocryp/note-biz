@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components'
 
 export const HeaderContainer = styled.div`
   z-index: 2;
@@ -8,7 +8,11 @@ export const HeaderContainer = styled.div`
   font-size: 18px;
   box-sizing: border-box;
   background-color: rgb(236, 236, 236);
-`;
+
+  @media (max-width: 900px){
+    width: 100%;
+  }
+`
 
 export const HeaderMenus = styled.div`
   width: 100%;
@@ -21,14 +25,20 @@ export const HeaderMenus = styled.div`
     display: flex;
     align-items: center;
   }
-`;
+`
 
 export const HeaderLogo = styled.img`
   width: 50px;
   height: auto;
-  margin-left: 48px;
+  margin-left: 60px;
   margin-right: 30px;
-`;
+
+  @media (max-width: 900px){
+  width: 50px;
+  height: auto;
+  margin: 5px 0px 5px 5px;
+  }
+`
 
 export const MenuWrapper = styled.div`
   display: flex;
@@ -44,41 +54,48 @@ export const MenuWrapper = styled.div`
     align-items: flex-start;
     position: absolute;
     top: 80px;
+    right: 0px;
     gap: 10px;
-    background-color: rgb(236, 236, 236);
+    background: rgb(236, 236, 236);
     overflow: hidden;
-    height: ${(props) => (props.showMenu ? "280px" : "0px")};
+    text-align: left;
+    height: ${(props) => (props.showMenu ? '520px' : '0px')};
   }
-`;
+`
 
 export const MenuItem = styled.div`
   color: #262c55;
   cursor: pointer;
   display: block;
-  font-size: 1rem;
-  font-family: "Moderat", sans-serif !important;
+  font-size: 1.15rem;
+  font-family: 'Moderat', sans-serif !important;
   font-weight: 500;
   justify-content: flex-start;
   line-height: 1.8rem;
+  letter-spacing: 1px;
   padding: 1rem 1.2rem;
-`;
+
+  @media (max-width: 768px){
+    font-size: 1rem;
+    line-height: 1.5rem;
+    font-weight: 400;
+  }
+`
 
 export const OrderBtn = styled.div`
   color: rgb(255, 255, 255);
-  width: fit-content;
-  background-color: #0a0e27;
+  background-color: green;
   cursor: pointer;
-  padding: 11px 20px;
-
+  padding: 10px 35px;
   font-size: 1rem;
-  font-family: "Moderat", sans-serif !important;
+  font-family: 'Moderat', sans-serif !important;
   font-weight: 100;
-  border-radius: 10px 10px;
+  letter-spacing: 0.8px;
+  border-radius: 3px;
 
   :hover {
-    /* box-shadow: 0 5px 10px rgba(29, 29, 29, 0.5); */
-    background: #fff;
-    color: #0a0e27;
-    transition: all ease 0.9s;
+    background: black;
+    color: white;
+    transition: all linear 0.4s;
   }
-`;
+`
