@@ -10,6 +10,7 @@ import {
 import { useEffect, useState } from "react";
 import { FaBars } from "react-icons/fa";
 
+
 const menuItems = [
   { to: "/", text: "Home" },
   { href: "/#what", text: "Services" },
@@ -75,6 +76,8 @@ const HeaderComponent = () => {
         {isMobile ? (
           <div>
             <FaBars size={30} onClick={() => setShowMenu(!showMenu)} />
+    
+
           </div>
         ) : (
           renderOrderButton()

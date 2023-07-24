@@ -28,7 +28,7 @@ const variant1 = {
     y: 0,
     opacity:1,
     transition:{
-      delay: 0.3,
+      delay: 0.9,
       duration: 1
     }
   }
@@ -54,9 +54,7 @@ const MainComponent = () => {
           <ArticleText>
             <p>{articleText}</p>
           </ArticleText>
-          {/* <OrderBtn onClick={() => navigate("/get_your_note")}>
-            Order your notes now
-          </OrderBtn> */}
+
           <Link to="/get-your-note">
               <OrderBtn >Order your note </OrderBtn>
             </Link>
