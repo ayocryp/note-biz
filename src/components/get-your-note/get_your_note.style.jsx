@@ -160,7 +160,8 @@ export const GroupWrapper = styled.div`
 `;
 
 export const GroupTitle = styled.div`
-  margin-top: 100px;
+  margin-top: 120px;
+  margin-bottom: 50px;
   color: green;
   word-break: break-all;
   font-family: "Millik", sans-serif !important;
@@ -168,6 +169,7 @@ export const GroupTitle = styled.div`
   font-size: 45px;
   font-weight: 600;
   letter-spacing: 0.8px;
+  text-align: center;
 
   @media (max-width: 768px) {
     font-size: 35px;
@@ -186,7 +188,7 @@ export const HowTo = styled.div`
   font-weight: 300;
   letter-spacing: 0.1px;
   margin-bottom: 40px;
-  
+
   @media (max-width: 768px) {
     padding: 8px;
     font-family: "Moderat", sans-serif !important;
