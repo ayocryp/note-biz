@@ -176,7 +176,7 @@ export const GroupTitle = styled.div`
     font-family: "Millik", sans-serif !important;
     line-height: 2.5rem;
     letter-spacing: 2px;
-    word-break: normal;
+    word-break: break-all;
     text-align: center;
   }
 `;
