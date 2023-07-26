@@ -54,10 +54,12 @@ export const MenuWrapper = styled.div`
     align-items: flex-start;
     position: absolute;
     top: 80px;
+    right: 0px;
     gap: 10px;
-    background-color: rgb(236, 236, 236);
+    background: rgb(236, 236, 236);
     overflow: hidden;
-    height: ${(props) => (props.showMenu ? '280px' : '0px')};
+    text-align: left;
+    height: ${(props) => (props.showMenu ? '520px' : '0px')};
   }
 `
 
@@ -72,6 +74,12 @@ export const MenuItem = styled.div`
   line-height: 1.8rem;
   letter-spacing: 1px;
   padding: 1rem 1.2rem;
+
+  @media (max-width: 768px){
+    font-size: 1rem;
+    line-height: 1.5rem;
+    font-weight: 400;
+  }
 `
 
 export const OrderBtn = styled.div`

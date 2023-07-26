@@ -138,7 +138,7 @@ export const Desc = styled.div`
   margin: 0px 0px 18px;
   padding: 0px 0px 30px;
   font-family: "Moderat", sans-serif !important;
-  line-height: 1.9rem;
+  line-height: 1.5rem;
     font-size: 17px;
     font-weight: 300;
     letter-spacing: 0.1px;
@@ -158,7 +158,7 @@ export const NoteWrapper = styled.div`
   flex-direction: column;
   gap: 30px;
   font-family: "Moderat", sans-serif !important;
-  line-height: 1.9rem;
+  line-height: 1.5rem;
     font-size: 17px;
     font-weight: 300;
     letter-spacing: 0.1px;
@@ -177,7 +177,7 @@ export const NoteWrapper = styled.div`
 export const GroupWrapper = styled.div`
   width: 100%;
   font-family: "Moderat", sans-serif !important;
-  line-height: 1.9rem;
+  line-height: 1.5rem;
     font-size: 17px;
     font-weight: 300;
     letter-spacing: 0.1px;
