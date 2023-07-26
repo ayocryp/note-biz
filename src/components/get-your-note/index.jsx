@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import {
   GroupTitle,
   Desc,
@@ -49,15 +50,12 @@ const GetYourNotes = () => {
         </div>
 
         <div>
-          <a
-            href="https://paystack.com/pay/limiltess"
-            rel="noreferrer"
-            target="_blank"
-          >
-            <button className="bg-[#008001]  text-slate-50 w-[320px] py-2 font-semibold rounded-sm text-xl border-0 ">
+          <Link to='/payment'>
+          <button className="bg-[#008001]  text-slate-50 w-[320px] py-2 font-semibold rounded-sm text-xl border-0 ">
               Proceed
-            </button>
-          </a>
+            </button></Link>
+            
+        
         </div>
       </OrderWrapper>
     </OrderContainer>
