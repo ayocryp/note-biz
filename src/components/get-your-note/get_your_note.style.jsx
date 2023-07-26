@@ -172,7 +172,7 @@ export const GroupTitle = styled.div`
   text-align: center;
 
   @media (max-width: 768px) {
-    font-size: 35px;
+    font-size: 30px;
     font-family: "Millik", sans-serif !important;
     line-height: 2.5rem;
     letter-spacing: 2px;
