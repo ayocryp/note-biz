@@ -6,6 +6,7 @@ import {
   OrderWrapper,
   Title,
   HowTo,
+  MyButton,
 } from "./get_your_note.style";
 
 
@@ -47,14 +48,14 @@ const GetYourNotes = () => {
           
         </div>
 
-        <div>
+        <MyButton>
           <Link to='/payment'>
           <button className="bg-[#008001]  text-slate-50 w-[320px] py-2 font-semibold rounded-sm text-xl border-0 ">
               Proceed
             </button></Link>
             
         
-        </div>
+        </MyButton>
       </OrderWrapper>
     </OrderContainer>
   );

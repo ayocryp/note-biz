@@ -198,3 +198,9 @@ export const HowTo = styled.div`
     letter-spacing: 0.1px;
   }
 `;
+
+export const MyButton = styled.div`
+  @media (max-width: 768px) {
+    text-align: center;
+  }
+`
