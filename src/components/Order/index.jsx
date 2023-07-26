@@ -1,8 +1,7 @@
 import { useRef } from "react";
 import { Form, Field } from "react-final-form";
 import * as Yup from "yup";
-import axios from "axios";
-import { toast } from "react-toastify";
+// import { toast } from "react-toastify";
 
 import {
   Desc,
@@ -23,6 +22,7 @@ import {
   DownloadBtn,
 } from "./order.style";
 import { BsArrowDownRight } from "react-icons/bs";
+
 
 const validationSchema = Yup.object().shape({
   firstName: Yup.string().required("First Name is required"),
@@ -78,40 +78,65 @@ const fileToBase64 = (file) => {
 };
 
 const sendData = async (data) => {
+
+
   try {
-    await axios.post(`${process.env.REACT_APP_ENDPOINT}/api/sender`, data, {
+    const res = await fetch("https://mummyserena-note-server.vercel.app/api/sender", {
+      method: "POST",
+
       headers: {
         "Content-Type": "application/json",
       },
-    });
 
-    toast.success("successful", {
-      position: "top-right",
-      autoClose: 5000,
-      hideProgressBar: false,
-      closeOnClick: true,
-      pauseOnHover: true,
-      draggable: true,
-      progress: undefined,
-      theme: "light",
-    });
+      body: JSON.stringify(data),
+      
+    })
 
-    return true;
-  } catch (error) {
-    toast.success("Error Happened", {
-      position: "top-right",
-      autoClose: 5000,
-      hideProgressBar: false,
-      closeOnClick: true,
-      pauseOnHover: true,
-      draggable: true,
-      progress: undefined,
-      theme: "light",
-    });
+    
+    const result = await res.json()
 
-    return false;
+    console.log(result);
+
+
+    
+
+  }catch(error){
+    throw new Error(error)
   }
-};
+
+
+
+
+   
+
+}
+
+
+//  toast.success("successful", {
+//       position: "top-right",
+//       autoClose: 5000,
+//       hideProgressBar: false,
+//       closeOnClick: true,
+//       pauseOnHover: true,
+//       draggable: true,
+//       progress: undefined,
+//       theme: "light",
+//     });
+
+//     return true;
+//   } catch (error) {
+//     toast.success("Error Happened", {
+//       position: "top-right",
+//       autoClose: 5000,
+//       hideProgressBar: false,
+//       closeOnClick: true,
+//       pauseOnHover: true,
+//       draggable: true,
+//       progress: undefined,
+//       theme: "light",
+//     });
+
+//     return false;
 
 const OrderComponent = () => {
   const fileRef = useRef(null);
@@ -157,8 +182,13 @@ const OrderComponent = () => {
         <Desc>
           Please provide the following information to process your request.
           Enter any other information in the Additional Notes section. After
-          submitting this form you will be taken to complete the Payment.
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique excepturi rerum omnis numquam autem at. Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis velit sunt vero accusantium. Lorem ipsum dolor sit. adipisicing elit. Similique excepturi rerum omnis numquam autem at. Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis velit sunt vero accusantium
+          submitting this form you will be taken to complete the Payment. Lorem
+          ipsum dolor sit amet consectetur adipisicing elit. Similique excepturi
+          rerum omnis numquam autem at. Lorem ipsum dolor sit amet consectetur
+          adipisicing elit. Perferendis velit sunt vero accusantium. Lorem ipsum
+          dolor sit. adipisicing elit. Similique excepturi rerum omnis numquam
+          autem at. Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          Perferendis velit sunt vero accusantium
         </Desc>
 
         <Form
@@ -193,23 +223,33 @@ const OrderComponent = () => {
                   <GroupTitle>PRIMARY APPLICANT</GroupTitle>
                   <FormContent>
                     <FormItem>
-                      <FormLabel>First Name <span>*</span></FormLabel>
+                      <FormLabel>
+                        First Name <span>*</span>
+                      </FormLabel>
                       {renderField("firstName", "First Name")}
                     </FormItem>
                     <FormItem>
-                      <FormLabel>Last Name <span>*</span></FormLabel>
+                      <FormLabel>
+                        Last Name <span>*</span>
+                      </FormLabel>
                       {renderField("lastName", "Last Name")}
                     </FormItem>
                     <FormItem>
-                      <FormLabel>Email Address <span>*</span></FormLabel>
+                      <FormLabel>
+                        Email Address <span>*</span>
+                      </FormLabel>
                       {renderField("email", "Email Address")}
                     </FormItem>
                     <FormItem>
-                      <FormLabel>Date of Birth <span>*</span></FormLabel>
+                      <FormLabel>
+                        Date of Birth <span>*</span>
+                      </FormLabel>
                       {renderField("dob", "Date of Birth", "date")}
                     </FormItem>
                     <FormItem>
-                      <FormLabel>UCI or Client ID Number <span>*</span></FormLabel>
+                      <FormLabel>
+                        UCI or Client ID Number <span>*</span>
+                      </FormLabel>
                       {renderField("uciOrClientId", "xx-xxx-xx or xx-xxx-xxx")}
                     </FormItem>
                   </FormContent>
@@ -290,7 +330,6 @@ const OrderComponent = () => {
                           <FormText
                             {...input}
                             placeholder="Provide any relevant information for your application"
-                      
                             onBlur={() => input.onBlur(input.value.trim())}
                             isError={meta.touched && meta.error}
                           />
@@ -306,13 +345,14 @@ const OrderComponent = () => {
                       <FormLabel>Transaction ID *</FormLabel>
                       {renderField("transactionId", "xxxxxxxxxx")}
                     </FormItem>
-                          
+
                     <Field name="file">
                       {({ input, meta }) => (
-                        
                         <FileUpload isError={meta.touched && meta.error}>
                           <span onClick={() => fileRef.current.click()}>
-                            {!meta.error ? "Loaded File" : "Upload Consent Form"}
+                            {!meta.error
+                              ? "Loaded File"
+                              : "Upload Consent Form"}
                           </span>
                           <FormInput
                             type="file"
