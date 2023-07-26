@@ -76,7 +76,7 @@ const Payment = () => {
              
 
                 <div className=" text-center">
-                    <PaystackButton className="bg-green-400"  {...componentProps} />
+                    <PaystackButton className="bg-green-400 border"  {...componentProps} />
                 </div>
                 </div>
 

@@ -42,15 +42,14 @@ export const OrderContainer = styled.div`
   padding: 3% 2%;
   display: flex;
   justify-content: center;
- 
+
   background-position: bottom center;
   background-repeat: no-repeat;
   background-size: 200px;
-  word-break:break-all;
+  word-break: break-all;
 
   @media (max-width: 900px) {
-    padding:20% 0%;
-   
+    padding: 20% 0%;
   }
   .leaf div {
     position: absolute;
@@ -104,36 +103,41 @@ export const OrderContainer = styled.div`
 
 export const OrderWrapper = styled.div`
   padding: 5% 3%;
-  border-radius: 1px;
-  max-width: 80%;
-  width: 100%;
-  box-sizing: border-box;
+  max-width: 100%;
 
-  @media (max-width: 900px) {
-    padding: 5% 0%; 
-  }
+  // box-sizing: border-box;
 `;
 
 export const Title = styled.div`
   font-size: 55px;
   color: black;
   text-align: center;
-  margin: 0px 0px 50px 0;
-  padding: 0px 0px 10px;
+  margin: 40px 0 50px 0;
+  padding: 0 0 10px;
   font-family: "Millik", sans-serif !important;
   @media (max-width: 900px) {
-  font-size:40px;
-  margin: 5px 0px;
+    font-size: 35px;
+    margin-top: 50px;
+    margin-bottom: 10px;
   }
 `;
 
 export const Desc = styled.div`
-font-family: "Moderat", sans-serif !important;
-line-height: 1.9rem;
-font-size: 17px;
-font-weight: 300;
-letter-spacing: 0.1px;
-  
+  font-family: "Moderat", sans-serif !important;
+  line-height: 1.9rem;
+  font-size: 17px;
+  font-weight: 300;
+  letter-spacing: 0.1px;
+
+  @media (max-width: 900px) {
+    font-family: "Moderat", sans-serif !important;
+    line-height: 1.9rem;
+    font-size: 15px;
+    font-weight: 300;
+    letter-spacing: 0.1px;
+    margin-bottom: 40px;
+    padding: 8px;
+  }
 `;
 
 export const NoteWrapper = styled.div`
@@ -159,25 +163,36 @@ export const GroupTitle = styled.div`
   margin-top: 100px;
   color: green;
   word-break: break-all;
-  font-family: "Milik", sans-serif !important;
+  font-family: "Millik", sans-serif !important;
   line-height: 1.5rem;
   font-size: 45px;
   font-weight: 600;
   letter-spacing: 0.8px;
+
+  @media (max-width: 768px) {
+    font-size: 35px;
+    font-family: "Millik", sans-serif !important;
+    line-height: 2.5rem;
+    letter-spacing: 2px;
+    word-break: normal;
+    text-align: center;
+  }
 `;
 
-
 export const HowTo = styled.div`
-font-family: "Moderat", sans-serif !important;
+  font-family: "Moderat", sans-serif !important;
   line-height: 1.9rem;
   font-size: 17px;
   font-weight: 300;
   letter-spacing: 0.1px;
   margin-bottom: 40px;
-
-`
-
-
-
-
-
+  
+  @media (max-width: 768px) {
+    padding: 8px;
+    font-family: "Moderat", sans-serif !important;
+    line-height: 1.9rem;
+    font-size: 15px;
+    font-weight: 300;
+    letter-spacing: 0.1px;
+  }
+`;
