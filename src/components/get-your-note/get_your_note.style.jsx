@@ -172,12 +172,12 @@ export const GroupTitle = styled.div`
   text-align: center;
 
   @media (max-width: 768px) {
-    font-size: 30px;
+    font-size: 31px;
     font-family: "Millik", sans-serif !important;
     line-height: 2.5rem;
-    letter-spacing: 2px;
+    letter-spacing: 0.8px;
     word-break: break-all;
-    text-align: center;
+    text-align: left;
   }
 `;
 
