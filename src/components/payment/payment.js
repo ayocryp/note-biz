@@ -3,6 +3,8 @@ import { PaystackButton } from "react-paystack";
 import "./payment.css";
 
 const Payment = () => {
+
+  
   const publicKey = "pk_your_public_key_here";
   const amount = 1000000;
   const [email, setEmail] = useState("");
