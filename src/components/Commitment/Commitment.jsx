@@ -32,19 +32,7 @@ function Commitment() {
         that offers GCMS notes service to individuals who have applied for a
         Canadian visa. We pride ourselves on providing an unbiased, transparent,
         safe and trustworthy service to our clients. As an independently owned
-        and operated business, we are committed to providing high-quality
-        services to ensure our clients receive accurate and reliable information
-        about their visa application. Limitless Immigration is a professional and independent organization
-        that offers GCMS notes service to individuals who have applied for a
-        Canadian visa. We pride ourselves on providing an unbiased, transparent,
-        safe and trustworthy service to our clients. As an independently owned
-        and operated business, we are committed to providing high-quality
-        services to ensure our clients receive accurate and reliable information
-        about their visa application. We pride ourselves on providing an unbiased, transparent,
-        safe and trustworthy service to our clients. As an independently owned
-        and operated business, we are committed to providing high-quality
-        services to ensure our clients receive accurate and reliable information
-        about their visa application. 
+        and operated business. 
        
       </p>
       <p className={styles.commitment_text}>

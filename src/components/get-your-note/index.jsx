@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import {
   GroupTitle,
   Desc,
@@ -5,6 +6,7 @@ import {
   OrderWrapper,
   Title,
   HowTo,
+  MyButton,
 } from "./get_your_note.style";
 
 
@@ -36,9 +38,7 @@ const GetYourNotes = () => {
             
             <br />A consent form is required pursuant to the Canadian Privacy
             Act, which states that personal information shall not, without the
-            consent of the individual to whom it relates, be disclosed.
-            <br />
-            <br /> A properly filled in consent form will ensure timely
+            consent of the individual to whom it relates, be disclosed. A properly filled in consent form will ensure timely
             processing of your order! Print and hand sign directly on the
             printed form. Each individual 16 years of age or older must sign on
             their own and the signature must be consistent with the official
@@ -48,17 +48,14 @@ const GetYourNotes = () => {
           
         </div>
 
-        <div>
-          <a
-            href="https://paystack.com/pay/limiltess"
-            rel="noreferrer"
-            target="_blank"
-          >
-            <button className="bg-[#008001]  text-slate-50 w-[320px] py-2 font-semibold rounded-sm text-xl border-0 ">
+        <MyButton>
+          <Link to='/payment'>
+          <button className="bg-[#008001]  text-slate-50 w-[320px] py-2 font-semibold rounded-sm text-xl border-0 ">
               Proceed
-            </button>
-          </a>
-        </div>
+            </button></Link>
+            
+        
+        </MyButton>
       </OrderWrapper>
     </OrderContainer>
   );
