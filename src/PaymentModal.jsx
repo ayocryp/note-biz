@@ -1,23 +1,25 @@
-import React from 'react'
-import ReactDOM from 'react-dom'
-import './PaymentModal.css'
-import { PaystackButton } from 'react-paystack'
-import { useState } from 'react'
+import React from "react";
+import ReactDOM from "react-dom";
+import "./PaymentModal.css";
+import { PaystackButton } from "react-paystack";
+import { useState } from "react";
+import { usePayContext } from "./Context/PayContext";
 
 const Backdrop = (props) => {
-  return <div onClick={props.onRemoveModal} className=" backdrop "></div>
-}
+  return <div onClick={props.onRemoveModal} className=" backdrop "></div>;
+};
 
 const ModalOverlay = (props) => {
-  const [email, setEmail] = useState('')
-  const [name, setName] = useState('')
-  const [phone, setPhone] = useState('')
-  const [defaultAmount, setDefaultAmount] = useState('')
+  const { setIsPaid } = usePayContext();
+  const [email, setEmail] = useState("");
+  const [name, setName] = useState("");
+  const [phone, setPhone] = useState("");
+  const [defaultAmount, setDefaultAmount] = useState("");
 
   // Form handle
 
-  const publicKey = 'pk_test_de0f7ff3c26fbc3449553a4bc56484048aba0f40'
-  const amount = 10000
+  const publicKey = "pk_test_de0f7ff3c26fbc3449553a4bc56484048aba0f40";
+  const amount = 10000;
 
   const componentProps = {
     email,
@@ -28,10 +30,10 @@ const ModalOverlay = (props) => {
       phone,
     },
     publicKey,
-    text: 'Pay Now',
-    onSuccess: () => alert('Working'),
-    onClose: () => alert("Wait! You need this oil, don't go!!!!"),
-  }
+    text: "Pay Now",
+    onSuccess: () => setIsPaid(true),
+    onClose: () => setIsPaid(false),
+  };
 
   return (
     <div className=" form_container   top-[25%] left-[37%] z-20 fixed  ">
@@ -98,22 +100,22 @@ const ModalOverlay = (props) => {
         />
       </div>
     </div>
-  )
-}
+  );
+};
 
 const Modal = (props) => {
   return (
     <>
       {ReactDOM.createPortal(
         <Backdrop onRemoveModal={props.handleModalRemove} />,
-        document.getElementById('backdrop-root'),
+        document.getElementById("backdrop-root")
       )}
       {ReactDOM.createPortal(
         <ModalOverlay />,
-        document.getElementById('modal-root'),
+        document.getElementById("modal-root")
       )}
     </>
-  )
-}
+  );
+};
 
-export default Modal
+export default Modal;
