@@ -10,7 +10,7 @@ import {
 } from "./get_your_note.style";
 import Modal from "src/PaymentModal";
 import { useState } from "react"; 
-import Payment from "../payment/index";
+// import Payment from "../payment/index";
 
 
 
