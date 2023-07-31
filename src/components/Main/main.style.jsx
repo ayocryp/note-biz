@@ -4,7 +4,7 @@ export const MainContainer = styled.div`
   display: flex;
   justify-content: center;
   background-color: whitesmoke;
-  padding: 50px 6% 86px;
+  padding: 50px 86px;
 
   @media (max-width:900px){
     padding: 10px;
@@ -12,7 +12,7 @@ export const MainContainer = styled.div`
 `;
 
 export const ArticleContainer = styled.div`
-  max-width: 50%;
+  max-width: 60%;
   @media (max-width: 990px) {
     width: 100%;
     max-width: 100%;
@@ -39,27 +39,37 @@ export const ArticleTitle = styled.div`
     font-weight: 300;
     font-family: "Millik", sans-serif !important;
     @media (max-width: 900px) {
-      font-size: 45px;
+      font-size: 52px;
+      text-align: center;
     }
   }
 
   @media (max-width: 900px) {
-    font-size: 40px;
+    font-size: 48px;
     display: flex;
     flex-direction: column;
   }
 `;
 
 export const ArticleText = styled.div`
-  margin: 30px 0;
+  margin: 40px 0;
   p {
-    margin: 0;
+    margin: 30px 0;
     color: #212529;
     line-height: 1.9rem;
     font-family: "Moderat", sans-serif !important;
     font-weight: 100;
     letter-spacing: 0.8px;
     word-break: break-all;
+  }
+
+  @media (max-width: 900px) {
+    margin:15px 0px;
+    
+    p {
+      
+      text-align: left;
+    }
   }
 `;
 
@@ -68,6 +78,7 @@ export const ImageSection = styled.div`
   width: 50%;
   display: flex;
   justify-content: center;
+  
   @media (max-width: 990px) {
     width: 100%;
     max-width: 100%;

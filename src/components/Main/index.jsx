@@ -19,8 +19,8 @@ import {
 
 const variant1 = {
   hidden: {
-    y: '-80vh' ,
-    opacity:0.1,
+    y: '30vh' ,
+    opacity:0,
 
   },
 
@@ -28,8 +28,8 @@ const variant1 = {
     y: 0,
     opacity:1,
     transition:{
-      delay: 0.9,
-      duration: 1
+      
+      duration: 1.8
     }
   }
 }
@@ -42,29 +42,30 @@ const MainComponent = () => {
     "/assets/image/Main/vincent-van-zalinge-5vCvYLEJRzg-unsplash-removebg-preview.png";
 
   return (
-  <motion.div variants={variant1} initial="hidden" animate="visible">
-      
-  
-    <MainContainer id="home">
-      <MainWrapper>
-        <ArticleContainer>
-          <ArticleTitle>
-            Limitless<span>Immigration</span>
-          </ArticleTitle>
-          <ArticleText>
-            <p>{articleText}</p>
-          </ArticleText>
+    <>
+      <MainContainer id="home">
+        <MainWrapper>
+          {" "}
+          <ArticleContainer>
+            <motion.div variants={variant1} initial="hidden" animate="visible">
+              <ArticleTitle>
+                Limitless<span>Immigration</span>
+              </ArticleTitle>
+              <ArticleText>
+                <p>{articleText}</p>
+              </ArticleText>
 
-          <Link to="/get-your-note">
-              <OrderBtn >Order your note </OrderBtn>
-            </Link>
-        </ArticleContainer>
-        <ImageSection>
-          <ArticleImage src={imageSrc} alt="Immigration" />
-        </ImageSection>
-      </MainWrapper>
+              <Link to="/get-your-note">
+                <OrderBtn>Order your note </OrderBtn>
+              </Link>
+            </motion.div>
+          </ArticleContainer>
+          <ImageSection>
+            <ArticleImage src={imageSrc} alt="Immigration" />
+          </ImageSection>
+        </MainWrapper>
       </MainContainer>
-      </motion.div>
+    </>
   );
 };
 

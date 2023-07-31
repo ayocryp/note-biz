@@ -1,0 +1,79 @@
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 100vh;
+  line-height: 1.9rem;
+  font-family: 'Moderat', sans-serif !important;
+  font-weight: 300;
+  letter-spacing: 0.1px;
+  cursor: pointer;
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(10px);
+}
+
+@media (max-width: 900px){
+  .backdrop {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(10px);
+  }
+}
+
+
+
+
+
+
+/* form */
+.form_container{
+  background-color: rgb(240, 240, 240);
+  padding: 25px 33px;
+  border: none;
+  border-radius: 1px;
+  display: flex;
+  flex-direction: column;
+  font-family: 'Moderat', sans-serif !important;
+  font-weight: 400;
+  /* letter-spacing: 0.1px; */
+}
+
+input:focus{
+  border-color: #008002;
+}
+
+ 
+
+.form_image{
+  text-align: center;
+  margin: 0 auto;
+
+
+}
+.form_image img {
+  text-align: center;
+  margin: 10px 0;
+  width: 50px;
+  justify-content: center;
+}
+
+.paystackButton{
+  background-color: #008002;
+  color: white;
+  border: none;
+
+}
+
+input{
+  border: 20px;
+}
+
+input::placeholder{
+  color: #008002b6;
+}
+
