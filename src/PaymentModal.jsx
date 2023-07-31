@@ -43,7 +43,7 @@ const ModalOverlay = (props) => {
       </div>
       <div className="my-2">
         <label className="block mb-1" htmlFor="name">
-          Name{' '}
+          Name
         </label>
         <input
           onChange={(e) => setName(e.target.value)}
@@ -55,7 +55,7 @@ const ModalOverlay = (props) => {
       </div>
       <div className="mb-4">
         <label className="block mb-1" htmlFor="email">
-          Email{' '}
+          Email
         </label>
         <input
           onChange={(e) => setEmail(e.target.value)}
@@ -67,7 +67,7 @@ const ModalOverlay = (props) => {
       </div>
       <div className="mb-4">
         <label className="block mb-1" htmlFor="phoneNumber">
-          Phone Number{' '}
+          Phone Number
         </label>
         <input
           onChange={(e) => setPhone(e.target.value)}
@@ -79,7 +79,7 @@ const ModalOverlay = (props) => {
       </div>
       <div className="mb-4">
         <label className="block mb-1" htmlFor="Amount">
-          Amount{' '}
+          Amount
         </label>
         <input
           onChange={(e) => setDefaultAmount(e.target.value)}
