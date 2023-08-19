@@ -13,7 +13,7 @@ import "./App.css";
 import Policy from "./components/Policy";
 import Terms from "./components/Terms/";
 import GetYourNotes from "./components/get-your-note/index.jsx";
-import Payment from "./components/payment/index.jsx";
+import Payment from "./components/payment2312/index.jsx";
 import ProtectedRoute from "./components/PrivateRoute";
 import { PayProvider } from "./Context/PayContext";
 

@@ -6,7 +6,7 @@ import { useState } from "react";
 import { usePayContext } from "./Context/PayContext";
 
 const Backdrop = (props) => {
-  return <div onClick={props.onRemoveModal} className=" backdrop "></div>;
+  return <div onClick={props.onRemoveModal} className=" backdrop"></div>;
 };
 
 const ModalOverlay = (props) => {
@@ -93,9 +93,9 @@ const ModalOverlay = (props) => {
         />
       </div>
 
-      <div className=" text-center">
+      <div className="text-center ">
         <PaystackButton
-          className="paystackButton  px-11 py-2 "
+          className="py-2 paystackButton px-11 "
           {...componentProps}
         />
       </div>

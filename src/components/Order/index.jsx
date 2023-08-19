@@ -23,7 +23,6 @@ import {
 } from "./order.style";
 import { BsArrowDownRight } from "react-icons/bs";
 
-
 const validationSchema = Yup.object().shape({
   firstName: Yup.string().required("First Name is required"),
   lastName: Yup.string().required("Last Name is required"),
@@ -78,39 +77,27 @@ const fileToBase64 = (file) => {
 };
 
 const sendData = async (data) => {
-
-
   try {
-    const res = await fetch("https://mummyserena-note-server.vercel.app/api/sender", {
-      method: "POST",
+    const res = await fetch(
+      "https://mummyserena-note-server.vercel.app/api/sender",
+      {
+        method: "POST",
 
-      headers: {
-        "Content-Type": "application/json",
-      },
+        headers: {
+          "Content-Type": "application/json",
+        },
 
-      body: JSON.stringify(data),
-      
-    })
+        body: JSON.stringify(data),
+      }
+    );
 
-    
-    const result = await res.json()
+    const result = await res.json();
 
     console.log(result);
-
-
-    
-
-  }catch(error){
-    throw new Error(error)
+  } catch (error) {
+    throw new Error(error);
   }
-
-
-
-
-   
-
-}
-
+};
 
 //  toast.success("successful", {
 //       position: "top-right",
