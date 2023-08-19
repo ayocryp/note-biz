@@ -13,7 +13,6 @@ import "./App.css";
 import Policy from "./components/Policy";
 import Terms from "./components/Terms/";
 import GetYourNotes from "./components/get-your-note/index.jsx";
-import Payment from "./components/payment/index.jsx";
 import ProtectedRoute from "./components/PrivateRoute";
 import { PayProvider } from "./Context/PayContext";
 
@@ -33,7 +32,6 @@ function App() {
             <Route path="/policy" element={<Policy />} />
             <Route path="/terms" element={<Terms />} />
             <Route path="/get-your-note" element={<GetYourNotes />} />
-            <Route path="/payment" element={<Payment />} />
           </Routes>
           <ContactComponent />
           <ToastContainer />
