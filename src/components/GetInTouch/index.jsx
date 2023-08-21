@@ -34,11 +34,11 @@ const GetInTouchComponent = () => (
       <Title>GET IN TOUCH</Title>
       <Desc>Lorem ipsum dolor. sit amet consectetur adipisicing elit. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptates modi voluptatem debitis officia? Corrupti, doloremque! Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta, rerum!</Desc>
       <TouchWrapper>
-        {contactInfo.map(({ icon, text }) => (
-          <>
+        {contactInfo.map(({ icon, text }, index) => (
+          <div key={index}>
             <ContactIcon>{icon}</ContactIcon>
             <IconDesc>{text}</IconDesc>
-          </>
+          </div>
         ))}
       </TouchWrapper>
     </GetInTouchWrapper>

@@ -1,16 +1,17 @@
-import React from "react";
 import ReactDOM from "react-dom";
 import "./PaymentModal.css";
 import { PaystackButton } from "react-paystack";
 import { useState } from "react";
 import { usePayContext } from "./Context/PayContext";
+import {  useNavigate } from "react-router-dom";
 
 const Backdrop = (props) => {
   return <div onClick={props.onRemoveModal} className=" backdrop"></div>;
 };
 
 const ModalOverlay = (props) => {
-  const { setIsPaid } = usePayContext();
+  const navigate = useNavigate();
+  const { setIsPaid, isPaid } = usePayContext();
   const [email, setEmail] = useState("");
   const [name, setName] = useState("");
   const [phone, setPhone] = useState("");
@@ -21,6 +22,8 @@ const ModalOverlay = (props) => {
   const publicKey = "pk_test_de0f7ff3c26fbc3449553a4bc56484048aba0f40";
   const amount = 10000;
 
+
+  
   const componentProps = {
     email,
     amount,
@@ -31,8 +34,13 @@ const ModalOverlay = (props) => {
     },
     publicKey,
     text: "Pay Now",
-    onSuccess: () => setIsPaid(true),
-    onClose: () => setIsPaid(false),
+    onSuccess: () => {
+      setIsPaid(true);
+      navigate('/order');
+    },
+    onClose: () => {
+      setIsPaid(false);
+    },
   };
 
   return (
