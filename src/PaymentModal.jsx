@@ -11,7 +11,7 @@ const Backdrop = (props) => {
 
 const ModalOverlay = (props) => {
   const navigate = useNavigate();
-  const { setIsPaid, isPaid } = usePayContext();
+  const { setIsPaid } = usePayContext();
   const [email, setEmail] = useState("");
   const [name, setName] = useState("");
   const [phone, setPhone] = useState("");
