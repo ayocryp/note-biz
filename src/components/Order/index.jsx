@@ -366,8 +366,8 @@ const OrderComponent = () => {
         />
       </OrderWrapper>
       <div className="leaf">
-        {leafImages.map((src) => (
-          <LeafImage key={src} src={src} />
+        {leafImages.map((src, index) => (
+          <LeafImage key={`leafimage`+index} src={src} />
         ))}
       </div>
     </OrderContainer>

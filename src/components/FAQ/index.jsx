@@ -51,7 +51,7 @@ const FaqComponent = () => (
 
 			<Accordion defaultActiveKey="0" >
 				{FAQ_DATA.map((item, index) => (
-					<Accordion.Item eventKey={"key" + index}>
+					<Accordion.Item eventKey={"key" + index} key={index}>
 						<Accordion.Header >{item.question}</Accordion.Header>
 						<Accordion.Body>{item.answer}</Accordion.Body>
 					</Accordion.Item>
