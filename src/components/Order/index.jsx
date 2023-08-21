@@ -1,7 +1,9 @@
-import { useRef } from "react";
+import { useRef, useState } from "react";
 import { Form, Field } from "react-final-form";
 import * as Yup from "yup";
-// import { toast } from "react-toastify";
+import { useNavigate } from "react-router-dom";
+import { toast } from "react-toastify";
+
 
 import {
   Desc,
@@ -22,82 +24,10 @@ import {
   DownloadBtn,
 } from "./order.style";
 import { BsArrowDownRight } from "react-icons/bs";
+import Loader from "src/Loader";
 
-const validationSchema = Yup.object().shape({
-  firstName: Yup.string().required("First Name is required"),
-  lastName: Yup.string().required("Last Name is required"),
-  email: Yup.string().email("Invalid email").required("Email is required"),
-  dob: Yup.date().required("Date of Birth is required"),
-  uciOrClientId: Yup.string().required("UCI or Client ID Number is required"),
-  s_firstName: Yup.string().required("First Name is required"),
-  s_lastName: Yup.string().required("Last Name is required"),
-  s_email: Yup.string().email("Invalid email").required("Email is required"),
-  s_uciOrClientId: Yup.string().required("UCI or Client ID Number is required"),
-  app_email: Yup.string()
-    .email("Invalid email")
-    .required("Primary Email is required"),
-  app_visatype: Yup.string().required("Please choose an option"),
-  transactionId: Yup.string().required("Transaction ID is required"),
-  file: Yup.mixed().required("A file is required"),
-});
 
-const validate = async (values) => {
-  try {
-    await validationSchema.validate(values, { abortEarly: false });
-  } catch (errors) {
-    return errors.inner.reduce((acc, error) => {
-      acc[error.path] = error.message;
-      return acc;
-    }, {});
-  }
-};
 
-const LeafImage = ({ src }) => (
-  <div>
-    <img src={src} height="25px" width="25px" alt="Leaf" />
-  </div>
-);
-
-const leafImages = [
-  "https://www.pngmart.com/files/1/Fall-Autumn-Leaves-Transparent-PNG.png",
-  "https://www.pngmart.com/files/1/Autumn-Fall-Leaves-Pictures-Collage-PNG.png",
-  "https://www.pngmart.com/files/1/Autumn-Fall-Leaves-Clip-Art-PNG.png",
-  "https://www.pngmart.com/files/1/Green-Leaves-PNG-File.png",
-  "https://www.pngmart.com/files/1/Transparent-Autumn-Leaves-Falling-PNG.png",
-  "https://www.pngmart.com/files/1/Realistic-Autumn-Fall-Leaves-PNG.png",
-];
-
-const fileToBase64 = (file) => {
-  return new Promise((resolve, reject) => {
-    const reader = new FileReader();
-    reader.readAsDataURL(file);
-    reader.onload = () => resolve(reader.result);
-    reader.onerror = (error) => reject(error);
-  });
-};
-
-const sendData = async (data) => {
-  try {
-    const res = await fetch(
-      "https://mummyserena-note-server.vercel.app/api/sender",
-      {
-        method: "POST",
-
-        headers: {
-          "Content-Type": "application/json",
-        },
-
-        body: JSON.stringify(data),
-      }
-    );
-
-    const result = await res.json();
-
-    console.log(result);
-  } catch (error) {
-    throw new Error(error);
-  }
-};
 
 //  toast.success("successful", {
 //       position: "top-right",
@@ -126,8 +56,97 @@ const sendData = async (data) => {
 //     return false;
 
 const OrderComponent = () => {
-  const fileRef = useRef(null);
 
+  const [isLoading, setIsloading] = useState(false)
+  const validationSchema = Yup.object().shape({
+    firstName: Yup.string().required("First Name is required"),
+    lastName: Yup.string().required("Last Name is required"),
+    email: Yup.string().email("Invalid email").required("Email is required"),
+    dob: Yup.date().required("Date of Birth is required"),
+    uciOrClientId: Yup.string().required("UCI or Client ID Number is required"),
+    s_firstName: Yup.string().required("First Name is required"),
+    s_lastName: Yup.string().required("Last Name is required"),
+    s_email: Yup.string().email("Invalid email").required("Email is required"),
+    s_uciOrClientId: Yup.string().required(
+      "UCI or Client ID Number is required"
+    ),
+    app_email: Yup.string()
+      .email("Invalid email")
+      .required("Primary Email is required"),
+    app_visatype: Yup.string().required("Please choose an option"),
+    transactionId: Yup.string().required("Transaction ID is required"),
+    file: Yup.mixed().required("A file is required"),
+  });
+
+  const validate = async (values) => {
+    try {
+      await validationSchema.validate(values, { abortEarly: false });
+    } catch (errors) {
+      return errors.inner.reduce((acc, error) => {
+        acc[error.path] = error.message;
+        return acc;
+      }, {});
+    }
+  };
+
+  const LeafImage = ({ src }) => (
+    <div>
+      <img src={src} height="25px" width="25px" alt="Leaf" />
+    </div>
+  );
+
+  const leafImages = [
+    "https://www.pngmart.com/files/1/Fall-Autumn-Leaves-Transparent-PNG.png",
+    "https://www.pngmart.com/files/1/Autumn-Fall-Leaves-Pictures-Collage-PNG.png",
+    "https://www.pngmart.com/files/1/Autumn-Fall-Leaves-Clip-Art-PNG.png",
+    "https://www.pngmart.com/files/1/Green-Leaves-PNG-File.png",
+    "https://www.pngmart.com/files/1/Transparent-Autumn-Leaves-Falling-PNG.png",
+    "https://www.pngmart.com/files/1/Realistic-Autumn-Fall-Leaves-PNG.png",
+  ];
+
+  const fileToBase64 = (file) => {
+    return new Promise((resolve, reject) => {
+      const reader = new FileReader();
+      reader.readAsDataURL(file);
+      reader.onload = () => resolve(reader.result);
+      reader.onerror = (error) => reject(error);
+    });
+  };
+
+  const sendData = async (data) => {
+ setIsloading(true);
+   
+    try {
+      const res = await fetch(
+        "https://mummyserena-note-server.vercel.app/api/sender",
+        {
+          method: "POST",
+
+          headers: {
+            "Content-Type": "application/json",
+          },
+
+          body: JSON.stringify(data),
+        }
+      )
+        .then((res) => {
+          res.json();
+        })
+
+        .then((result) => {
+          setIsloading(false)
+          toast.success(
+            "Your order has been placed successfully! Please check your email"
+          );
+          navigate("/");
+        });
+    } catch (error) {
+      toast.error(`${error.messgae}`);
+    }
+  };
+
+  const fileRef = useRef(null);
+const navigate = useNavigate();
   const onSubmit = async (values, form) => {
     const base64File = await fileToBase64(values.file);
     let formData = {
@@ -163,7 +182,9 @@ const OrderComponent = () => {
   };
 
   return (
+
     <OrderContainer>
+    {isLoading ? <Loader/> : ""}
       <OrderWrapper>
         <Title>Get your notes</Title>
         <Desc>

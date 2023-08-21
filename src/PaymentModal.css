@@ -14,17 +14,6 @@
   backdrop-filter: blur(10px);
 }
 
-@media (max-width: 900px){
-  .backdrop {
-    position: fixed;
-    width: 100%;
-    height: 100vh;
-    cursor: pointer;
-    background-color: rgba(0, 0, 0, 0.5);
-    backdrop-filter: blur(10px);
-  }
-}
-
 
 
 
@@ -33,7 +22,7 @@
 /* form */
 .form_container{
   background-color: rgb(240, 240, 240);
-  padding: 25px 33px;
+  padding: 15px 15px;
   border: none;
   border-radius: 1px;
   display: flex;
@@ -41,10 +30,6 @@
   font-family: 'Moderat', sans-serif !important;
   font-weight: 400;
   /* letter-spacing: 0.1px; */
-}
-
-input:focus{
-  border-color: #008002;
 }
 
  
@@ -62,6 +47,20 @@ input:focus{
   justify-content: center;
 }
 
+input{
+  border: 20px;
+  width: 100%;
+}
+
+input:focus{
+  border-color: #008002;
+}
+
+input::placeholder{
+  color: #008002b6;
+}
+
+
 .paystackButton{
   background-color: #008002;
   color: white;
@@ -69,11 +68,22 @@ input:focus{
 
 }
 
-input{
-  border: 20px;
-}
 
-input::placeholder{
-  color: #008002b6;
-}
 
+
+@media (max-width: 900px){
+  .backdrop {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(10px);
+  }
+
+
+  input{
+    width: 100%;
+  }
+
+}

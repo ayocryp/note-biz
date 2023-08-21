@@ -44,7 +44,7 @@ const ModalOverlay = (props) => {
   };
 
   return (
-    <div className=" form_container   top-[25%] left-[37%] z-20 fixed  ">
+    <div className=" form_container top-[19%] left-[6%]  sm:top-[19%] sm:left-[6%]   md:top-[20%] md:left-[30%] lg:top-[23%] lg:left-[38%] z-20 fixed  ">
       <div className="form_image">
         <img
           src="https://res.cloudinary.com/dgah5rv12/image/upload/v1690581861/zibkuly0qtdrca83r8ln.svg"
