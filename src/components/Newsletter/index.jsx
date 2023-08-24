@@ -4,7 +4,7 @@ const Newsletter = () => {
       <div className="flex items-center  justify-center">
         <div className="mr-4 hidden sm:hidden md:block xl:block">
           <img
-            className="w-[280px] "
+            className="w-[280px] cursor-pointer"
             src="https://res.cloudinary.com/dgah5rv12/image/upload/v1692728765/Envelope_hrb6us.gif"
             alt=""
           />
