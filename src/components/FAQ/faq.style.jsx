@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const FaqContainer = styled.div`
   display: flex;
   justify-content: center;
-  padding: 90px;
+  padding: 20px 50px;
   color: black;
   @media (max-width: 425px) {
     padding: 30px;
@@ -18,8 +18,6 @@ export const FaqWrapper = styled.div`
   gap: 30px;
   background: #090E27;
   color: #B6F5E8;
-  
-  margin-bottom: 150px;
 
   .accordion-button {
     background: white;

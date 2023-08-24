@@ -6,8 +6,8 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-       'milik': ['Milik, sans-serif']
-      },
+       roboto: ['Roboto, sans-serif'],
+      }
     },
 
   },

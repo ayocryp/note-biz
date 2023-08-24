@@ -7,7 +7,7 @@ body {
 }
 
 * {
-  font-family: "Robot",sans-serif !important;
+  font-family: "Robot",sans-serif;
 }
 
 
@@ -20,7 +20,4 @@ body {
 
 
 
-@font-face {
-  font-family: 'Millik';
-  src: url('../public/assets/fonts/Millik\ Regular.otf') format('opentype');
-}
+  @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');

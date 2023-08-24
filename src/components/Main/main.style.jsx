@@ -27,15 +27,15 @@ export const ArticleContainer = styled.div`
 `;
 
 export const ArticleTitle = styled.div`
-  color: #fb9129;
+  color: #F0B24E;
   font-family: "Millik", sans-serif !important;
   margin: 0;
-  font-size: 90px;
+  font-size: 60px;
   font-weight: 600;
 
   span {
     color: black;
-    font-size: 104px;
+    font-size: 84px;
     font-weight: 300;
     font-family: "Millik", sans-serif !important;
     @media (max-width: 900px) {
