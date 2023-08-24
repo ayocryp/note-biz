@@ -17,3 +17,10 @@ body {
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+
+@font-face {
+  font-family: 'Millik';
+  src: url('../public/assets/fonts/Millik\ Regular.otf') format('opentype');
+}

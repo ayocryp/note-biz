@@ -5,7 +5,9 @@ import FaqComponent from '../FAQ'
 import RemoveComponent from '../Remove'
 import Commitment from '../Commitment/Commitment'
 
+
 import { HomeContainer } from './home.style'
+import Newsletter from '../Newsletter'
 
 const HomeComponent = () => {
   return (
@@ -16,7 +18,7 @@ const HomeComponent = () => {
       <RemoveComponent />
       <Button />
       <FaqComponent />
-      
+      <Newsletter />
     </HomeContainer>
   )
 }
