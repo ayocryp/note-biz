@@ -47,48 +47,51 @@ const ModalOverlay = (props) => {
     <div className=" form_container top-[19%] left-[6%]  sm:top-[19%] sm:left-[6%]   md:top-[20%] md:left-[30%] lg:top-[23%] lg:left-[38%] z-20 fixed  ">
       <div className="form_image">
         <img
-          src="https://res.cloudinary.com/dgah5rv12/image/upload/v1690581861/zibkuly0qtdrca83r8ln.svg"
+          src="/assets/Image/Header/limitlessbrand/Limitless1-4.png"
           alt="img"
         />
       </div>
       <div className="my-2">
-        <label className="block mb-1" htmlFor="name">
+        <label className="block mb-1 font-roboto font-black" htmlFor="name">
           Name
         </label>
         <input
           onChange={(e) => setName(e.target.value)}
           name="name"
           required
-          className=" w-[300px] px-1 py-1 border border-green-300"
+          className=" w-[300px] px-1 py-1 border border-green-300 font-roboto"
           type="text"
         />
       </div>
       <div className="mb-4">
-        <label className="block mb-1" htmlFor="email">
+        <label className="block mb-1 font-roboto font-black" htmlFor="email">
           Email
         </label>
         <input
           onChange={(e) => setEmail(e.target.value)}
           required
           name="email"
-          className=" w-[300px] px-1 py-1 border border-slate-300"
+          className=" w-[300px] px-1 py-1 border border-slate-300 font-roboto"
           type="email"
         />
       </div>
       <div className="mb-4">
-        <label className="block mb-1" htmlFor="phoneNumber">
+        <label
+          className="block mb-1 font-roboto font-black"
+          htmlFor="phoneNumber"
+        >
           Phone Number
         </label>
         <input
           onChange={(e) => setPhone(e.target.value)}
           name="phoneNumber"
           required
-          className=" w-[300px] px-1 py-1  border border-slate-300"
+          className=" w-[300px] px-1 py-1  border border-slate-300 font-roboto"
           type="text"
         />
       </div>
       <div className="mb-4">
-        <label className="block mb-1" htmlFor="Amount">
+        <label className="block mb-1 font-roboto font-black " htmlFor="Amount">
           Amount
         </label>
         <input
@@ -96,14 +99,14 @@ const ModalOverlay = (props) => {
           placeholder="NGN10,000"
           name="Amount"
           disabled={true}
-          className=" w-[300px] px-1 py-1  border border-slate-300"
+          className=" w-[300px] px-1 py-1 font-roboto placeholder:font-roboto placeholder:font-black  border border-slate-300"
           type="text"
         />
       </div>
 
       <div className="text-center ">
         <PaystackButton
-          className="py-2 paystackButton px-11 "
+          className="py-2 paystackButton px-11 font-roboto"
           {...componentProps}
         />
       </div>

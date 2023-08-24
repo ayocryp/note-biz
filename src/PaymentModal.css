@@ -22,14 +22,17 @@
 /* form */
 .form_container{
   background-color: rgb(240, 240, 240);
-  padding: 15px 15px;
+  padding: 20px 20px;
   border: none;
   border-radius: 1px;
   display: flex;
   flex-direction: column;
   font-family: 'Moderat', sans-serif !important;
   font-weight: 400;
-  /* letter-spacing: 0.1px; */
+
+  @media (max-width: 900px){
+   padding: 20px 15px;
+  }
 }
 
  
@@ -43,18 +46,19 @@
 .form_image img {
   text-align: center;
   margin: 10px 0;
-  width: 50px;
+  width: 100px;
   justify-content: center;
 }
 
+.form_label{
+  font-family: 'Moderat', sans-serif !important;
+}
 input{
   border: 20px;
   width: 100%;
 }
 
-input:focus{
-  border-color: #008002;
-}
+
 
 input::placeholder{
   color: #008002b6;
@@ -65,7 +69,6 @@ input::placeholder{
   background-color: #008002;
   color: white;
   border: none;
-
 }
 
 
@@ -82,8 +85,6 @@ input::placeholder{
   }
 
 
-  input{
-    width: 100%;
-  }
+  
 
 }

@@ -102,16 +102,16 @@ export const OrderContainer = styled.div`
 `;
 
 export const OrderWrapper = styled.div`
-  padding: 5% 3%;
+  padding: 5% 5%;
   max-width: 100%;
 
   // box-sizing: border-box;
 `;
 
 export const Title = styled.div`
-  font-size: 55px;
+  font-size: 40px;
   color: black;
-  text-align: center;
+  text-align: left;
   margin: 40px 0 50px 0;
   padding: 0 0 10px;
   font-family: "Millik", sans-serif !important;
@@ -160,24 +160,27 @@ export const GroupWrapper = styled.div`
 `;
 
 export const GroupTitle = styled.div`
-  margin-top: 120px;
-  margin-bottom: 50px;
-  color: green;
+  margin-top: 5%;
+  margin-bottom: 20px;
+  color: #008001;
   word-break: break-all;
   font-family: "Millik", sans-serif !important;
   line-height: 1.5rem;
-  font-size: 45px;
+  font-size: 40px;
   font-weight: 600;
   letter-spacing: 0.8px;
-  text-align: center;
+  text-align: left;
 
   @media (max-width: 768px) {
-    font-size: 31px;
+    font-size: 25px;
     font-family: "Millik", sans-serif !important;
     line-height: 2.5rem;
-    letter-spacing: 0.8px;
+
     word-break: break-all;
     text-align: left;
+
+    margin-top: 2%;
+    margin-bottom: 2px;
   }
 `;
 
