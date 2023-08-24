@@ -64,7 +64,7 @@ const HeaderComponent = () => {
         <div>
           <Link to="/">
             <HeaderLogo
-              src="/assets/image/Header/100710_red_maple_leaf.svg"
+              src="/assets/image/Header/limitlessbrand/Limitless2-4.png"
               alt=""
             />
           </Link>

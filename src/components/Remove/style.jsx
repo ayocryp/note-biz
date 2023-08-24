@@ -2,10 +2,8 @@ import styled from 'styled-components'
 
 export const Layout = styled.div`
   width: 100%;
-
   display: flex;
   justify-content: center;
-
   padding: 150px 0px;
   @media (max-width: 900px) {
     padding: 70px 0px;
@@ -23,8 +21,7 @@ export const Container = styled.div`
   }
 `
 export const TextContainer = styled.div`
-  flex: 1;
-
+  flex: 3;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -32,7 +29,7 @@ export const TextContainer = styled.div`
 export const Title = styled.div`
   font-size: 2rem;
   font-weight: 800;
-  font-family: Poppins, sans-serif;
+  font-family: Millik, sans-serif;
   margin-bottom: 20px;
 `
 export const Detail = styled.div`
@@ -40,16 +37,16 @@ export const Detail = styled.div`
   font-family: 'Moderat', sans-serif !important;
   font-weight: 300;
   letter-spacing: 0.1px;
-  margin-bottom: 20px;
+  // margin-bottom: 20px;
   word-break: break-all;
 `
 export const ImageContainer = styled.div`
-  flex: 1;
+  // flex: 1;
   display: flex;
   align-items: center;
   justify-content: center;
 `
 export const Image = styled.img`
-  width: 300px;
-  height: 350px;
+  width: 200px;
+  height: 220px;
 `

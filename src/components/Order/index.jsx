@@ -117,7 +117,7 @@ const OrderComponent = () => {
  setIsloading(true);
    
     try {
-      fetch(
+       fetch(
         "https://mummyserena-note-server.vercel.app/api/sender",
         {
           method: "POST",

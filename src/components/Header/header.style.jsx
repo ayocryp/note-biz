@@ -28,13 +28,13 @@ export const HeaderMenus = styled.div`
 `
 
 export const HeaderLogo = styled.img`
-  width: 50px;
+  width: 180px;
   height: auto;
   margin-left: 60px;
   margin-right: 30px;
 
   @media (max-width: 900px){
-  width: 50px;
+  width: 125px;
   height: auto;
   margin: 5px 0px 5px 5px;
   }
