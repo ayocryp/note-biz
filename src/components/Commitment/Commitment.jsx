@@ -3,11 +3,12 @@ import styles from './Commitment.module.css'
 
 function Commitment() {
   return (
+    
     <div className={styles.commitment_main_wrap}>
       <h2 className={styles.commitment_heading}>Our Commitment</h2>
       
 
-      <div className={styles.commitment_li_main_wrap}>
+      {/* <div className={styles.commitment_li_main_wrap}>
         <ul className={styles.commitment_ul}>
           <li className={styles.commitment_li}>Confidential</li>
           <li className={styles.commitment_li}>Secure</li>
@@ -22,11 +23,9 @@ function Commitment() {
             className={styles.commitment_img}
             src="/assets/Image/Service/atip no bg.png"
             alt=""
-          />
-        </div>
-
-        
-      </div>
+          /> */}
+      <img src="/assets/Image/Main/Limitless Commit.jpeg" alt="" className='commitment_img'/>
+       
       <p className={styles.commitment_text}>
         Limitless Immigration is a professional and independent organization
         that offers GCMS notes service to individuals who have applied for a
@@ -42,10 +41,13 @@ function Commitment() {
         safe and trustworthy service to our clients. As an independently owned
         and operated business, we are committed to providing high-quality
         services to ensure our clients receive accurate and reliable information
-      
-        
+    
       </p>
-    </div>
+        
+     
+    
+    </div >
+    
   );
 }
 

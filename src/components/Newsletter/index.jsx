@@ -10,14 +10,14 @@ const Newsletter = () => {
           />
         </div>
         <div className="w-full sm:w-full md:w-[23%] lg:w-[23%]">
-          <h6 className="text-lg text-center sm:text-center md:text-center lg:text-center  font-bold mb-1 tracking-[.15em] uppercase">
+          <h6 className="text-lg   font-bold mb-1 tracking-[.15em] uppercase">
             Get Our Weekly
           </h6>
           <h2 className=" text-2xl  text-center md:text-left lg:text-left sm:text-center sm:text-2xl md:text-2xl lg:text-4xl text-[#a01627] tracking-[.15em] font-bold uppercase mb-4">
             Newsletter
           </h2>
 
-          <p className="font-roboto ">
+          <p className="font-roboto text-center  sm:text-center md:text-center lg:text-center">
             Our newsletter will provide you with the information you need to
             navigate the immigration process smoothly. <br />
             <span className="font-roboto text-black font-black">
