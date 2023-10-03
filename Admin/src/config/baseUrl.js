@@ -1,1 +1,0 @@
-export const siteEnv ='https://lur-api.deltechverse.com';

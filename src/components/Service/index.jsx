@@ -33,7 +33,7 @@ const ServiceComponent = () => {
         <SectionWrapper>
           <SectionTitle>
             Make your immigration dream come true with our{" "}
-            <span>tools</span>
+            <span>service</span>
           </SectionTitle>
           <SectionContent>
             <div>

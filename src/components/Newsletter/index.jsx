@@ -9,7 +9,7 @@ const Newsletter = () => {
             alt=""
           />
         </div>
-        <div className="w-full sm:w-full md:w-[23%] lg:w-[23%]">
+        <div className="w-full sm:w-full md:w-[23%] lg:w-[23%] text-center">
           <h6 className="text-lg   font-bold mb-1 tracking-[.15em] uppercase">
             Get Our Weekly
           </h6>

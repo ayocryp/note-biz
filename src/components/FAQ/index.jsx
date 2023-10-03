@@ -2,46 +2,26 @@ import { FaqContainer, FaqWrapper, SectionTitle } from "./faq.style";
 import Accordion from "react-bootstrap/Accordion";
 
 const FAQ_DATA = [
-	{
-		question: "Why GCMS notes? I need an answer, dolor sit amet consectetur adipisicing elit. Temporibus, magna",
-		answer:
-			"Lorem ipsum, dolor sit amet consectetur adipisicing elit. Temporibus, magnam. dolor sit amet consectetur adipisicing elit. Temporibus, magna dolor sit amet consectetur adipisicing elit. Temporibus, magna",
-	},
-	{
-		question: "Why GCMS?",
-		answer:
-			"Lorem ipsum, dolor sit amet consectetur adipisicing elit. Temporibus, magnam.",
-	},
-	{
-		question: "Why GCMS notes?",
-		answer:
-			"Lorem ipsum, dolor sit amet consectetur adipisicing elit. Temporibus, magnam.",
-	},
-	{
-		question: "Why GCMS?",
-		answer:
-			"Lorem ipsum, dolor sit amet consectetur adipisicing elit. Temporibus, magnam.",
-	},
-	{
-		question: "Why GCMS notes?",
-		answer:
-			"Lorem ipsum, dolor sit amet consectetur adipisicing elit. Temporibus, magnam.",
-	},
-	{
-		question: "Why GCMS?",
-		answer:
-			"Lorem ipsum, dolor sit amet consectetur adipisicing elit. Temporibus, magnam.",
-	},
-	{
-		question: "Why GCMS notes?",
-		answer:
-			"Lorem ipsum, dolor sit amet consectetur adipisicing elit. Temporibus, magnam.",
-	},
-	{
-		question: "Why GCMS?",
-		answer:
-			"Lorem ipsum, dolor sit amet consectetur adipisicing elit. Temporibus, magnam.",
-	},
+  {
+    question: "How do you process the order?",
+    answer:
+      "Once you sucessfully make payment, then you will be able to submit the consent form with your application details,  Once we receive your submission, we will process the order by submitting your request to the govt. agency. The order is submitted within 24 hours of receiving all the requisite information.",
+  },
+  {
+    question: "How long does the whole process take?",
+    answer:
+      "The official time-frame for processing a request under the Access to Information Act is 30 calendar days.",
+  },
+  {
+    question: "How will i receive the GCMS Note ?",
+    answer: `The file will be sent to you electronically in a password protected PDF format.`,
+  },
+  {
+    question: "Privacy & Information Security Policy",
+    answer:
+      "Here at Limitless, our service is based on trust and transparency and we are committed to keeping your information safe and secure. Please Check our policy page to see how we protect your personal data. ",
+  },
+  
 ];
 
 const FaqComponent = () => (

@@ -37,7 +37,7 @@ const variant1 = {
 const MainComponent = () => {
  
   const articleText =
-    "GCMS (Global Case Management System) is a software system used by Immigration, Refugees and Citizenship Canada (IRCC) to process immigration and citizenship applications. GCMS is a single integrated system designed to process applications both inside Canada and outside. It is the most comprehensive and up-to-date information that can be obtained to understand the status of a visa application or to learn the details about a visa refusal.";
+    "Welcome to Limitless, your trusted partner in the Canadian visa application journey. As an independently owned and operated professional firm, we specialize in providing top-tier GCMS (Global Case Management System) notes services to individuals like you who are navigating the complex path to obtaining a Canadian visa.";
   const imageSrc =
     "/assets/image/Main/LimitFrontIma.png";
 
@@ -56,7 +56,7 @@ const MainComponent = () => {
               </ArticleText>
 
               <Link to="/get-your-note">
-                <OrderBtn>Order your note </OrderBtn>
+                <OrderBtn>Order your note today </OrderBtn>
               </Link>
             </motion.div>
           </ArticleContainer>

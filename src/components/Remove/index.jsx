@@ -14,23 +14,16 @@ const RemoveComponent = () => {
     <Layout>
       <Container>
         <TextContainer>
-          <Title>
-            Remove backgrounds 100% automatically in 5 seconds with one click
-          </Title>
+          <Title>Choose LIMITLESS for your GCMS notes needs</Title>
+        
           <Detail>
-            Thanks to remove.bg's clever AI, you can slash editing time - and
-            have
-          </Detail>
-          <Detail>
-            more fun! No matter if you want to make a background transparent
-            (PNG) or add a white background to a photo - you can do all this and
-            more with remove. As an independently owned
-        and operated business, we are committed to providing high-quality
-        services to ensure our clients receive accurate and reliable information
-        about their visa application. 
+            Experience the difference of partnering with an independently
+            owned and operated professional firm committed to providing you with
+            an unbiased, transparent, and trustworthy service. Your Canadian
+            dreams are within reach with us by your side.
           </Detail>
         </TextContainer>
-        
+
         <ImageContainer>
           <Image src="assets/Image/Main/image.png" />
         </ImageContainer>
